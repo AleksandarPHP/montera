@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    --text-color-primary: #023867;
+    --title-color: #003967;
+    --text-color-secondary: #e5ddd2;
+    --gold: #b2916a;
+    --white: #fff;
+}
+
+body {
+    font-family: "DM Sans", sans-serif !important;
+    font-size: 2rem;
+    color: var(--text-color-primary);
+    -webkit-font-smoothing: antialiased;
+    background-color: #222 !important;
+}
+
+.subtitle {
+    font-size: 2.8rem;
+    font-weight: 400;
+    letter-spacing: 0.025rem;
+    color: var(--text-color-primary);
+    opacity: 0.8;
+}
+.title {
+    font-size: 22px;
+    display: block;
+    position: relative;
+    padding-left: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    margin-top: 20px;
+}
+
+header .navbar {
+    padding: 4rem;
+}
+
+.navbar .offcanvas .offcanvas-body {
+    justify-content: center;
+}
+
+header .navbar-nav.languages {
+    border: 1px solid #fff;
+    color: #fff;
+    text-transform: uppercase;
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+header .navbar-nav.languages a.nav-link {
+    color: #fff;
+}
+header .navbar-nav.languages ul li {
+    font-size: 1.5rem;
+}
+
+header .navbar .offcanvas .offcanvas-body ul li:not(:last-child) {
+    margin-right: 7.5rem;
+}
+
+header .navbar .offcanvas .offcanvas-body ul li a {
+    color: #fff;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+header .header-contact {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+header .header-contact i {
+    color: #f28a57;
+    font-size: 2.4rem;
+}
+
+header .header-contact a {
+    color: #fff;
+    font-size: 1.4rem;
+    text-decoration: none;
+    display: block;
+}
