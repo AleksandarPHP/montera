@@ -26,8 +26,12 @@ Route::group(['prefix' => 'cms', 'middleware' => ['auth', 'active']], function()
     Route::post('users/ajax', 'App\Http\Controllers\UsersController@ajax');
 
     Route::resource('galleries', 'App\Http\Controllers\GalleryController')->except('show');
-    Route::post('galleries/ajax', 'App\Http\Controllers\GalleryController@ajax');    
-    Route::post('galleries/{id}/upload', 'App\Http\Controllers\GalleryController@upload');
+    Route::controller(App\Http\Controllers\GalleryController::class)->group(function () {
+        Route::post('galleries/ajax', 'ajax');    
+        Route::post('galleries/{id}/upload', 'upload');
+        Route::delete('galleries/{id}/delete', 'delete');
+    });
+
 
     Route::resource('texts', 'App\Http\Controllers\TextController')->only('index','update','edit');
     Route::controller(App\Http\Controllers\TextController::class)->group(function () {

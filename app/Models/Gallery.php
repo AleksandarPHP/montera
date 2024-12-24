@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use App\Models\Album;
 
-class Galery extends Model
+class Gallery extends Model
 {
     use HasFactory;
 

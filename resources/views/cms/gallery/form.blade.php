@@ -71,7 +71,7 @@
     </div>
 </div>
     @foreach ($images as $image)
-        <form id="delete-image{{ $image->id }}" action="{{ url('cms/gallery/'.$image->id) }}" method="POST" style="display: none;">
+        <form id="delete-image{{ $image->id }}" action="{{ url('cms/galleries/'.$image->id.'/delete') }}" method="POST" style="display: none;">
             @csrf
             @method('DELETE')
         </form>

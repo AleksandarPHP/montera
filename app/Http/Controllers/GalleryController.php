@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Apartment;
 use Illuminate\Http\Request;
-use App\Models\Galery;
+use App\Models\Gallery;
 use App\Models\Album;
 use App\Helpers\Helper;
 use Cache;
@@ -73,7 +73,7 @@ class GalleryController extends Controller
 
     public function edit($id)
     {
-        $images = Galery::where('album_id', $id)->get();
+        $images = Gallery::where('album_id', $id)->get();
         $album = Album::findOrFail($id);
         return view('cms.gallery.form', ['images' => $images, 'album' => $album]);
     }
@@ -94,7 +94,7 @@ class GalleryController extends Controller
 
         $galleryname = Helper::saveImage($image, 'gallery', $name);
         
-        Galery::create([
+        Gallery::create([
             'image' => $galleryname,
             'album_id' => $id,
         ]);
@@ -104,9 +104,9 @@ class GalleryController extends Controller
         return response()->json('Uspešno ste dodali sliku.', 200);
     }
 
-    public function destroy($id)
+    public function delete($id)
     {
-        $item = Galery::findOrFail($id);
+        $item = Gallery::findOrFail($id);
         
         if(Helper::deleteImage($item->image)) {
             $item->delete();

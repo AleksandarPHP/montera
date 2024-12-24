@@ -7,7 +7,7 @@ use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
 use Exception;
 use Illuminate\Support\Facades\Log;
-use App\Models\Galery;
+use App\Models\Gallery;
 use App\Models\Text;
 use Request;
 use Cache;
@@ -97,9 +97,9 @@ class Helper {
         }
     }
 
-    public static function galery()
+    public static function gallery()
     {
-        $query = Galery::query();
+        $query = Gallery::query();
         return $query->get();
     }
 
