@@ -6,20 +6,20 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Translatable\HasTranslations;
 
-class Menu extends Model
+class Apartment extends Model
 {
-    use HasFactory, HasTranslations;
+    use HasFactory;
 
     protected $fillable = [
         'title',
-        'parent_id',
-        'link',
-        'order',
-        'is_active'
+        'apt_number',
+        'floor',
+        'pdf',
+        'surface',
+        'rooms',
+        'status',
+        'image',
+        'image2',
     ];
 
-    public $translatable = [
-        'title',
-        'link',
-    ];
 }

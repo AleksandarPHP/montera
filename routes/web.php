@@ -25,11 +25,21 @@ Route::group(['prefix' => 'cms', 'middleware' => ['auth', 'active']], function()
     Route::resource('users', 'App\Http\Controllers\UsersController')->except('show');
     Route::post('users/ajax', 'App\Http\Controllers\UsersController@ajax');
 
-    Route::resource('gallery', 'App\Http\Controllers\GalleryController')->only('index', 'destroy');
-    Route::post('gallery/upload', 'App\Http\Controllers\GalleryController@upload');
+    Route::resource('galleries', 'App\Http\Controllers\GalleryController')->except('show');
+    Route::post('galleries/ajax', 'App\Http\Controllers\GalleryController@ajax');    
+    Route::post('galleries/{id}/upload', 'App\Http\Controllers\GalleryController@upload');
 
-    Route::resource('menu', 'App\Http\Controllers\MenuController')->except('show');
-    Route::post('menu/ajax', 'App\Http\Controllers\MenuController@ajax');    
+    Route::resource('texts', 'App\Http\Controllers\TextController')->only('index','update','edit');
+    Route::controller(App\Http\Controllers\TextController::class)->group(function () {
+        Route::post('texts/ajax',  'ajax');  
+        Route::get('texts/imagedelete/{id}', 'removeImage');
+    });
+
+    // Route::resource('menu', 'App\Http\Controllers\MenuController')->except('show');
+    // Route::post('menu/ajax', 'App\Http\Controllers\MenuController@ajax');    
+
+    Route::resource('apartments', 'App\Http\Controllers\ApartmentController')->except('show');
+    Route::post('apartments/ajax', 'App\Http\Controllers\ApartmentController@ajax');    
 
     Route::resource('messages', 'App\Http\Controllers\MessageController')->except('show');
     Route::post('messages/ajax', 'App\Http\Controllers\MessageController@ajax');  

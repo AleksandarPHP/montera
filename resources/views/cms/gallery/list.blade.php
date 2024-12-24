@@ -6,9 +6,9 @@
     <li class="breadcrumb-item">
         <a href="{{ url('cms') }}">POČETNA</a>
     </li>
-    <li class="breadcrumb-item active">Stranice</li>
+    <li class="breadcrumb-item active">Albumi</li>
 </ol>
-<h1>Stranice</h1>
+<h1>Albumi</h1>
 <hr>
 <div class="card mb-3">
     <div class="card-header">
@@ -18,17 +18,15 @@
             <table class="table table-bordered" id="dataTableSSR" width="100%" cellspacing="0">
                 <thead>
                 <tr>
-                    <th>ID</th>
+                    <th>Id</th>
                     <th>Naziv</th>
-                    <th class="nosort text-center" style="width:80px;">Meta edit</th>
-                    <th class="nosort text-center" style="width:80px;">Akcija</th>
+                    <th class="nosort text-center">Akcija</th>
                 </tr>
                 </thead>
                 <tfoot>
                 <tr>
-                    <th>ID</th>
+                    <th>Id</th>
                     <th>Naziv</th>
-                    <th class="nosort text-center" style="width:80px;">Meta edit</th>
                     <th class="nosort text-center">Akcija</th>
                 </tr>
                 </tfoot>
@@ -79,7 +77,7 @@ $(document).ready(function() {
     "bProcessing": true,
     "serverSide": true,
     "ajax": {
-        url: "{{ url('cms/pages/ajax') }}",
+        url: "{{ url('cms/galleries/ajax') }}",
         type: "post",
         headers: {
             'X-CSRF-Token': "{{ csrf_token() }}"
@@ -93,7 +91,7 @@ $(document).ready(function() {
         $(row).find('td:eq(2)').addClass("text-center");
         $(row).find('td:eq(3)').addClass("text-center");
     },
-    "order": [[ 0, "asc"]],
+    "order": [[ 0, "desc"]],
   });
 });
 </script>

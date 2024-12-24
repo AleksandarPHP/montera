@@ -6,9 +6,9 @@
     <li class="breadcrumb-item">
         <a href="{{ url('cms') }}">POČETNA</a>
     </li>
-    <li class="breadcrumb-item active">Galerija</li>
+    <li class="breadcrumb-item active">{{$album->title}}</li>
 </ol>
-<h1>Galerija</h1>
+<h1>{{$album->title}}</h1>
 <hr>
 <div class="row">
     <div class="col-md-12" id="mainDiv">
@@ -16,7 +16,9 @@
             <div class="row">
                 <div class="col-md-12">
                 <div class="form-group">
-                            <label>Slike koje će biti prikazane na stranici 'Galerija'</label>
+                            <label>
+                                Dozvoljeno je otpremanje jpg,jpeg,png,webp slika 
+                            </label>
                         </div>
                     <div class="row">
                         <div class="col-md-12">
@@ -26,7 +28,7 @@
                             <script type="text/javascript">
                                 Dropzone.options.dropzoneUploader = {
                                 paramName: "files",
-                                url: '{{ url('cms/gallery/upload') }}',
+                                url: '{{ url('cms/galleries/'.$album->id.'/upload') }}',
                                 maxFilesize: 2,
                                 parallelUploads: 1,
                                 acceptedFiles: "image/png, image/jpeg, image/webp",

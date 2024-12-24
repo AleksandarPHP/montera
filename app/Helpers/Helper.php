@@ -7,9 +7,8 @@ use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
 use Exception;
 use Illuminate\Support\Facades\Log;
-use App\Models\Gallery;
-use App\Models\Menu;
-use App\Models\Page;
+use App\Models\Galery;
+use App\Models\Text;
 use Request;
 use Cache;
 
@@ -100,39 +99,40 @@ class Helper {
 
     public static function galery()
     {
-        $query = Gallery::query();
+        $query = Galery::query();
         return $query->get();
     }
 
-    public static function menu($id, $parent_id, $title, $link)
+    public static function saveFile($file, $folder, $title, $oldFile = null, $withoutDate = false)
     {
-        $code = '';
-        $models = Menu::where('is_active', 1)->where('parent_id', $id)->get(); 
-    
-        if ($parent_id) {
-            $code .= '<li>
-                        <a class="dropdown-item" href="'.Helper::url($link).'">'.$title.'</a>
-                      </li>';
-        } else {
-            $code .= '<li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">'.$title.'</a>
-                        <ul class="dropdown-menu">';
-    
-            foreach ($models as $model) {
-                $code .= self::menu($model->id, $model->parent_id, $model->title, $model->link);
+        try {
+            if (!is_null($oldFile) && Storage::exists('public/' . $oldFile))
+                Storage::delete('public/' . $oldFile);
+
+            if ($title === "" || !is_string($title))
+                $title = Str::random(40);
+
+            $time = time();
+            $date = $withoutDate ? '' : '/' . date('d-m-Y');
+            $filename = $time . '_' . Str::limit(Str::slug($title), 100, '') . '.' . $file->getClientOriginalExtension();
+
+            $br = 2;
+            while (Storage::exists('public/' . $folder . $date . '/' . $filename)) {
+                $filename = $time . '_' . Str::limit(Str::slug($title), 100, '') . '-' . $br . '.' . $file->getClientOriginalExtension();
+                $br++;
             }
-    
-            $code .= '</ul>
-                      </li>';
+            $file->storeAs('public/' . $folder . $date, $filename);
+
+            return $folder . $date . '/' . $filename;
+        } catch (Exception $e) {
+            return null;
         }
-    
-        return $code;
     }
 
     public static function text($id)
     {
         return Cache::rememberForever('texts-'.$id, function() use ($id) {
-            return Page::find($id);
+            return Text::find($id);
         });
     }
 
@@ -148,14 +148,14 @@ class Helper {
     public static function description($id)
     {
         return Cache::rememberForever('meta_description-'.$id, function() use ($id) {
-            return Page::where('id', $id)->value('meta_description');
+            return Text::where('id', $id)->value('meta_description');
         });
     }
 
     public static function title($id)
     {
         return Cache::rememberForever('meta_title-'.$id, function() use ($id) {
-            return Page::where('id', $id)->value('meta_title');
+            return Text::where('id', $id)->value('meta_title');
         });
     }
 }

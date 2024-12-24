@@ -6,9 +6,9 @@
     <li class="breadcrumb-item">
         <a href="{{ url('cms') }}">POČETNA</a>
     </li>
-    <li class="breadcrumb-item active">Recenzije</li>
+    <li class="breadcrumb-item active">Stranice</li>
 </ol>
-<h1>Recenzije</h1>
+<h1>Stranice</h1>
 <hr>
 <a href="{{ url()->full().'/create'}}" class="btn btn-primary mb-3">Dodaj <i class="fa-solid fa-plus"></i></a>
 <div class="card mb-3">
@@ -21,13 +21,15 @@
                 <tr>
                     <th>ID</th>
                     <th>Naziv</th>
-                    <th class="nosort text-center" style="width:80px;">Akcija</th>
+                    <th>Status</th>
+                    <th class="nosort text-center">Akcija</th>
                 </tr>
                 </thead>
                 <tfoot>
                 <tr>
                     <th>ID</th>
                     <th>Naziv</th>
+                    <th>Status</th>
                     <th class="nosort text-center">Akcija</th>
                 </tr>
                 </tfoot>
@@ -78,7 +80,7 @@ $(document).ready(function() {
     "bProcessing": true,
     "serverSide": true,
     "ajax": {
-        url: "{{ url('cms/testimonials/ajax') }}",
+        url: "{{ url('cms/apartments/ajax') }}",
         type: "post",
         headers: {
             'X-CSRF-Token': "{{ csrf_token() }}"
