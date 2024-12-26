@@ -27,7 +27,6 @@ class TextController extends Controller
         $columns = array( 
             0 =>'id',
             1 =>'title',
-            2 =>'meta',
             3 =>'action'
         );
 
@@ -79,7 +78,7 @@ class TextController extends Controller
         $width = $height = 0;
         $lang = $request->lang ?? 'sr';
 
-        return view('cms.pages.form', ['item' => Text::findOrFail($id), 'editing' => true, 'width' => $width, 'height' => $height, 'lang' => $lang]);
+        return view('cms.texts.form', ['item' => Text::findOrFail($id), 'editing' => true, 'width' => $width, 'height' => $height, 'lang' => $lang]);
     }
 
     public function update(Request $request, $id)
@@ -102,20 +101,20 @@ class TextController extends Controller
         ]);    
 
         $image = $item->image;
-        if($request->hasFile('image')) $image = Helper::saveImage($request->image, 'Pages', $item->title, $image);
-        else if($item->title != $item->title && !is_null($image)) $image = Helper::renameImage($image, 'Pages', $item->title);
+        if($request->hasFile('image')) $image = Helper::saveImage($request->image, 'Texts', $item->title, $image);
+        else if($item->title != $item->title && !is_null($image)) $image = Helper::renameImage($image, 'Texts', $item->title);
         
         $image2 = $item->image2;
-        if($request->hasFile('image2')) $image2 = Helper::saveImage($request->image2, 'Pages', $item->title, $image2);
-        else if($item->title != $item->title && !is_null($image2)) $image2 = Helper::renameImage($image2, 'Pages', $item->title);
+        if($request->hasFile('image2')) $image2 = Helper::saveImage($request->image2, 'Texts', $item->title, $image2);
+        else if($item->title != $item->title && !is_null($image2)) $image2 = Helper::renameImage($image2, 'Texts', $item->title);
 
         $image3 = $item->image3;
-        if($request->hasFile('image3')) $image3 = Helper::saveImage($request->image3, 'Pages', $item->title, $image3);
-        else if($item->title != $item->title && !is_null($image3)) $image3 = Helper::renameImage($image3, 'Pages', $item->title);
+        if($request->hasFile('image3')) $image3 = Helper::saveImage($request->image3, 'Texts', $item->title, $image3);
+        else if($item->title != $item->title && !is_null($image3)) $image3 = Helper::renameImage($image3, 'Texts', $item->title);
 
         $image4 = $item->image4;
-        if($request->hasFile('image4')) $image4 = Helper::saveImage($request->image4, 'Pages', $item->title, $image4);
-        else if($item->title != $item->title && !is_null($image4)) $image4 = Helper::renameImage($image4, 'Pages', $item->title);
+        if($request->hasFile('image4')) $image4 = Helper::saveImage($request->image4, 'Texts', $item->title, $image4);
+        else if($item->title != $item->title && !is_null($image4)) $image4 = Helper::renameImage($image4, 'Texts', $item->title);
 
         $item->setTranslation('title', $lang, $request->input('title'));
         $item->setTranslation('subtitle', $lang, $request->input('subtitle'));
@@ -141,7 +140,7 @@ class TextController extends Controller
 
         session()->flash('success', 'Izmjenjeno.');
 
-        return redirect('cms/pages');
+        return redirect('cms/texts');
     }
 
     public function removeImage(Request $request, $id)
