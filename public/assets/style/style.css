@@ -53,6 +53,16 @@ body {
 .button-wrapper {
     text-align: center;
 }
+.button.button_primary {
+    background-color: var(--blue);
+    padding: 1rem 1.5rem;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2rem;
+    transition: 0.3s;
+    display: inline-block;
+}
 .button.button_secondary {
     background-color: transparent;
     border: 1px solid var(--blue);
@@ -389,4 +399,33 @@ footer .lastline ul li {
 }
 footer .lastline ul li a {
     font-size: 1.4rem;
+}
+
+.floors {
+    position: relative;
+    min-height: 1200px;
+}
+.floors .bg {
+    background-size: cover;
+}
+
+#svg-container {
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/apartments.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.gallery-navigator {
+    padding: 5rem 0 10rem 0;
+}
+
+.gallery-navigator .button-wrapper {
+    margin-top: 5rem;
+}
+
+.txt {
+    font-size: 1.6rem;
 }

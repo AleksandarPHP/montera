@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 $routes = [
     '/' => 'index',
     'sadrzaj' => 'sadrzaj',
+    'apartmani' => 'apartmani',
     
 ];
 

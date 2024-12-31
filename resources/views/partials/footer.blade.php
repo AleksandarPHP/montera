@@ -83,8 +83,9 @@
                 <h3>lokacija</h3>
                 <p>
                     Hotel Termag Jahorina, Olimpijska 4 , Bosna i Hercegovina
-                    Telefoni: +387 57 270 422, +387 57 272 100 Faks: +387 57 270
-                    423, +387 57 272 072
+                    <br />
+                    Telefoni: +387 57 270 422, +387 57 272 100 <br />
+                    Faks: +387 57 270 423, +387 57 272 072
                 </p>
                 <a href="mailto:info@termaghotel.com">info@termaghotel.com</a>
             </div>
@@ -109,9 +110,7 @@
                 <li>
                     <a href="#">DIsclaimer</a>
                 </li>
-                <li>
-                    <a href="#">Privacy Policy</a>
-                </li>
+                <li><a href="#">Privacy Policy</a>\\\</li>
                 <li>
                     <a href="#">Term Of Use</a>
                 </li>
