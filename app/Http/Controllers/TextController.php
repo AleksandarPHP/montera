@@ -87,18 +87,20 @@ class TextController extends Controller
         $lang = $request->language ?? 'sr';
 
         $width = $height = 0;
-
-        $request->validate([
+        $rules = [
             'title' => ['nullable', 'string', 'max:191'],
             'subtitle' => ['nullable', 'string'],
-            'text' => ['nullable', 'string'],
-            'url' => ['nullable', 'string', 'max:191'],
-            'urlTitle' => ['nullable', 'string', 'max:191'],
-            'url2' => ['nullable', 'string', 'max:191'],
-            'urlTitle2' => ['nullable', 'string', 'max:191'],
+            'description' => ['nullable', 'string'],
             'image' => ['nullable', 'mimes:jpeg,png,svg,webp', 'image', 'max:5000', 'dimensions:min_width='.$width.',min_height='.$height],
-
-        ]);    
+        ];
+        
+        for ($i = 2; $i <= 7; $i++) {
+            $rules["title$i"] = ['nullable', 'string', 'max:191'];
+            $rules["subtitle$i"] = ['nullable', 'string'];
+            $rules["description$i"] = ['nullable', 'string'];
+        }
+        
+        $request->validate($rules);  
 
         $image = $item->image;
         if($request->hasFile('image')) $image = Helper::saveImage($request->image, 'Texts', $item->title, $image);
@@ -116,11 +118,16 @@ class TextController extends Controller
         if($request->hasFile('image4')) $image4 = Helper::saveImage($request->image4, 'Texts', $item->title, $image4);
         else if($item->title != $item->title && !is_null($image4)) $image4 = Helper::renameImage($image4, 'Texts', $item->title);
 
+
+
         $item->setTranslation('title', $lang, $request->input('title'));
         $item->setTranslation('subtitle', $lang, $request->input('subtitle'));
-        $item->setTranslation('text', $lang, $request->input('text'));
-        $item->setTranslation('urlTitle', $lang, $request->input('urlTitle'));
-        $item->setTranslation('urlTitle2', $lang, $request->input('urlTitle2'));
+        $item->setTranslation('description', $lang, $request->input('description'));
+        for ($i = 2; $i <= 7; $i++) {
+            $item->setTranslation('title'.$i, $lang, $request->input('title'.$i));
+            $item->setTranslation('subtitle'.$i, $lang, $request->input('subtitle'.$i));
+            $item->setTranslation('description'.$i, $lang, $request->input('description'.$i));
+        }
         $item->setTranslation('meta_title', $lang, $request->input('meta_title'));
         $item->setTranslation('meta_description', $lang, $request->input('meta_description'));
 
@@ -130,8 +137,6 @@ class TextController extends Controller
             $item->image2 = $image2;
             $item->image3 = $image3;
             $item->image4 = $image4;
-            $item->url = $request->url;
-            $item->url2 = $request->url2;
         }
 
         $item->save();
