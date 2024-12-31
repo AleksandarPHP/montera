@@ -2,6 +2,17 @@
 
 use Illuminate\Support\Facades\Route;
 
+$routes = [
+    '/' => 'index',
+    'sadrzaj' => 'sadrzaj',
+    'apartmani' => 'apartmani',
+    
+];
+
+foreach ($routes as $uri => $view) {
+    Route::get($uri, fn() => view($view));
+}
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
