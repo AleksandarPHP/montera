@@ -429,3 +429,36 @@ footer .lastline ul li a {
 .txt {
     font-size: 1.6rem;
 }
+
+.subtitle {
+    font-size: 3rem;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.gallery {
+    padding: 15rem 0;
+}
+
+.gallery .subtitle {
+    position: relative;
+    margin-bottom: 5rem;
+}
+.gallery .subtitle::before {
+    content: "";
+    position: absolute;
+    bottom: -1.5rem;
+    left: 0;
+    right: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #c4c4c4;
+}
+
+.gallery .wrapper {
+    margin-bottom: 4rem;
+}
+
+.gallery .slick-slide {
+    margin: 0 1rem;
+}

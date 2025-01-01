@@ -6,6 +6,7 @@ $routes = [
     '/' => 'index',
     'sadrzaj' => 'sadrzaj',
     'apartmani' => 'apartmani',
+    'galerija' => 'galerija',
     
 ];
 
