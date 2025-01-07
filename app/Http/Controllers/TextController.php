@@ -83,6 +83,7 @@ class TextController extends Controller
 
     public function update(Request $request, $id)
     {
+        // dd($request->all());
         $item = Text::findOrFail($id);
         $lang = $request->language ?? 'sr';
 
@@ -99,7 +100,7 @@ class TextController extends Controller
             $rules["subtitle$i"] = ['nullable', 'string'];
             $rules["description$i"] = ['nullable', 'string'];
         }
-        
+
         $request->validate($rules);  
 
         $image = $item->image;
@@ -117,7 +118,6 @@ class TextController extends Controller
         $image4 = $item->image4;
         if($request->hasFile('image4')) $image4 = Helper::saveImage($request->image4, 'Texts', $item->title, $image4);
         else if($item->title != $item->title && !is_null($image4)) $image4 = Helper::renameImage($image4, 'Texts', $item->title);
-
 
 
         $item->setTranslation('title', $lang, $request->input('title'));
@@ -150,18 +150,12 @@ class TextController extends Controller
 
     public function removeImage(Request $request, $id)
     {
-        $checkArray = ['image'];
-
-        $checkArray = implode(",", $checkArray);
-
-        $request->validate([
-            'image2' => ['required', 'in:'.$checkArray],
-        ]);
+        $image = $request->image;
 
         $item = Text::findOrFail($id);
 
-        if(Helper::deleteImage($item[$request->image])) {
-            $item[$request->image] = null;
+        if(Helper::deleteImage($item->$image)) {
+            $item->$image = null;
             $item->save();
         } else {
             session()->flash('error', 'Došlo je do greške.');
