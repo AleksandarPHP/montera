@@ -24,7 +24,7 @@
           array('cms/apartments', 'Stanovi', 'building'),
           array('cms/galleries', 'Albumi', 'image'),
           array('cms/settings/1/edit', 'Podesavanja', 'cog'),
-          array('cms/users', 'Tekstovi', 'text-width'),
+          array('cms/texts', 'Tekstovi', 'text-width'),
           array('cms/users', 'Korisnici', 'users'),
 
         );
