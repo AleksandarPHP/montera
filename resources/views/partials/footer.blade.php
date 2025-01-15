@@ -144,3 +144,5 @@
     crossorigin="anonymous"
 ></script>
 <script src="{{ asset('assets/script/script.js') }}"></script>
+</body>
+</html>

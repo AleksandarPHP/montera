@@ -1,5 +1,5 @@
-@include('partials.header')
-
+@extends('layouts.app')
+@section('content')
 <main>
     <section class="content-page-banner">
         <div class="bg" style="background-image: url('{{asset("assets/images/placeholder.png")}}');"></div>
@@ -206,4 +206,4 @@
     </section>
 </main>
 
-@include('partials.footer')
+@endsection

@@ -56,7 +56,7 @@ class GalleryController extends Controller
         foreach($rows as $row) {
             $data[] = [
                 '0' => $row->id,
-                '1' => $row->title,
+                '1' => '<a href="'.url('cms/albums/'.$row->id.'/edit').'" class="action-edit">'.$row->title.'</a>',
                 '2' => '<a href="'.url('cms/galleries/'.$row->id.'/edit').'" class="action-edit"><i class="fa fa-edit"></i></a>',
             ];
         }

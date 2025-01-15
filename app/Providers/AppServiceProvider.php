@@ -24,6 +24,13 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        $settings = Cache::rememberForever('settings', function() {
+            try {
+                return Settings::find(1) ?? new Settings;
+            } catch (Exception $e) {
+                return new Settings;
+            }
+        });
+        View::share('settings', $settings);
     }
 }

@@ -11,11 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('albums', function (Blueprint $table) {
-            $table->id();
-            $table->string('title');
-            $table->string('description')->nullable();
-            $table->timestamps();
+        Schema::table('albums', function (Blueprint $table) {
+            $table->integer('type');
+            $table->boolean('is_active')->default(true);
         });
     }
 
@@ -24,6 +22,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('albums');
+        Schema::table('albums', function (Blueprint $table) {
+            //
+        });
     }
 };
