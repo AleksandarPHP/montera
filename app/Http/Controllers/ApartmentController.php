@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Apartment;
+use App\Models\Floor;
 use Cache;
 use App\Helpers\Helper;
 
@@ -73,7 +74,7 @@ class ApartmentController extends Controller
 
     public function create()
     {
-        return view('cms.apartments.form', ['item' => new Apartment(), 'editing' => false]);
+        return view('cms.apartments.form', ['item' => new Apartment(), 'editing' => false, 'floors' => Floor::all()]);
     }
 
     public function store(Request $request)
@@ -127,7 +128,7 @@ class ApartmentController extends Controller
 
     public function edit($id)
     {
-        return view('cms.apartments.form', ['item' => Apartment::findOrFail($id), 'editing' => true]);
+        return view('cms.apartments.form', ['item' => Apartment::findOrFail($id), 'editing' => true, 'floors' => Floor::all()]);
     }
 
     public function update(Request $request, $id)

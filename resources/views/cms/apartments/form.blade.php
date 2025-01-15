@@ -34,7 +34,9 @@
                         <label for="floor">Sprat </label>
                         <select name="floor" class="form-control" id="floor" {!! $errors->has('floor') ? 'style="border-color:red;"' : '' !!}>
                             <option value="">Izaberi</option>  
-                            <option value="1">1</option>   
+                            @foreach ($floors as $floor)
+                            <option value="{{$floor->id}}">{{$floor->title}}</option>  
+                            @endforeach
                         </select>
                     </div>
                 </div>   

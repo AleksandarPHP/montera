@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Translatable\HasTranslations;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Apartment extends Model
 {
@@ -13,7 +14,7 @@ class Apartment extends Model
     protected $fillable = [
         'title',
         'apt_number',
-        'floor',
+        'floor_id',
         'pdf',
         'surface',
         'rooms',
@@ -21,5 +22,10 @@ class Apartment extends Model
         'image',
         'image2',
     ];
+
+    public function floor(): BelongsTo
+    {
+        return $this->belongsTo(Apartment::class);
+    }
 
 }

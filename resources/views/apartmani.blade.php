@@ -191,6 +191,7 @@
     const floors = [
         {
             name: "PRIZEMLJE",
+            id: "1",
             points: "535,940 1410,930 1610,950 1610,1045 1410,1045 535,1040",
             width: 1075,
             height: 125,
@@ -199,6 +200,7 @@
         },
         {
             name: "I SPRAT",
+            id: "2",
             points: "535,840 1410,800 1645,850 1645,935 1410,915 535,935",
             width: 1075,
             height: 105,
@@ -207,6 +209,7 @@
         },
         {
             name: "II SPRAT",
+            id: "3",
             points: "500,750 1440,700 1645,770 1645,840 1440,795 500,835",
             width: 1075,
             height: 105,
@@ -215,6 +218,7 @@
         },
         {
             name: "III SPRAT",
+            id: "4",
             points: "500,660 1440,590 1645,680 1645,760 1440,685 500,745",
             width: 1075,
             height: 105,
@@ -223,6 +227,7 @@
         },
         {
             name: "IV SPRAT",
+            id: "5",
             points: "500,570 1440,480 1645,600 1645,675 1440,585 500,650",
             width: 1075,
             height: 105,
@@ -231,6 +236,7 @@
         },
         {
             name: "V SPRAT",
+            id: "6",
             points: "500,475 1425,350 1645,515 1645,580 1425,470 500,560",
             width: 1075,
             height: 105,
@@ -239,6 +245,7 @@
         },
         {
             name: "VI SPRAT",
+            id: "7",
             points: "502,375 1435,260 1595,355 1595,430 1435,350 500,450",
             width: 1075,
             height: 105,
@@ -345,8 +352,9 @@
             .on("mouseout", () => {
                 polygon.attr({ fill: "none" });
             })
-            .on("click", () => alert(`Kliknuli ste na: ${floor.name}`));
-    });
+            .on("click", () => {
+            window.location.href = `sprat/${floor.id}`;
+        });    });
 
     texts.forEach((text) => {
         draw.text(text.title).attr(text);

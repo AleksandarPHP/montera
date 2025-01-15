@@ -9,9 +9,7 @@
                 @endphp
                 @foreach ($items as $floor)
                     <div>
-                        <a href="{{url('sprat/'.$floor->id)}}" @if ($floor->id == $floors->id)
-                            class="active"
-                        @endif>{{$floor->title}}</a>
+                        <a href="#">{{$floor->title}}</a>
                     </div>
                 @endforeach
             </div>
@@ -38,15 +36,35 @@
                         </thead>
                         <tbody>
                             {{-- @dd($floors->apartment) --}}
-                            @isset($floors->apartment)
-                                @foreach ($floors->apartment as $apartment)
-                                    <tr>
-                                        <td><a href="">{{$apartment->title}}</a></td>
-                                        <td>{{$apartment->apt_number}}</td>
-                                        <td>{{$apartment->surface}}</td>
-                                    </tr>
-                                @endforeach 
-                            @endisset
+                            {{-- <tr>
+                                <td>A0-1</td>
+                                <td>2</td>
+                                <td>55</td>
+                            </tr>
+                            <tr>
+                                <td>A0-2</td>
+                                <td>2</td>
+                                <td>68</td>
+                            </tr>
+                            <tr>
+                                <td>A0-3</td>
+                                <td>2</td>
+                                <td>72</td>
+                            </tr>
+                            <tr class="studio-header">
+                                <td colspan="2">STUDIO</td>
+                                <td>m2</td>
+                            </tr>
+                            <tr>
+                                <td>ST1</td>
+                                <td>-</td>
+                                <td>26</td>
+                            </tr>
+                            <tr>
+                                <td>ST2</td>
+                                <td>-</td>
+                                <td>28</td>
+                            </tr> --}}
                         </tbody>
                     </table>
                 </div>

@@ -21,6 +21,7 @@
         </div>
         @php
         $moduli = array(
+          array('cms/floors', 'Spratovi', 'building'),
           array('cms/apartments', 'Stanovi', 'building'),
           array('cms/galleries', 'Albumi', 'image'),
           array('cms/settings/1/edit', 'Podesavanja', 'cog'),

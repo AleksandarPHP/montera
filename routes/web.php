@@ -10,6 +10,8 @@ $routes = [
 
 ];
 Route::get('galerija', [App\Http\Controllers\HomeController::class, 'gallery']);
+Route::get('sprat/{id}', [App\Http\Controllers\HomeController::class, 'floors']);
+Route::get('apartmani/{id}', [App\Http\Controllers\HomeController::class, 'apartmani']);
 
 foreach ($routes as $uri => $view) {
     Route::get($uri, fn() => view($view));
@@ -58,6 +60,9 @@ Route::group(['prefix' => 'cms', 'middleware' => ['auth', 'active']], function()
 
     Route::resource('apartments', 'App\Http\Controllers\ApartmentController')->except('show');
     Route::post('apartments/ajax', 'App\Http\Controllers\ApartmentController@ajax');    
+
+    Route::resource('floors', 'App\Http\Controllers\FloorController')->except('show');
+    Route::post('floors/ajax', 'App\Http\Controllers\FloorController@ajax');  
 
     Route::resource('messages', 'App\Http\Controllers\MessageController')->except('show');
     Route::post('messages/ajax', 'App\Http\Controllers\MessageController@ajax');  
