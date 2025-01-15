@@ -52,6 +52,7 @@ $(".location-slider").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
 });
+
 $(".apartments-slider").slick({
     dots: false,
     arrows: false,
@@ -77,6 +78,15 @@ $(".apartments-slider").slick({
             },
         },
     ],
+});
+
+$(".navigator-slider").slick({
+    dots: false,
+    arrows: true,
+    autoplay: false,
+    infinite: false,
+    slidesToShow: 8,
+    slidesToScroll: 1,
 });
 
 Fancybox.bind("[data-fancybox]", {});

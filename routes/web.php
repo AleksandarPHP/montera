@@ -6,7 +6,8 @@ $routes = [
     '/' => 'index',
     'sadrzaj' => 'sadrzaj',
     'apartmani' => 'apartmani',
-    
+    'tehnicki-prikaz' => 'tehnicki-prikaz',
+
 ];
 Route::get('galerija', [App\Http\Controllers\HomeController::class, 'gallery']);
 
