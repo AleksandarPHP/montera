@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Album;
+use App\Models\Apartment;
 use App\Models\Floor;
 use Illuminate\Http\Request;
 use App\Models\Gallery;
@@ -19,5 +20,26 @@ class HomeController extends Controller
         $floors = Floor::findOrFail($id);
 
         return view('tehnicki-prikaz', ['floors' => $floors]);
+    }
+
+    public function apartmant(Request $request, $id){
+        $apartmant = Apartment::findOrFail($id);
+
+        return view('detail', ['apartmant' => $apartmant]);
+    }
+
+    public function contact(Request $request)
+    {
+        $request->validate([
+            'firstName' => ['required', 'string', 'max:191'],
+            'phone' => ['required', 'string'],
+            'email' => ['required', 'string', 'max:191'],
+            'lastName' => ['required', 'string'],
+            'question' => ['required', 'string'],
+        ]);   
+
+
+
+        return redirect()->back()->with(['status' => 'Vasa poruka je uspijesno poslana!']);
     }
 }

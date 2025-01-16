@@ -25,8 +25,8 @@
         </div>
 
         <div class="button-wrapper">
-            <a href="{{ url('galerija') }}" class="button button_primary">
-                Galerija
+            <a href="{{ Helper::url('galerija') }}" class="button button_primary">
+                {{__('galerija')}}
             </a>
         </div>
     </div>
@@ -78,7 +78,7 @@
 </div>
 
 <div class="button-wrapper">
-    <a href="#" class="button button_secondary">Kompletna ponuda</a>
+    <a href="{{ Helper::url('sprat/1') }}" class="button button_secondary">Kompletna ponuda</a>
 </div>
 </section>
 

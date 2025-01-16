@@ -40,11 +40,13 @@
                             {{-- @dd($floors->apartment) --}}
                             @isset($floors->apartment)
                                 @foreach ($floors->apartment as $apartment)
+                                <a href="d">
                                     <tr>
-                                        <td><a href="">{{$apartment->title}}</a></td>
+                                        <td>{{$apartment->title}}</td>
                                         <td>{{$apartment->apt_number}}</td>
                                         <td>{{$apartment->surface}}</td>
                                     </tr>
+                                </a>
                                 @endforeach 
                             @endisset
                         </tbody>
@@ -72,8 +74,8 @@
             </div>
 
             <div class="button-wrapper">
-                <a href="{{ url('galerija') }}" class="button button_primary">
-                    Galerija
+                <a href="{{ Helper::url('galerija') }}" class="button button_primary">
+                    {{__('galerija')}}
                 </a>
             </div>
         </div>

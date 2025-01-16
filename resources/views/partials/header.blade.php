@@ -56,6 +56,7 @@
             href="https://code.jquery.com/ui/1.14.0/themes/base/jquery-ui.css"
         />
         <link rel="shortcut icon" href="{{asset('favicon.png')}}">
+        <link rel="stylesheet" href="{{asset('assets/style/jquery.toast.css')}}">
         <link rel="stylesheet" type="text/css" href="{{asset('assets/slick-1.8.1/slick/slick.css')}}"/>
         <link rel="stylesheet" type="text/css" href="{{asset('assets/slick-1.8.1/slick/slick-theme.css')}}"/>
         <script src="https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js"></script>
@@ -79,6 +80,7 @@
             href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
         />
         <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <script src="{{asset('assets/script/jquery.toast.js')}}"></script>
         <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
         <title>Montera</title>
     </head>
@@ -94,6 +96,7 @@
                         />
                     </a>
                     <ul class="navbar-nav languages">
+                        @if(app()->getLocale() == 'sr')
                         <li class="nav-item dropdown">
                             <a
                                 class="nav-link dropdown-toggle"
@@ -106,10 +109,28 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a class="dropdown-item" href="#">ENG</a>
+                                    <a class="dropdown-item" href="{{ url(Str::start(request()->path(), 'en/')) }}">ENG</a>
                                 </li>
                             </ul>
                         </li>
+                        @else
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                ENG
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="{{ url(Str::replaceFirst('en', '', request()->path())) }}">SRB</a>
+                                </li>
+                            </ul>
+                        </li>
+                        @endif
                     </ul>
                     <button
                         class="navbar-toggler"
@@ -138,37 +159,37 @@
                         <div class="offcanvas-body">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#" role="button">
+                                    <a class="nav-link" href="{{ Helper::url('o-nama') }}" role="button">
                                         O nama
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#" role="button">
+                                    <a class="nav-link" href="{{ Helper::url('lokacija') }}" role="button">
                                         Lokacija
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#" role="button">
+                                    <a class="nav-link" href="{{ Helper::url('sadrzaj') }}" role="button">
                                         SADRŽAJ
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#" role="button">
+                                    <a class="nav-link" href="{{ Helper::url('/') }}" role="button">
                                         Logo
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#" role="button">
+                                    <a class="nav-link" href="{{ Helper::url('apartmani') }}" role="button">
                                         APARTMANI
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#" role="button">
+                                    <a class="nav-link" href="" role="button" data-bs-toggle="modal" data-bs-target="#contactModal">
                                         KUPOVINA
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#" role="button">
+                                    <a class="nav-link" href="" role="button" data-bs-toggle="modal" data-bs-target="#contactModal"> 
                                         NAJAM APARTMANA
                                     </a>
                                 </li>

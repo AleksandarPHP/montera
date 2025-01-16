@@ -118,7 +118,75 @@
         </div>
     </div>
 </footer>
+<style>
+    .modal-content {
+        border-radius: 0; /* Isključuje zaobljene ivice */
+    }
 
+    .my-form-control {
+    display: block;
+    width: 100%;
+    padding: 1.375rem .75rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--bs-body-color);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: var(--bs-body-bg);
+    background-clip: padding-box;
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    }
+</style>
+<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl"> <!-- Prošireni modal -->
+        <div class="modal-content">
+            <div class="modal-header">
+                {{-- <h5 class="modal-title fs-4" id="contactModalLabel">Za sva pitanja i nedoumice</h5> --}}
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="{{ url('/kontakt') }}" method="POST">
+                    @csrf
+                    <h2 class=" text-center">{{__('kontakt')}}</h2>
+                    <br>
+                    <br>
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-6">
+                            <label for="firstName" class="form-label fs-5">Ime <span class="text-danger">*</span></label>
+                            <input type="text" class="my-form-control" name="firstName" id="firstName" placeholder="Unesite ime" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="lastName" class="form-label fs-5">Prezime <span class="text-danger">*</span></label>
+                            <input type="text" class="my-form-control" name="lastName" id="lastName" placeholder="Unesite prezime" required>
+                        </div>
+                    </div>
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-6">
+                            <label for="phone" class="form-label fs-5">Broj telefona <span class="text-danger">*</span></label>
+                            <input type="tel" class="my-form-control" name="phone" id="phone" placeholder="Unesite broj telefona" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="email" class="form-label fs-5">Mail <span class="text-danger">*</span></label>
+                            <input type="email" class="my-form-control" name="email" id="email" placeholder="Unesite email" required>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="question" class="form-label fs-5">Postavite pitanje <span class="text-danger">*</span></label>
+                        <textarea class="my-form-control" id="question" name="question" rows="4" placeholder="Unesite pitanje" required></textarea>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="text-center">
+                        <button type="submit" class="button button_primary">Pošaljite</button> <!-- Veće dugme -->
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 <link
@@ -143,6 +211,21 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"
 ></script>
+<script>
+    $(document).ready(function(e) {
+      @if(session('status'))
+      $.toast({
+        heading: 'Uspijeh.',
+        text: {!! json_encode(session('status')) !!},
+        hideAfter: 6000,
+        position: 'top-right',
+        icon: 'success',
+        loader: true,
+        loaderBg: '#2492D1'
+      });
+      @endif
+    })
+</script>
 <script src="{{ asset('assets/script/script.js') }}"></script>
 </body>
 </html>

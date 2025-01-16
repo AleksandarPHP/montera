@@ -109,7 +109,7 @@ class ApartmentController extends Controller
         Apartment::create([
             'title' => $request->title,
             'apt_number' => $request->apt_number,
-            'floor' => $request->floor,
+            'floor_id' => $request->floor,
             'pdf' => $pdf,
             'surface' => $request->surface,
             'rooms' => $request->rooms,
@@ -163,7 +163,7 @@ class ApartmentController extends Controller
 
         $item ->title = $request->title;
         $item ->apt_number = $request->apt_number;
-        $item ->floor = $request->floor;
+        $item ->floor_id = $request->floor;
         $item ->pdf = $pdf;
         $item ->surface = $request->surface;
         $item ->rooms = $request->rooms;
