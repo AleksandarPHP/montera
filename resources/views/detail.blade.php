@@ -48,13 +48,13 @@
             </div>
             <div class="button-wrapper">
                 <a href="{{ Helper::url('galerija') }}" class="button button_secondary" style="margin-right: 1rem">
-                    {{__('galerija')}}
+                    {{__('Gallery')}}
                 </a>
                 <a href="" class="button button_primary" data-bs-toggle="modal" data-bs-target="#contactModal">
                     Kontakt
                 </a>
                 <a href="{{ Helper::url('galerija') }}" class="button button_secondary" style="margin-left: 1rem">
-                    {{__('galerija')}}
+                    {{__('Gallery')}}
                 </a>
             </div>
         </div>

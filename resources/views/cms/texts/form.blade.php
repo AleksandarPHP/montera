@@ -59,14 +59,14 @@
                 <div class="col-md-12">
                     <div class="form-group">
                         <label for="subtitle{{$i}}">Podnaslov {{$i}}</label>
-                        <input name="subtitle{{$i}}" type="text" class="form-control" id="subtitle{{$i}}" placeholder="Podnaslov {{$i}}" value="{{ old('subtitle', $item->getTranslation('subtitle', $lang, false)) }}" {!! $errors->has('subtitle') ? 'style="border-color:red;"' : '' !!}>
+                        <input name="subtitle{{$i}}" type="text" class="form-control" id="subtitle{{$i}}" placeholder="Podnaslov {{$i}}" value="{{ old('subtitle'.$i, $item->getTranslation('subtitle'.$i, $lang, false)) }}" {!! $errors->has('subtitle') ? 'style="border-color:red;"' : '' !!}>
                     </div>
                 </div>
                 <div class="col-md-12"><hr></div>   
                 <div class="col-md-12">
                     <div class="form-group" {!! $errors->has('text') ? 'style="border:1px solid red;"' : '' !!}>
                         <label for="description{{$i}}">Tekst {{$i}}</label>
-                        <textarea name="description{{$i}}" id="description{{$i}}" class="form-control">{{ old('description', $item->getTranslation('description', $lang, false)) }}</textarea>
+                        <textarea name="description{{$i}}" id="description{{$i}}" class="form-control">{{ old('description'.$i, $item->getTranslation('description'.$i, $lang, false)) }}</textarea>
                     </div>
                 </div>
                 <div class="col-md-12"><hr></div>
@@ -165,10 +165,10 @@
         readURL(this, $(this).parent().find('img'));
     });
 
-    tinymce.init({
-        selector : "textarea",
-        plugins : ["advlist autolink lists link charmap print preview anchor", "searchreplace visualblocks code fullscreen", "insertdatetime media table paste "],
-        toolbar : "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link code",
-    });
+    // tinymce.init({
+    //     selector : "textarea",
+    //     plugins : ["advlist autolink lists link charmap print preview anchor", "searchreplace visualblocks code fullscreen", "insertdatetime media table paste "],
+    //     toolbar : "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link code",
+    // });
 </script>
 @endsection

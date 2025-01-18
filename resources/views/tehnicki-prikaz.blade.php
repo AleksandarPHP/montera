@@ -75,7 +75,7 @@
 
             <div class="button-wrapper">
                 <a href="{{ Helper::url('galerija') }}" class="button button_primary">
-                    {{__('galerija')}}
+                    {{__('Gallery')}}
                 </a>
             </div>
         </div>

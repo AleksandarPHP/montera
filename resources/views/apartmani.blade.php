@@ -6,27 +6,26 @@
 <section class="gallery-navigator">
     <div class="container">
         <div class="row">
+            @php $text =  Helper::text(1) @endphp
             <div class="col-lg-6">
                 <p class="txt">
-                    Monterra je nezavisan, multifunkcionalan kompleks koji
-                    budućim vlasnicima nudi 81 apartman, opremljen
-                    najkvalitetnijim i prirodnim materijalima, u
-                    neoplaninskom stilu
+                    @isset($text->description)
+                        {{$text->description}}
+                    @endisset
                 </p>
             </div>
             <div class="col-lg-6">
                 <p class="txt">
-                    Svaki apartman ima svoju terasu, a u zavisnosti od
-                    pozicije određen broj ima i dvije terase. U sklopu
-                    cijene apartmana dobijate kontrolisan prostor - ski boks
-                    - za skijašku opremu u skijašnici
+                    @isset($text->description2)
+                        {{$text->description2}}
+                    @endisset
                 </p>
             </div>
         </div>
 
         <div class="button-wrapper">
             <a href="{{ Helper::url('galerija') }}" class="button button_primary">
-                {{__('galerija')}}
+                {{__('Gallery')}}
             </a>
         </div>
     </div>
@@ -186,6 +185,8 @@
 
     const baseWidth = 1920;
     const baseHeight = 1080;
+
+    const mainTitle = '{{ __('FLOOR AND\nPOSITION\nAPARTMENT\nOFFERED') }}';
     draw.viewbox(0, 0, baseWidth, baseHeight);
 
     const floors = [
@@ -326,7 +327,7 @@
             "font-weight": "500",
         },
         {
-            title: "SPRATNOST I\nPOZICIJE\nAPARTMANA\nU PONUDI",
+            title: mainTitle,
             x: 225,
             y: 435,
             fill: "#000",

@@ -160,17 +160,17 @@
                             <ul class="navbar-nav">
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ Helper::url('o-nama') }}" role="button">
-                                        O nama
+                                        {{__('About us')}}
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ Helper::url('lokacija') }}" role="button">
-                                        Lokacija
+                                        {{ __('Location') }}
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ Helper::url('sadrzaj') }}" role="button">
-                                        SADRŽAJ
+                                        {{__('Content')}}
                                     </a>
                                 </li>
                                 <li class="nav-item">
@@ -180,17 +180,17 @@
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ Helper::url('apartmani') }}" role="button">
-                                        APARTMANI
+                                        {{__('Apartments')}}
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="" role="button" data-bs-toggle="modal" data-bs-target="#contactModal">
-                                        KUPOVINA
+                                        {{__('Shopping')}}
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="" role="button" data-bs-toggle="modal" data-bs-target="#contactModal"> 
-                                        NAJAM APARTMANA
+                                        {{__('Apartment rent')}}
                                     </a>
                                 </li>
                             </ul>

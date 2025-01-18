@@ -35,7 +35,7 @@
                         <select name="floor" class="form-control" id="floor" {!! $errors->has('floor') ? 'style="border-color:red;"' : '' !!}>
                             <option value="">Izaberi</option>  
                             @foreach ($floors as $floor)
-                            <option value="{{$floor->id}}">{{$floor->title}}</option>  
+                            <option value="{{$floor->id}}" @selected(old('floor', $item->id) == $floor->id )>{{$floor->title}}</option>  
                             @endforeach
                         </select>
                     </div>
@@ -51,7 +51,9 @@
                         <label for="status">Status </label>
                         <select name="status" class="form-control" id="status" {!! $errors->has('status') ? 'style="border-color:red;"' : '' !!}>
                             <option value="">Izaberi</option>   
-                            <option value="1">2</option>   
+                            <option value="1" @selected(old('status', $item->status) == 1 )> Izdavanje</option>   
+                            <option value="2" @selected(old('status', $item->status) == 2 )> Prodaja</option> 
+                            <option value="3" @selected(old('status', $item->status) == 3 )> Narucen</option>   
                         </select>
                     </div>
                 </div>   
