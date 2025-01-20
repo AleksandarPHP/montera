@@ -82,11 +82,12 @@
         <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
         <script src="{{asset('assets/script/jquery.toast.js')}}"></script>
         <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
+        <script src="{{ asset('assets/script/header.js') }}"></script>
         <title>Montera</title>
     </head>
     <body>
         <header>
-            <nav class="navbar fixed-top navbar-expand-lg">
+            <nav class="navbar fixed-top navbar-expand-lg {{ $isTransparent ?? false ? 'transparent' : '' }}">
                 <div class="container-fluid">
                     <a class="navbar-brand d-lg-none" href="{{ url('/') }}">
                         <img

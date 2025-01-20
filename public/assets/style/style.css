@@ -80,10 +80,32 @@ body {
     color: #fff;
 }
 
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar.transparent {
+    background-color: transparent;
+    box-shadow: none;
+}
+
 header .navbar {
     padding: 4rem;
     background-color: #fff;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+header .transparent .navbar-nav.languages a.nav-link {
+    border: 1px solid #fff;
+}
+
+header .transparent .navbar-nav.languages a.nav-link {
+    color: #fff;
 }
 
 .navbar .offcanvas .offcanvas-body {
@@ -115,6 +137,10 @@ header .navbar .offcanvas .offcanvas-body ul li a {
     text-transform: uppercase;
 }
 
+header .transparent .offcanvas .offcanvas-body ul li a {
+    color: #fff;
+}
+
 header .header-contact {
     display: flex;
     align-items: center;
@@ -130,6 +156,10 @@ header .header-contact a {
     font-size: 1.4rem;
     text-decoration: none;
     display: block;
+}
+
+header .transparent .header-contact a {
+    color: #fff;
 }
 
 .content-page-banner {
@@ -148,6 +178,28 @@ header .header-contact a {
     text-transform: uppercase;
     color: #fff;
     text-align: center;
+}
+
+.concept-termag {
+    padding: 60px 0;
+}
+
+.concept-termag .title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.concept-termag .subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.concept-termag .image-wrapper img {
+    border-radius: 8px;
+    max-width: 100%;
+    object-fit: cover;
 }
 
 .apartments {
@@ -560,4 +612,10 @@ footer .lastline ul li a {
 
 .apartment-table tbody tr:hover {
     background-color: #f1f1f1;
+}
+
+@media (max-width: 768px) {
+    .concept-termag .row {
+        flex-direction: column-reverse;
+    }
 }
