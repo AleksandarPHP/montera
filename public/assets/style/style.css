@@ -180,26 +180,93 @@ header .transparent .header-contact a {
     text-align: center;
 }
 
+.hero .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-70%, -50%);
+    text-align: center;
+}
+
 .concept-termag {
     padding: 60px 0;
 }
 
 .concept-termag .title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 20px;
+    text-align: left;
 }
 
 .concept-termag .subtitle {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin-bottom: 20px;
     color: #555;
+    font-weight: 700;
+}
+
+.concept-termag p {
+    font-size: 1.6rem;
+}
+
+.concept-termag .emphasis {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.concept-termag .image-wrapper {
+    position: relative;
 }
 
 .concept-termag .image-wrapper img {
-    border-radius: 8px;
     max-width: 100%;
     object-fit: cover;
+}
+
+.large-image {
+    width: 100%;
+    height: auto;
+}
+
+.small-image {
+    position: absolute;
+    bottom: -110px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+}
+
+.rent-apartment {
+    padding: 100px 0;
+}
+
+.rent-apartment p {
+    font-size: 1.6rem;
+}
+
+.rent-apartment .section-header {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.apartment-section h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.apartment-section img {
+    width: 100%;
+    height: auto;
+}
+
+.ac-padd {
+    padding-top: 30px;
+}
+
+.apartment-column h3 {
+    background-color: #394f70;
+    color: #fff;
+    padding: 15px;
+    font-size: 2rem;
 }
 
 .apartments {
@@ -248,6 +315,18 @@ header .transparent .header-contact a {
 .slider-control .next-arrow {
     background-color: #e6d1aa;
     color: #fff;
+}
+
+.down-arrow {
+    background-color: #e55f5f;
+    color: #fff;
+    padding: 4px 7px;
+    border: none;
+    margin-left: -1px;
+}
+
+.down-arrow i {
+    font-size: 2rem;
 }
 
 .apartments .button-wrapper {
@@ -617,5 +696,10 @@ footer .lastline ul li a {
 @media (max-width: 768px) {
     .concept-termag .row {
         flex-direction: column-reverse;
+    }
+
+    .small-image {
+        bottom: -30px;
+        width: 80%;
     }
 }
