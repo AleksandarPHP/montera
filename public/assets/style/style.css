@@ -188,6 +188,12 @@ header .transparent .header-contact a {
     text-align: center;
 }
 
+.hero-video {
+    width: 100%;
+    min-height: 100dvh;
+    object-fit: cover;
+}
+
 .concept-termag {
     padding: 60px 0;
 }
@@ -267,6 +273,43 @@ header .transparent .header-contact a {
     color: #fff;
     padding: 15px;
     font-size: 2rem;
+}
+
+.ac-bord {
+    border-right: 3px solid #ccc;
+}
+
+.eco-bg-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.eco-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.eco-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.eco-title {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 .apartments {
@@ -693,13 +736,38 @@ footer .lastline ul li a {
     background-color: #f1f1f1;
 }
 
+@media (max-width: 1000px) {
+    .concept-termag-images {
+        padding-bottom: 135px;
+    }
+
+    .ac-bord {
+        border-right: none;
+    }
+}
+
 @media (max-width: 768px) {
+    .hero .container {
+        transform: translate(-50%, -50%);
+    }
+
     .concept-termag .row {
         flex-direction: column-reverse;
     }
 
+    .concept-termag-images {
+        padding-bottom: 0;
+    }
+
     .small-image {
-        bottom: -30px;
+        bottom: -100px;
         width: 80%;
+    }
+
+    .eco-bg-container {
+        height: 300px;
+    }
+    .eco-title {
+        font-size: 1.8rem;
     }
 }

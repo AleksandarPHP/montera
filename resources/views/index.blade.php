@@ -2,7 +2,7 @@
 
 <main>
     <section class="hero" style="min-height: 100dvh">
-        <video autoplay loop muted playsinline class="hero-video" style="width: 100%; height: 100%; object-fit: cover;">
+        <video autoplay loop muted playsinline class="hero-video">
             <source src="{{ asset('assets/videos/hero-video.mp4') }}" type="video/mp4">
             Your browser does not support the video tag.
         </video>
@@ -13,7 +13,7 @@
     <section class="concept-termag">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-6 concept-termag-images">
                     <div class="image-wrapper">
                         <img src="{{ asset('assets/images/concept-termag-1.png') }}" alt="Ski Resort" class="large-image">
                         <img src="{{ asset('assets/images/concept-termag-2.png') }}" alt="Building View" class="small-image">
@@ -43,7 +43,7 @@
 
             <div class="apartment-section">
                 <div class="row">
-                    <div class="col-lg-6 apartment-column" style="border-right: 3px solid #ccc;">
+                    <div class="col-lg-6 apartment-column ac-bord">
                         <h3>Basic Apartman</h3>
                         <p>
                             vodni text Uvodni textUvodni textUvodni textUvodni textUvodni textUvodni textUvodni text
@@ -73,7 +73,7 @@
             </div>
             <div class="apartment-section">
                 <div class="row">
-                    <div class="col-lg-6 apartment-column ac-padd" style="border-right: 3px solid #ccc;">
+                    <div class="col-lg-6 apartment-column ac-padd ac-bord">
                         <p>
                             Uvodni Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
                         </p>
@@ -114,7 +114,7 @@
             </div>
             <div class="apartment-section" style="text-align: center;">
                 <div class="row">
-                    <div class="col-lg-6 apartment-column ac-padd" style="border-right: 3px solid #ccc;">
+                    <div class="col-lg-6 apartment-column ac-padd ac-bord">
                 </div>
             </div>
             <button class="down-arrow"  aria-label="Next" type="button">
@@ -206,6 +206,17 @@
             </div>
         </div>
     </section>
+
+    <section class="eco-friendly">
+        <div class="eco-bg-container">
+            <img src="{{ asset('assets/images/logs.png') }}" alt="Eco Friendly Background" class="eco-bg">
+            <div class="eco-overlay">
+                <h2 class="eco-title">Eco Friendly</h2>
+            </div>
+        </div>
+    </section>
+
+
 </main>
 
 @include('partials/footer')
