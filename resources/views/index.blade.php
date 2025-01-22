@@ -207,16 +207,29 @@
         </div>
     </section>
 
-    <section class="eco-friendly">
-        <div class="eco-bg-container">
-            <img src="{{ asset('assets/images/logs.png') }}" alt="Eco Friendly Background" class="eco-bg">
-            <div class="eco-overlay">
-                <h2 class="eco-title">Eco Friendly</h2>
+    <section class="eco-friendly-section" style="background-image: url('{{ asset('assets/images/logs.png') }}'); ">
+                            <!-- <h2>ECO FRIENDLY</h2> -->
+        <div class="ec-container">
+            <div class="content">
+                <div class="col-lg-6 column-left">
+                    <p>
+                    Sve poslovne jedinice kompanije Termag za zagrijavanje koriste bio masu, kao
+                    energent koji emituje najmanje štetnih gasova. Korištenje pametnih i održivih
+                    izolacijskih materijala, prirodnih materijala te led rasvjete u mnogome doprinosimo
+                    uštedi električne energije. Prilikom gradnje kompleksa Monterra koristimo proizvode
+                    od kompanjia kao što je Rehau, kompanija koja je član "50 Sustainbility & climate
+                    leaders" koja do 2025. planira da procenat recikliranih materijala u proizvodnji
+                    poveća za 15%, čime će emisiju CO2 smanjiti za 30%.
+                    </p>
+                </div>
+                <div class="col-lg-6 column-contrast">
+                    <p class="text-right">
+                    OČUVANJE ŽIVOTNE SREDINE JE GLAVNI ZADATAK ČOVJEČANSTVA I JEDAN OD STRATEŠKIH CILJEVA KOMPANIJE TERMAG. NE SAMO KROZ PODIZANJE SVIJESTI VEĆ I KONKRETNIH KORAKA IZ DANA U DAN KRIČIMO SVOJ PUT ZA POSTIZANJE OVOG CILJA.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
-
-
 </main>
 
 @include('partials/footer')
