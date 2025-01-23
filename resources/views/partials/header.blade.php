@@ -89,11 +89,15 @@
             <nav class="navbar fixed-top navbar-expand-lg">
                 <div class="container-fluid">
                     <a class="navbar-brand d-lg-none" href="{{ url('/') }}">
+                        @if ($settings->logoH)
                         <img
-                            src="{{ asset('assets/images/logo.svg') }}"
+                            src="{{ asset('storage/'.$settings->logoH) }}"
                             alt="logo"
                             class="img-fluid"
                         />
+                        @else
+                            LOGO
+                        @endif
                     </a>
                     <ul class="navbar-nav languages">
                         @if(app()->getLocale() == 'sr')
@@ -175,7 +179,15 @@
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ Helper::url('/') }}" role="button">
-                                        Logo
+                                        @if ($settings->logoH)
+                                        <img
+                                            src="{{ asset('storage/'.$settings->logoH) }}"
+                                            alt="logo"
+                                            class="img-fluid"
+                                        />
+                                        @else
+                                        LOGO
+                                        @endif
                                     </a>
                                 </li>
                                 <li class="nav-item">

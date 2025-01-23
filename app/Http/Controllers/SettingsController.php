@@ -43,8 +43,8 @@ class SettingsController extends Controller
             'google' => ['nullable', 'string', 'max:191'],
             'instagram' => ['nullable', 'string', 'max:191'],
 
-            'logoH' => ['nullable', 'mimes:svg', 'image', 'max:5000'],
-            'logoF' => ['nullable', 'mimes:svg', 'image', 'max:5000'],
+            'logoH' => ['nullable',  'image', 'max:5000'],
+            'logoF' => ['nullable',  'image', 'max:5000'],
             'favicon' => ['nullable', 'mimes:jpeg,png,svg', 'image', 'max:5000','dimensions:min_width=50,min_height=50'],
             'language' => ['required', 'string', 'in:'.$allLangs],
         ]);
@@ -67,7 +67,6 @@ class SettingsController extends Controller
             $item->worktime = $request->worktime;
             $item->address = $request->address;
             $item->facebook = $request->facebook;
-            $item->google = $request->google;
             $item->instagram = $request->instagram;
 
             $item->logoH = $logoH;
