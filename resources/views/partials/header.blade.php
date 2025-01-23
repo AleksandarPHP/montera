@@ -91,7 +91,8 @@
                 <div class="container-fluid">
                     <a class="navbar-brand d-lg-none" href="{{ url('/') }}">
                         <img
-                            src="{{ asset('assets/images/logo.svg') }}"
+                            id="media-logo"
+                            src="{{ asset('assets/images/golden-logo.webp') }}"
                             alt="logo"
                             class="img-fluid"
                         />
@@ -176,7 +177,12 @@
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ Helper::url('/') }}" role="button">
-                                        Logo
+                                        <img
+                                            id="regular-logo"
+                                            src="{{ asset('assets/images/golden-logo.webp') }}"
+                                            alt="logo"
+                                            class="img-fluid"
+                                        />
                                     </a>
                                 </li>
                                 <li class="nav-item">

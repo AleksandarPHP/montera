@@ -120,6 +120,10 @@ header .navbar-nav.languages {
     font-size: 1.5rem;
 }
 
+header .img-fluid {
+    width: 130px;
+}
+
 header .navbar-nav.languages a.nav-link {
     color: #000;
 }
