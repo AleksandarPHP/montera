@@ -10,10 +10,10 @@ document.addEventListener("DOMContentLoaded", () => {
             if (window.scrollY > 250) {
                 navbar.classList.remove("transparent");
                 if (mediaLogo) {
-                    mediaLogo.src = "assets/images/golden-logo.webp";
+                    mediaLogo.src = "assets/images/black-logo.webp";
                 }
                 if (regularLogo) {
-                    regularLogo.src = "assets/images/golden-logo.webp";
+                    regularLogo.src = "assets/images/black-logo.webp";
                 }
             } else {
                 navbar.classList.add("transparent");

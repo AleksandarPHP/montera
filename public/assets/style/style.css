@@ -95,9 +95,14 @@ body {
 }
 
 header .navbar {
-    padding: 4rem;
+    padding: 3rem;
     background-color: #fff;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+header .navbar-nav {
+    gap: 3rem;
+    align-items: center;
 }
 
 header .transparent .navbar-nav.languages a.nav-link {
@@ -124,6 +129,10 @@ header .img-fluid {
     width: 130px;
 }
 
+header .img-fluid-regular {
+    width: 190px;
+}
+
 header .navbar-nav.languages a.nav-link {
     color: #000;
 }
@@ -131,8 +140,8 @@ header .navbar-nav.languages ul li {
     font-size: 1.5rem;
 }
 
-header .navbar .offcanvas .offcanvas-body ul li:not(:last-child) {
-    margin-right: 7.5rem;
+header .nav-item {
+    width: 120px;
 }
 
 header .navbar .offcanvas .offcanvas-body ul li a {

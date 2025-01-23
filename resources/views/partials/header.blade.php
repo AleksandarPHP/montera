@@ -175,13 +175,13 @@
                                         {{__('Content')}}
                                     </a>
                                 </li>
-                                <li class="nav-item">
+                                <li class="nav-logo">
                                     <a class="nav-link" href="{{ Helper::url('/') }}" role="button">
                                         <img
                                             id="regular-logo"
                                             src="{{ asset('assets/images/golden-logo.webp') }}"
                                             alt="logo"
-                                            class="img-fluid"
+                                            class="img-fluid-regular"
                                         />
                                     </a>
                                 </li>
