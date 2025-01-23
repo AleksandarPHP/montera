@@ -180,15 +180,50 @@ header .transparent .header-contact a {
     text-align: center;
 }
 
-.hero .container {
+.image-frame {
+    position: relative;
+    width: 315px;
+    height: 315px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.image-text {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-70%, -50%);
+    transform: translate(-30%, -50%);
+    text-align: center;
+    color: #fff;
+    font-size: 5rem;
+    line-height: 4rem;
+    width: max-content;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    text-align: left;
+    font-weight: 600;
+}
+
+.image-text-soft {
+    font-weight: 300;
+    font-size: 3.5rem;
+    letter-spacing: 0.2rem;
+}
+
+.hero {
+    overflow: hidden;
+}
+
+.hero .container {
+    position: absolute;
+    top: 50%;
+    left: 44%;
+    max-width: 315px;
+    transform: translate(-100%, -50%);
     text-align: center;
 }
 
-.hero-video {
+.hero .container .hero-video {
     width: 100%;
     min-height: 100dvh;
     object-fit: cover;
@@ -280,8 +315,27 @@ header .transparent .header-contact a {
 }
 
 .eco-friendly-section {
+    position: relative;
     background-size: cover;
     color: white;
+}
+
+.eco-friendly-section .image-frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-100%, -84%);
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 100;
+}
+
+.eco-friendly-section .image-text {
+    transform: translate(-23%, -50%);
+    letter-spacing: 0.3rem;
+    font-size: 4rem;
 }
 
 .eco-friendly-section .content {
@@ -298,10 +352,14 @@ header .transparent .header-contact a {
     text-align: right;
 }
 
+.column-left-text {
+    max-height: 115px;
+}
+
 .eco-friendly-section .column-contrast {
     position: relative;
     width: 42%;
-    height: 500px;
+    height: 515px;
     background: rgba(0, 0, 0, 0.5);
     padding: 20px;
     font-weight: 600;
@@ -309,10 +367,11 @@ header .transparent .header-contact a {
 
 .text-right {
     position: absolute;
-    bottom: 10px;
+    bottom: 18px;
     right: 20px;
-    color: white;
+    color: #fff;
     padding-left: 20px;
+    max-height: 115px;
 }
 
 .apartments {
@@ -748,8 +807,12 @@ footer .lastline ul li a {
         border-right: none;
     }
 
+    .eco-friendly-section .image-frame {
+        top: 80%;
+    }
+
     .eco-friendly-section .column-contrast {
-        width: 100%;
+        width: 50%;
     }
 }
 
@@ -774,7 +837,16 @@ footer .lastline ul li a {
     .eco-bg-container {
         height: 300px;
     }
+
     .eco-title {
         font-size: 1.8rem;
+    }
+
+    .eco-friendly-section .column-contrast {
+        width: 100%;
+    }
+
+    .eco-friendly-section .column-left {
+        padding: 20px;
     }
 }

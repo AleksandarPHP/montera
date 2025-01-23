@@ -7,7 +7,12 @@
             Your browser does not support the video tag.
         </video>
         <div class="container">
-            <img src="{{ asset('assets/images/index-logo.png') }}" alt="Index logo">
+            <div class="image-frame" style="background-image: url('{{ asset('assets/images/okvir-2.png') }}'); ">
+                <div class="image-text">
+                    <p class="image-text-soft">parče raja</p>
+                    <p>na Jahorini</p>
+                </div>
+            </div>
         </div>
     </section>
     <section class="concept-termag">
@@ -208,11 +213,15 @@
     </section>
 
     <section class="eco-friendly-section" style="background-image: url('{{ asset('assets/images/logs.png') }}'); ">
-                            <!-- <h2>ECO FRIENDLY</h2> -->
+        <div class="image-frame" style="background-image: url('{{ asset('assets/images/okvir-2.png') }}'); ">
+            <div class="image-text">
+                <p>eco friendly</p>
+            </div>
+        </div>
         <div class="ec-container">
             <div class="content">
                 <div class="col-lg-6 column-left">
-                    <p>
+                    <p class="column-left-text">
                     Sve poslovne jedinice kompanije Termag za zagrijavanje koriste bio masu, kao
                     energent koji emituje najmanje štetnih gasova. Korištenje pametnih i održivih
                     izolacijskih materijala, prirodnih materijala te led rasvjete u mnogome doprinosimo
