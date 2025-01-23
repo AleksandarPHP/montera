@@ -80,10 +80,37 @@ body {
     color: #fff;
 }
 
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar.transparent {
+    background-color: transparent;
+    box-shadow: none;
+}
+
 header .navbar {
-    padding: 4rem;
+    padding: 3rem;
     background-color: #fff;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+header .navbar-nav {
+    gap: 3rem;
+    align-items: center;
+}
+
+header .transparent .navbar-nav.languages a.nav-link {
+    border: 1px solid #fff;
+}
+
+header .transparent .navbar-nav.languages a.nav-link {
+    color: #fff;
 }
 
 .navbar .offcanvas .offcanvas-body {
@@ -98,6 +125,14 @@ header .navbar-nav.languages {
     font-size: 1.5rem;
 }
 
+header .img-fluid {
+    width: 130px;
+}
+
+header .img-fluid-regular {
+    width: 190px;
+}
+
 header .navbar-nav.languages a.nav-link {
     color: #000;
 }
@@ -105,14 +140,18 @@ header .navbar-nav.languages ul li {
     font-size: 1.5rem;
 }
 
-header .navbar .offcanvas .offcanvas-body ul li:not(:last-child) {
-    margin-right: 7.5rem;
+header .nav-item {
+    width: 120px;
 }
 
 header .navbar .offcanvas .offcanvas-body ul li a {
     color: #000;
     font-size: 1.5rem;
     text-transform: uppercase;
+}
+
+header .transparent .offcanvas .offcanvas-body ul li a {
+    color: #fff;
 }
 
 header .header-contact {
@@ -132,6 +171,10 @@ header .header-contact a {
     display: block;
 }
 
+header .transparent .header-contact a {
+    color: #fff;
+}
+
 .content-page-banner {
     position: relative;
     min-height: 60dvh;
@@ -148,6 +191,200 @@ header .header-contact a {
     text-transform: uppercase;
     color: #fff;
     text-align: center;
+}
+
+.image-frame {
+    position: relative;
+    width: 315px;
+    height: 315px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-30%, -50%);
+    text-align: center;
+    color: #fff;
+    font-size: 5rem;
+    line-height: 4rem;
+    width: max-content;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    text-align: left;
+    font-weight: 600;
+}
+
+.image-text-soft {
+    font-weight: 300;
+    font-size: 3.5rem;
+    letter-spacing: 0.2rem;
+}
+
+.hero {
+    overflow: hidden;
+}
+
+.hero .container {
+    position: absolute;
+    top: 50%;
+    left: 44%;
+    max-width: 315px;
+    transform: translate(-100%, -50%);
+    text-align: center;
+}
+
+.hero .container .hero-video {
+    width: 100%;
+    min-height: 100dvh;
+    object-fit: cover;
+}
+
+.concept-termag {
+    padding: 60px 0;
+}
+
+.concept-termag .title {
+    text-align: left;
+}
+
+.concept-termag .subtitle {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    color: #555;
+    font-weight: 700;
+}
+
+.concept-termag p {
+    font-size: 1.6rem;
+}
+
+.concept-termag .emphasis {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.concept-termag .image-wrapper {
+    position: relative;
+}
+
+.concept-termag .image-wrapper img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.large-image {
+    width: 100%;
+    height: auto;
+}
+
+.small-image {
+    position: absolute;
+    bottom: -110px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+}
+
+.rent-apartment {
+    padding: 100px 0;
+}
+
+.rent-apartment p {
+    font-size: 1.6rem;
+}
+
+.rent-apartment .section-header {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.apartment-section h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.apartment-section img {
+    width: 100%;
+    height: auto;
+}
+
+.ac-padd {
+    padding-top: 30px;
+}
+
+.apartment-column h3 {
+    background-color: #394f70;
+    color: #fff;
+    padding: 15px;
+    font-size: 2rem;
+}
+
+.ac-bord {
+    border-right: 3px solid #ccc;
+}
+
+.eco-friendly-section {
+    position: relative;
+    background-size: cover;
+    color: white;
+}
+
+.eco-friendly-section .image-frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-100%, -84%);
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 100;
+}
+
+.eco-friendly-section .image-text {
+    transform: translate(-23%, -50%);
+    letter-spacing: 0.3rem;
+    font-size: 4rem;
+}
+
+.eco-friendly-section .content {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.5rem;
+}
+
+.eco-friendly-section .column-left {
+    margin-top: 280px;
+    padding: 48px 20px 20px;
+    background-color: #fff;
+    color: #000;
+    text-align: right;
+}
+
+.column-left-text {
+    max-height: 115px;
+}
+
+.eco-friendly-section .column-contrast {
+    position: relative;
+    width: 42%;
+    height: 515px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    font-weight: 600;
+}
+
+.text-right {
+    position: absolute;
+    bottom: 18px;
+    right: 20px;
+    color: #fff;
+    padding-left: 20px;
+    max-height: 115px;
 }
 
 .apartments {
@@ -196,6 +433,18 @@ header .header-contact a {
 .slider-control .next-arrow {
     background-color: #e6d1aa;
     color: #fff;
+}
+
+.down-arrow {
+    background-color: #e55f5f;
+    color: #fff;
+    padding: 4px 7px;
+    border: none;
+    margin-left: -1px;
+}
+
+.down-arrow i {
+    font-size: 2rem;
 }
 
 .apartments .button-wrapper {
@@ -560,4 +809,57 @@ footer .lastline ul li a {
 
 .apartment-table tbody tr:hover {
     background-color: #f1f1f1;
+}
+
+@media (max-width: 1000px) {
+    .concept-termag-images {
+        padding-bottom: 135px;
+    }
+
+    .ac-bord {
+        border-right: none;
+    }
+
+    .eco-friendly-section .image-frame {
+        top: 80%;
+    }
+
+    .eco-friendly-section .column-contrast {
+        width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero .container {
+        transform: translate(-50%, -50%);
+    }
+
+    .concept-termag .row {
+        flex-direction: column-reverse;
+    }
+
+    .concept-termag-images {
+        padding-bottom: 0;
+    }
+
+    .small-image {
+        bottom: -100px;
+        width: 80%;
+    }
+
+    .eco-bg-container {
+        height: 300px;
+    }
+
+    .eco-title {
+        font-size: 1.8rem;
+    }
+
+    .eco-friendly-section .column-contrast {
+        width: 100%;
+    }
+
+    .eco-friendly-section .column-left {
+        padding: 20px;
+    }
 }
