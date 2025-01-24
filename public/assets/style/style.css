@@ -36,6 +36,10 @@ body {
     z-index: -1;
 }
 
+.btn-close {
+    background-color: #fff !important;
+}
+
 .subtitle {
     font-size: 2.8rem;
     font-weight: 400;
@@ -140,7 +144,7 @@ header .navbar-nav.languages ul li {
 }
 
 header .navbar .offcanvas .offcanvas-body ul li:not(:last-child) {
-    margin-right: 7.5rem;
+    margin-right: 6rem;
 }
 
 header .navbar .offcanvas .offcanvas-body ul li a {
@@ -946,6 +950,27 @@ footer .lastline ul li a {
 @media (max-width: 1400px) {
     .navbar-toggler {
         background-color: #fff !important;
+    }
+
+    header .navbar-nav {
+        align-items: unset;
+        padding-left: 20px;
+    }
+
+    .nav-logo {
+        margin-bottom: 35px;
+    }
+
+    .offcanvas {
+        text-align: left;
+    }
+
+    header .navbar .offcanvas .offcanvas-body ul li:not(:last-child) {
+        margin-bottom: 12px;
+    }
+
+    header .header-contact {
+        margin-top: 20px;
     }
 }
 

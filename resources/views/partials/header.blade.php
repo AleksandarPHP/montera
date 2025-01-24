@@ -160,6 +160,16 @@
                         </div>
                         <div class="offcanvas-body">
                             <ul class="navbar-nav">
+                                <li class="nav-logo d-xxl-none">
+                                    <a class="nav-link" href="{{ Helper::url('/') }}" role="button">
+                                        <img
+                                            id="regular-logo"
+                                            src="{{ asset('assets/images/black-logo.webp') }}"
+                                            alt="logo"
+                                            class="img-fluid-regular"
+                                        />
+                                    </a>
+                                </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ Helper::url('o-nama') }}" role="button">
                                         {{__('About us')}}
@@ -175,19 +185,20 @@
                                         {{__('Content')}}
                                     </a>
                                 </li>
-                                <li class="nav-logo">
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ Helper::url('apartmani') }}" role="button">
+                                        {{__('Apartments')}}
+                                    </a>
+                                </li>
+                                <li class="nav-logo d-none d-xxl-flex">
                                     <a class="nav-link" href="{{ Helper::url('/') }}" role="button">
                                         <img
-                                            id="regular-logo"
+                                            id="regular-logo2"
                                             src="{{ asset('assets/images/black-logo.webp') }}"
                                             alt="logo"
                                             class="img-fluid-regular"
                                         />
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ Helper::url('apartmani') }}" role="button">
-                                        {{__('Apartments')}}
                                     </a>
                                 </li>
                                 <li class="nav-item">
@@ -200,18 +211,18 @@
                                         {{__('Apartment rent')}}
                                     </a>
                                 </li>
+                                <li class="header-contact">
+                                    <i class="fa-solid fa-mobile-screen"></i>
+                                    <div>
+                                        <a href="tel:+381 66 686 89 85"
+                                            >+381 66 686 89 85</a
+                                        >
+                                        <a href="tel: +381 65 927 97 00">
+                                            +381 65 927 97 00</a
+                                        >
+                                    </div>
+                                </li>
                             </ul>
-                        </div>
-                    </div>
-                    <div class="header-contact d-none d-xxl-flex">
-                        <i class="fa-solid fa-mobile-screen"></i>
-                        <div>
-                            <a href="tel:+381 66 686 89 85"
-                                >+381 66 686 89 85</a
-                            >
-                            <a href="tel: +381 65 927 97 00">
-                                +381 65 927 97 00</a
-                            >
                         </div>
                     </div>
                 </div>
