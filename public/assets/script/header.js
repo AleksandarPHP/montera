@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const regularLogo = document.getElementById("regular-logo");
     const regularLogo2 = document.getElementById("regular-logo2");
     const offcanvas = document.querySelector(".offcanvas");
+    const btnClose = document.querySelector(".btn-close");
     body.style.paddingTop = "0";
 
     if (navbar && navbar.classList.contains("transparent")) {
@@ -14,6 +15,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 "#000",
                 "important"
             );
+
+        btnClose.style.setProperty("filter", "invert(1)");
 
         navbar.classList.add("transparent");
         if (mediaLogo) {
@@ -34,6 +37,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     );
 
                 navbar.classList.remove("transparent");
+                btnClose.style.removeProperty("filter");
+
                 if (mediaLogo) {
                     mediaLogo.src = "assets/images/black-logo.webp";
                 }
@@ -48,6 +53,8 @@ document.addEventListener("DOMContentLoaded", () => {
                         "#000",
                         "important"
                     );
+
+                btnClose.style.setProperty("filter", "invert(1)");
 
                 navbar.classList.add("transparent");
                 if (mediaLogo) {
