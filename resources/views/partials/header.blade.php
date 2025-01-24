@@ -87,7 +87,7 @@
     </head>
     <body>
         <header>
-            <nav class="navbar fixed-top navbar-expand-lg {{ $isTransparent ?? false ? 'transparent' : '' }}">
+            <nav class="navbar fixed-top navbar-expand-xxl {{ $isTransparent ?? false ? 'transparent' : '' }}">
                 <div class="container-fluid">
                     <a class="navbar-brand d-lg-none" href="{{ url('/') }}">
                         <img
@@ -97,7 +97,7 @@
                             class="img-fluid"
                         />
                     </a>
-                    <ul class="navbar-nav languages">
+                    <ul class="navbar-nav languages d-none d-lg-flex">
                         @if(app()->getLocale() == 'sr')
                         <li class="nav-item dropdown">
                             <a
@@ -203,7 +203,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="header-contact">
+                    <div class="header-contact d-none d-xxl-flex">
                         <i class="fa-solid fa-mobile-screen"></i>
                         <div>
                             <a href="tel:+381 66 686 89 85"

@@ -101,7 +101,6 @@ header .navbar {
 }
 
 header .navbar-nav {
-    gap: 3rem;
     align-items: center;
 }
 
@@ -140,8 +139,8 @@ header .navbar-nav.languages ul li {
     font-size: 1.5rem;
 }
 
-header .nav-item {
-    width: 120px;
+header .navbar .offcanvas .offcanvas-body ul li:not(:last-child) {
+    margin-right: 7.5rem;
 }
 
 header .navbar .offcanvas .offcanvas-body ul li a {
@@ -240,7 +239,7 @@ header .transparent .header-contact a {
     text-align: center;
 }
 
-.hero .container .hero-video {
+.hero .hero-video {
     width: 100%;
     min-height: 100dvh;
     object-fit: cover;
@@ -896,6 +895,18 @@ footer .lastline ul li a {
     background-color: #f1f1f1;
 }
 
+@media (max-width: 1500px) {
+    .header-contact {
+        display: none;
+    }
+}
+
+@media (max-width: 1400px) {
+    .navbar-toggler {
+        background-color: #fff !important;
+    }
+}
+
 @media (max-width: 1200px) {
     .location-frame-container {
         padding: 166px 0 0;
@@ -917,6 +928,10 @@ footer .lastline ul li a {
 
     .eco-friendly-section .column-contrast {
         width: 50%;
+    }
+
+    .column-left-text {
+        max-height: unset;
     }
 }
 
