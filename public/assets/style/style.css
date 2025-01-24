@@ -300,6 +300,20 @@ header .transparent .header-contact a {
     flex: 1;
 }
 
+.styled-list {
+    list-style-type: disc;
+    margin: 1rem 0;
+    padding-left: 2rem;
+    text-transform: uppercase;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    font-size: 1.5rem;
+}
+
+.styled-list li {
+    margin-bottom: 0.5rem;
+}
+
 .google-map {
     padding-bottom: 50%;
     position: relative;

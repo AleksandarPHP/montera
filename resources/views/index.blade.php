@@ -7,7 +7,7 @@
             Your browser does not support the video tag.
         </video>
         <div class="container">
-            <div class="image-frame" style="background-image: url('{{ asset('assets/images/okvir-2.png') }}'); ">
+            <div class="image-frame" style="background-image: url('{{ asset('assets/images/okvir-2.png') }}');">
                 <div class="image-text">
                     <p class="image-text-soft">parče raja</p>
                     <p>na Jahorini</p>
