@@ -92,7 +92,7 @@
                     <a class="navbar-brand d-lg-none" href="{{ url('/') }}">
                         <img
                             id="media-logo"
-                            src="{{ asset('assets/images/golden-logo.webp') }}"
+                            src="{{ asset('assets/images/black-logo.webp') }}"
                             alt="logo"
                             class="img-fluid"
                         />
@@ -179,7 +179,7 @@
                                     <a class="nav-link" href="{{ Helper::url('/') }}" role="button">
                                         <img
                                             id="regular-logo"
-                                            src="{{ asset('assets/images/golden-logo.webp') }}"
+                                            src="{{ asset('assets/images/black-logo.webp') }}"
                                             alt="logo"
                                             class="img-fluid-regular"
                                         />

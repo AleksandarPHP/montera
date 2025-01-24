@@ -223,6 +223,10 @@ header .transparent .header-contact a {
     letter-spacing: 0.2rem;
 }
 
+.image-text-small {
+    font-size: 1.5rem;
+}
+
 .hero {
     overflow: hidden;
 }
@@ -240,6 +244,73 @@ header .transparent .header-contact a {
     width: 100%;
     min-height: 100dvh;
     object-fit: cover;
+}
+
+.location-frame-container {
+    position: relative;
+    text-align: center;
+    padding: 128px 0 0;
+    font-size: 1.6rem;
+    margin-bottom: 70px;
+    color: #555;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.location-frame {
+    position: absolute;
+    top: -170px;
+    left: 15%;
+    background-color: #fff;
+}
+
+.location-frame .image-text {
+    width: 230px !important;
+    color: #000;
+    transform: translate(-45%, -50%);
+    line-height: 3.5rem;
+    font-weight: 400;
+    letter-spacing: 0.3rem;
+}
+
+.location .subtitle {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    color: #555;
+    font-weight: 700;
+}
+
+.simple-column-section .subtitle {
+    font-size: 1.6rem;
+    color: #000;
+    font-weight: 700;
+    text-align: center;
+}
+
+.simple-column-container {
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 35px auto;
+    padding: 0 20px;
+    font-size: 1.5rem;
+}
+
+.simple-column-container .col-lg-6 {
+    flex: 1;
+}
+
+.google-map {
+    padding-bottom: 50%;
+    position: relative;
+}
+
+.google-map iframe {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
 }
 
 .concept-termag {
@@ -809,6 +880,12 @@ footer .lastline ul li a {
 
 .apartment-table tbody tr:hover {
     background-color: #f1f1f1;
+}
+
+@media (max-width: 1200px) {
+    .location-frame-container {
+        padding: 166px 0 0;
+    }
 }
 
 @media (max-width: 1000px) {

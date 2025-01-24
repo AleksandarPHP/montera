@@ -6,6 +6,14 @@ document.addEventListener("DOMContentLoaded", () => {
     body.style.paddingTop = "0";
 
     if (navbar && navbar.classList.contains("transparent")) {
+        navbar.classList.add("transparent");
+        if (mediaLogo) {
+            mediaLogo.src = "assets/images/white-logo.webp";
+        }
+        if (regularLogo) {
+            regularLogo.src = "assets/images/white-logo.webp";
+        }
+
         window.addEventListener("scroll", () => {
             if (window.scrollY > 250) {
                 navbar.classList.remove("transparent");
