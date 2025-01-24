@@ -2,10 +2,30 @@
 <main>
     <section class="content-page-banner" style="min-height: 80dvh;">
         <div class="bg" style="background-image: url('{{ asset('assets/images/frosty-background.png') }}');"></div>
+    
+        <div class="left-content">
+        <h2>Sigurna investicija</h2>
+        <h1 class="title">TERMAG KONCEPT</h1>
+        <p>
+            Kao krajnje ozbiljna i odgovorna, koja je svoje poslovanje usko vezala
+            za planinu Jahorinu, kompanija Termag je 2020. godine započela sa
+            izgradnjom novog objekta sa apartmanskim jedinicama, prepoznajući
+            želju brojnih posjetilaca da upravo na Jahorini imaju svoj kutak pod
+            nebom, gdje se mogu u potpunosti prepustiti čarima ove planine.
+        </p>
+        <p>
+            Vodeći se ovim principima, na isti način se vrši gradnja kompleksa
+            apartmana Monterra, garantujući primjenu najviših građevinskih
+            standarda uz primjenu inovativnih tehnoloških rješenja i korištenje
+            visoko kvalitetnih i prirodnih materijala.
+        </p>
+        </div>
     </section>
 
+    <img class="about-us-small-img" src="{{ asset('assets/images/concept-termag-3.png') }}" />
+
     <div class="location-frame-container">
-        <div class="image-frame location-frame" style="background-image: url('{{ asset('assets/images/okvir-2.png') }}'); ">
+        <div class="image-frame location-frame about-us-frame" style="background-image: url('{{ asset('assets/images/okvir-2.png') }}'); ">
             <div class="image-text">
                 <p class="image-text-small">
                     Kompanija Termag je lider 

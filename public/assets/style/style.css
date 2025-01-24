@@ -192,6 +192,18 @@ header .transparent .header-contact a {
     text-align: center;
 }
 
+.left-content {
+    position: absolute;
+    bottom: 0;
+    left: 6%;
+    max-width: 600px;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 6rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
 .image-frame {
     position: relative;
     width: 315px;
@@ -261,6 +273,36 @@ header .transparent .header-contact a {
     top: -170px;
     left: 15%;
     background-color: #fff;
+}
+
+.about-us-frame {
+    top: unset;
+    left: unset;
+    right: 28%;
+    bottom: 290px;
+    width: 200px;
+    height: 200px;
+}
+
+.about-us-frame .image-text {
+    width: 200px !important;
+}
+
+.about-us-small-img {
+    position: absolute;
+    width: 360px;
+    height: 420px;
+    bottom: 25px;
+    right: 8%;
+}
+
+.about-us-frame .image-text-small {
+    width: 195px;
+    padding-left: 27px;
+    height: 170px;
+    letter-spacing: 0.1rem;
+    line-height: 2.5rem;
+    font-size: 1.4rem;
 }
 
 .location-frame .image-text {
@@ -910,6 +952,19 @@ footer .lastline ul li a {
 @media (max-width: 1200px) {
     .location-frame-container {
         padding: 166px 0 0;
+    }
+
+    .about-us-small-img {
+        position: static;
+    }
+
+    .about-us-frame {
+        right: 20%;
+    }
+
+    .left-content {
+        position: static;
+        min-height: 80dvh;
     }
 }
 
