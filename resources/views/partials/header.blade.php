@@ -87,13 +87,13 @@
     </head>
     <body>
         <header>
-            <nav class="navbar fixed-top navbar-expand-lg {{ $isTransparent ?? false ? 'transparent' : '' }}">
+            <nav class="navbar fixed-top navbar-expand-xxl {{ $isTransparent ?? false ? 'transparent' : '' }}">
                 <div class="container-fluid">
                     <a class="navbar-brand d-lg-none" href="{{ url('/') }}">
                         @if ($settings->logoH)
                         <img
                             id="media-logo"
-                            src="{{ asset('assets/images/golden-logo.webp') }}"
+                            src="{{ asset('assets/images/black-logo.webp') }}"
                             alt="logo"
                             class="img-fluid"
                         />
@@ -101,7 +101,7 @@
                             LOGO
                         @endif
                     </a>
-                    <ul class="navbar-nav languages">
+                    <ul class="navbar-nav languages d-none d-lg-flex">
                         @if(app()->getLocale() == 'sr')
                         <li class="nav-item dropdown">
                             <a
@@ -164,6 +164,16 @@
                         </div>
                         <div class="offcanvas-body">
                             <ul class="navbar-nav">
+                                <li class="nav-logo d-xxl-none">
+                                    <a class="nav-link" href="{{ Helper::url('/') }}" role="button">
+                                        <img
+                                            id="regular-logo"
+                                            src="{{ asset('assets/images/black-logo.webp') }}"
+                                            alt="logo"
+                                            class="img-fluid-regular"
+                                        />
+                                    </a>
+                                </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ Helper::url('o-nama') }}" role="button">
                                         {{__('About us')}}
@@ -179,19 +189,20 @@
                                         {{__('Content')}}
                                     </a>
                                 </li>
-                                <li class="nav-logo">
-                                    <a class="nav-link" href="{{ Helper::url('/') }}" role="button">
-                                        <img
-                                            id="regular-logo"
-                                            src="{{ asset('assets/images/golden-logo.webp') }}"
-                                            alt="logo"
-                                            class="img-fluid-regular"
-                                        />
-                                    </a>
-                                </li>
+
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ Helper::url('apartmani') }}" role="button">
                                         {{__('Apartments')}}
+                                    </a>
+                                </li>
+                                <li class="nav-logo d-none d-xxl-flex">
+                                    <a class="nav-link" href="{{ Helper::url('/') }}" role="button">
+                                        <img
+                                            id="regular-logo2"
+                                            src="{{ asset('assets/images/black-logo.webp') }}"
+                                            alt="logo"
+                                            class="img-fluid-regular"
+                                        />
                                     </a>
                                 </li>
                                 <li class="nav-item">
@@ -204,18 +215,18 @@
                                         {{__('Apartment rent')}}
                                     </a>
                                 </li>
+                                <li class="header-contact">
+                                    <i class="fa-solid fa-mobile-screen"></i>
+                                    <div>
+                                        <a href="tel:+381 66 686 89 85"
+                                            >+381 66 686 89 85</a
+                                        >
+                                        <a href="tel: +381 65 927 97 00">
+                                            +381 65 927 97 00</a
+                                        >
+                                    </div>
+                                </li>
                             </ul>
-                        </div>
-                    </div>
-                    <div class="header-contact">
-                        <i class="fa-solid fa-mobile-screen"></i>
-                        <div>
-                            <a href="tel:+381 66 686 89 85"
-                                >+381 66 686 89 85</a
-                            >
-                            <a href="tel: +381 65 927 97 00">
-                                +381 65 927 97 00</a
-                            >
                         </div>
                     </div>
                 </div>

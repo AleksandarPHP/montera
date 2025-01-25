@@ -36,6 +36,11 @@ body {
     z-index: -1;
 }
 
+.btn-close {
+    background-color: #fff !important;
+    font-size: 2rem;
+}
+
 .subtitle {
     font-size: 2.8rem;
     font-weight: 400;
@@ -101,7 +106,6 @@ header .navbar {
 }
 
 header .navbar-nav {
-    gap: 3rem;
     align-items: center;
 }
 
@@ -140,8 +144,8 @@ header .navbar-nav.languages ul li {
     font-size: 1.5rem;
 }
 
-header .nav-item {
-    width: 120px;
+header .navbar .offcanvas .offcanvas-body ul li:not(:last-child) {
+    margin-right: 6rem;
 }
 
 header .navbar .offcanvas .offcanvas-body ul li a {
@@ -193,6 +197,18 @@ header .transparent .header-contact a {
     text-align: center;
 }
 
+.left-content {
+    position: absolute;
+    bottom: 0;
+    left: 6%;
+    max-width: 600px;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 6rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
 .image-frame {
     position: relative;
     width: 315px;
@@ -223,6 +239,10 @@ header .transparent .header-contact a {
     letter-spacing: 0.2rem;
 }
 
+.image-text-small {
+    font-size: 1.5rem;
+}
+
 .hero {
     overflow: hidden;
 }
@@ -236,10 +256,121 @@ header .transparent .header-contact a {
     text-align: center;
 }
 
-.hero .container .hero-video {
+.hero .hero-video {
     width: 100%;
     min-height: 100dvh;
     object-fit: cover;
+}
+
+.location-frame-container {
+    position: relative;
+    text-align: center;
+    padding: 128px 0 0;
+    font-size: 1.6rem;
+    margin-bottom: 70px;
+    color: #555;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.location-frame {
+    position: absolute;
+    top: -170px;
+    left: 15%;
+    background-color: #fff;
+}
+
+.about-us-frame {
+    top: unset;
+    left: unset;
+    right: 28%;
+    bottom: 290px;
+    width: 200px;
+    height: 200px;
+}
+
+.about-us-frame .image-text {
+    width: 200px !important;
+}
+
+.about-us-small-img {
+    position: absolute;
+    width: 360px;
+    height: 420px;
+    bottom: 25px;
+    right: 8%;
+}
+
+.about-us-frame .image-text-small {
+    width: 195px;
+    padding-left: 27px;
+    height: 170px;
+    letter-spacing: 0.1rem;
+    line-height: 2.5rem;
+    font-size: 1.4rem;
+}
+
+.location-frame .image-text {
+    width: 230px !important;
+    color: #000;
+    transform: translate(-45%, -50%);
+    line-height: 3.5rem;
+    font-weight: 400;
+    letter-spacing: 0.3rem;
+}
+
+.location .subtitle {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    color: #555;
+    font-weight: 700;
+}
+
+.simple-column-section .subtitle {
+    font-size: 1.6rem;
+    color: #000;
+    font-weight: 700;
+    text-align: center;
+}
+
+.simple-column-container {
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 35px auto;
+    padding: 0 20px;
+    font-size: 1.5rem;
+}
+
+.simple-column-container .col-lg-6 {
+    flex: 1;
+}
+
+.styled-list {
+    list-style-type: disc;
+    margin: 1rem 0;
+    padding-left: 2rem;
+    text-transform: uppercase;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    font-size: 1.5rem;
+}
+
+.styled-list li {
+    margin-bottom: 0.5rem;
+}
+
+.google-map {
+    padding-bottom: 50%;
+    position: relative;
+}
+
+.google-map iframe {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
 }
 
 .concept-termag {
@@ -811,6 +942,58 @@ footer .lastline ul li a {
     background-color: #f1f1f1;
 }
 
+@media (max-width: 1500px) {
+    .header-contact {
+        display: none;
+    }
+}
+
+@media (max-width: 1400px) {
+    .navbar-toggler {
+        background-color: #fff !important;
+    }
+
+    header .navbar-nav {
+        align-items: unset;
+        padding-left: 20px;
+    }
+
+    .nav-logo {
+        margin-bottom: 35px;
+    }
+
+    .offcanvas {
+        text-align: left;
+    }
+
+    header .navbar .offcanvas .offcanvas-body ul li:not(:last-child) {
+        margin-bottom: 12px;
+    }
+
+    header .header-contact {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .location-frame-container {
+        padding: 166px 0 0;
+    }
+
+    .about-us-small-img {
+        position: static;
+    }
+
+    .about-us-frame {
+        right: 20%;
+    }
+
+    .left-content {
+        position: static;
+        min-height: 80dvh;
+    }
+}
+
 @media (max-width: 1000px) {
     .concept-termag-images {
         padding-bottom: 135px;
@@ -826,6 +1009,10 @@ footer .lastline ul li a {
 
     .eco-friendly-section .column-contrast {
         width: 50%;
+    }
+
+    .column-left-text {
+        max-height: unset;
     }
 }
 
