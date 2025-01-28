@@ -20,15 +20,15 @@
                 <tr>
                     <th>ID</th>
                     <th>Naziv</th>
-                    <th class="nosort text-center">Akcija</th>
-                </tr>
+                    <th class="nosort text-center" style="width:80px;">Meta edit</th>
+                    <th class="nosort text-center" style="width:80px;">Akcija</th>                </tr>
                 </thead>
                 <tfoot>
                 <tr>
                     <th>ID</th>
                     <th>Naziv</th>
-                    <th class="nosort text-center">Akcija</th>
-                </tr>
+                    <th class="nosort text-center" style="width:80px;">Meta edit</th>
+                    <th class="nosort text-center" style="width:80px;">Akcija</th>                </tr>
                 </tfoot>
             </table>
         </div>

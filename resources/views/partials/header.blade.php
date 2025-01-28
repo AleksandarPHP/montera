@@ -79,6 +79,8 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
         />
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
         <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
         <script src="{{asset('assets/script/jquery.toast.js')}}"></script>
         <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>

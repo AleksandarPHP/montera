@@ -64,9 +64,12 @@ Route::group(['prefix' => 'cms', 'middleware' => ['auth', 'active']], function()
     Route::resource('albums', 'App\Http\Controllers\AlbumController')->except('show');
 
     Route::resource('texts', 'App\Http\Controllers\TextController')->only('index','update','edit');
-    Route::controller(App\Http\Controllers\TextController::class)->group(function () {
-        Route::post('texts/ajax',  'ajax');  
-        Route::get('texts/imagedelete/{id}', 'removeImage');
+    Route::controller(App\Http\Controllers\TextController::class)->prefix('texts')->group(function () {
+        Route::post('/ajax',  'ajax');  
+        Route::get('/detail/{id}', 'detail'); 
+        Route::post('/ajax-detail/{id}', 'ajaxDetail');  
+        Route::get('/meta/{id}/edit', 'meta');  
+        Route::get('/imagedelete/{id}', 'removeImage');
     });
 
     // Route::resource('menu', 'App\Http\Controllers\MenuController')->except('show');

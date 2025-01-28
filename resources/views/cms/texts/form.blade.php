@@ -47,30 +47,6 @@
                     </div>
                 </div>
                 <div class="col-md-12"><hr></div>
-                @for ($i = 2; $i <= 7; $i++)
-                <div class="col-md-12">
-                    <div class="form-group">
-                        <label for="title{{$i}}">Naziv {{$i}}</label>
-                        <input name="title{{$i}}" type="text" class="form-control" id="title{{$i}}" placeholder="Naziv {{$i}}" value="{{ old('title'.$i, $item->getTranslation('title'.$i, $lang, false)) }}" {!! $errors->has('title'.$i) ? 'style="border-color:red;"' : '' !!}>
-                    </div>
-                </div>
-                <div class="col-md-12"><hr></div>
-
-                <div class="col-md-12">
-                    <div class="form-group">
-                        <label for="subtitle{{$i}}">Podnaslov {{$i}}</label>
-                        <input name="subtitle{{$i}}" type="text" class="form-control" id="subtitle{{$i}}" placeholder="Podnaslov {{$i}}" value="{{ old('subtitle'.$i, $item->getTranslation('subtitle'.$i, $lang, false)) }}" {!! $errors->has('subtitle') ? 'style="border-color:red;"' : '' !!}>
-                    </div>
-                </div>
-                <div class="col-md-12"><hr></div>   
-                <div class="col-md-12">
-                    <div class="form-group" {!! $errors->has('text') ? 'style="border:1px solid red;"' : '' !!}>
-                        <label for="description{{$i}}">Tekst {{$i}}</label>
-                        <textarea name="description{{$i}}" id="description{{$i}}" class="form-control">{{ old('description'.$i, $item->getTranslation('description'.$i, $lang, false)) }}</textarea>
-                    </div>
-                </div>
-                <div class="col-md-12"><hr></div>
-                @endfor
                 <div class="col-md-12"><hr></div>
                 <div class="col-md-3">
                     <div class="form-group">
@@ -165,10 +141,10 @@
         readURL(this, $(this).parent().find('img'));
     });
 
-    // tinymce.init({
-    //     selector : "textarea",
-    //     plugins : ["advlist autolink lists link charmap print preview anchor", "searchreplace visualblocks code fullscreen", "insertdatetime media table paste "],
-    //     toolbar : "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link code",
-    // });
+    tinymce.init({
+        selector : "textarea",
+        plugins : ["advlist autolink lists link charmap print preview anchor", "searchreplace visualblocks code fullscreen", "insertdatetime media table paste "],
+        toolbar : "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link code",
+    });
 </script>
 @endsection

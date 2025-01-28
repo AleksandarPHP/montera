@@ -1,12 +1,16 @@
 <section class="invest">
     <div class="container">
         <div class="content-wrapper">
-            <h4>INVESTIRAJTE U KUPOVINU</h4>
-            <h3>
+            <h4 data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1000">INVESTIRAJTE U KUPOVINU</h4>
+            <h3 data-aos="fade-up"
+            data-aos-easing="linear"
+            data-aos-duration="1300">
                 Monterra Concept Termag APARTMANA u NAJMODERNIJem SKIJALIŠTu U
                 REGIONU
             </h3>
-            <a href="#" class="button button_secondary"> upit za ponudu </a>
+            <a href="#" class="button button_secondary" data-aos="zoom-out" data-aos-duration="1500"> upit za ponudu </a>
         </div>
     </div>
 </section>
@@ -16,8 +20,8 @@
             <div class="row">
                 <div class="col-md-6 offset-lg-1">
                     <a href="#">
-                        <img
-                            src="../../../public/assets/images/placeholder.png"
+                        <img style="max-width:50%;"
+                            src="{{asset('assets/images/black-logo.webp')}}"
                             alt="logo"
                             class="img-fluid"
                         />
@@ -201,16 +205,13 @@
     type="text/javascript"
     src="{{ asset('assets/slick-1.8.1/slick/slick.min.js') }}"
 ></script>
-<script
-    type="text/javascript"
-    src="{{ asset('assets/slick-1.8.1/slick/slick.min.js') }}"
-></script>
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"
 ></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
     $(document).ready(function(e) {
       @if(session('status'))
@@ -227,5 +228,9 @@
     })
 </script>
 <script src="{{ asset('assets/script/script.js') }}"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+  </script>
 </body>
 </html>
