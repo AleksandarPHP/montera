@@ -9,10 +9,19 @@ $routes = [
     'o-nama' => 'o-nama', 
     'tehnicki-prikaz' => 'tehnicki-prikaz',
     'lokacija' => 'lokacija',
+    'sprat/1' => 'prizemlje',
+    'sprat/2' => 'sprat-1',
+    'sprat/3' => 'sprat-2',
+    'sprat/4' => 'sprat-3',
+    'sprat/5' => 'sprat-4',
+    'sprat/6' => 'sprat-5',
+    'sprat/7' => 'sprat-6',
+    'sprat/8' => 'sprat-7',
+    'sprat/9' => 'sprat-8',
 
 ];
 Route::get('galerija', [App\Http\Controllers\HomeController::class, 'gallery']);
-Route::get('sprat/{id}', [App\Http\Controllers\HomeController::class, 'floors']);
+// Route::get('sprat/{id}', [App\Http\Controllers\HomeController::class, 'floors']);
 Route::get('apartmani/{id}', [App\Http\Controllers\HomeController::class, 'apartmant']);
 Route::post('kontakt', [App\Http\Controllers\HomeController::class, 'contact']);
 
@@ -21,7 +30,7 @@ Route::group(['prefix' => 'en'], function () use ($routes) {
         Route::get($uri, fn() => view($view));
     }
     Route::get('galerija', [App\Http\Controllers\HomeController::class, 'gallery']);
-    Route::get('sprat/{id}', [App\Http\Controllers\HomeController::class, 'floors']);
+    // Route::get('sprat/{id}', [App\Http\Controllers\HomeController::class, 'floors']);
     Route::get('apartmani/{id}', [App\Http\Controllers\HomeController::class, 'apartmant']);
     Route::post('kontakt', [App\Http\Controllers\HomeController::class, 'contact']);
 
