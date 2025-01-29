@@ -20,8 +20,8 @@
     </nav>
 
     <section class="floor-main">
-        <div class="bg" style="background-image: url('{{asset("assets/images/1736968971_test.jpg")}}')"></div>
-        <div class="container">
+        <div id="ground-floor"></div>
+        <div class="container" style="position: absolute;">
             <div class="row">
                 <div class="col-md-3">
                     <h3> TEHNIČKI PRIKAZ OSNOVE <br />
@@ -81,6 +81,65 @@
             </div>
         </div>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js"></script>
+    <script>
+        const draw = SVG().addTo("#ground-floor").size("100%", "100%");
+
+        const baseWidth = 1920;
+        const baseHeight = 1080;
+
+        draw.viewbox(0, 0, baseWidth, baseHeight);
+
+        const floors = [
+            {
+                name: "Apartment 1",
+                id: "1",
+                points: "730,287 593,287 593,454.5 726,454.5 726,462.5 791,462.5 791,383.5 730,383.5",
+                width: 1075,
+                height: 105,
+                hoverColor: "#ff6600",
+                stroke: "#33333300",
+            },
+            {
+                name: "Apartment 2",
+                id: "2",
+                points: "1101,287 729.5,287 729.5,384.5 791.5,384.5 791.5,421.5 851.5,421.5 851.5,458.5 979.5,458.5 979.5,434.5 1035,434.5 1035,462.5 1101,462.5",
+                width: 1075,
+                height: 105,
+                hoverColor: "#ff6600",
+                stroke: "#33333300",
+            },
+            {
+                name: "Apartment 3",
+                id: "3",
+                points: "1114.5,287 1101,287 1100.5,463.5 1015.5,463.5 1015.5,597.5 1095,597.5 1095,563.5 1202.5,563.5 1202.5,457 1220,457 1220,461.5 1233,461.5 1233,457 1248.5,457 1248.5,421.5 1233,421.5 1233,326.5 1185.5,326.5",
+                width: 1075,
+                height: 105,
+                hoverColor: "#ff6600",
+                stroke: "#33333300",
+            },
+        ];
+
+        floors.forEach((floor) => {
+            const polygon = draw
+                .polygon(floor.points)
+                .attr({
+                    fill: floor.hoverColor,
+                    stroke: floor.stroke,
+                    "stroke-width": 10,
+                    cursor: "pointer",
+                    opacity: 0.4
+                })
+                .on("mouseover", () => {
+                    polygon.attr({ fill: "#ff6600", opacity: 0.8 });
+                })
+                .on("mouseout", () => {
+                    polygon.attr({ fill: floor.hoverColor, opacity: 0.4 });
+                })
+                .on("click", () => {
+                window.location.href = `sprat/${floor.id}`;
+            });    });
+    </script>
 </main>
 
 @include('partials/footer')

@@ -208,12 +208,12 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="" role="button" data-bs-toggle="modal" data-bs-target="#contactModal">
+                                    <a class="nav-link" href="{{ Helper::url('kupovina') }}" role="button">
                                         {{__('Shopping')}}
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="" role="button" data-bs-toggle="modal" data-bs-target="#contactModal"> 
+                                    <a class="nav-link" href="{{ Helper::url('najam-apartmana') }}" role="button"> 
                                         {{__('Apartment rent')}}
                                     </a>
                                 </li>

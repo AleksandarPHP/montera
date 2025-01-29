@@ -801,6 +801,87 @@ footer .lastline ul li a {
     background-position: center;
 }
 
+#ground-floor {
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/prizemlje.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#floor-1 {
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/sprat-1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#floor-2 {
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/sprat-2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#floor-3 {
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/sprat-3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#floor-4 {
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/sprat-4.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#floor-5 {
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/sprat-5.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#floor-6 {
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/sprat-6.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#floor-7 {
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/sprat-7.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#floor-8 {
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/sprat-8.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
 .gallery-navigator {
     padding: 5rem 0 10rem 0;
 }

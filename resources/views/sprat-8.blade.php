@@ -20,8 +20,8 @@
     </nav>
 
     <section class="floor-main">
-        <div class="bg" style="background-image: url('{{asset("assets/images/1736968971_test.jpg")}}')"></div>
-        <div class="container">
+        <div id="floor-8"></div>
+        <div class="container" style="position: absolute;">
             <div class="row">
                 <div class="col-md-3">
                     <h3> TEHNIČKI PRIKAZ OSNOVE <br />
@@ -81,6 +81,65 @@
             </div>
         </div>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js"></script>
+    <script>
+        const draw = SVG().addTo("#floor-8").size("100%", "100%");
+
+        const baseWidth = 1920;
+        const baseHeight = 1080;
+
+        draw.viewbox(0, 0, baseWidth, baseHeight);
+
+        const floors = [
+            {
+                name: "Apartment 1",
+                id: "1",
+                points: "",
+                width: 1075,
+                height: 105,
+                hoverColor: "#ff6600",
+                stroke: "#33333300",
+            },
+            {
+                name: "Apartment 2",
+                id: "2",
+                points: "",
+                width: 1075,
+                height: 105,
+                hoverColor: "#ff6600",
+                stroke: "#33333300",
+            },
+            {
+                name: "Apartment 3",
+                id: "3",
+                points: "",
+                width: 1075,
+                height: 105,
+                hoverColor: "#ff6600",
+                stroke: "#33333300",
+            },
+        ];
+
+        floors.forEach((floor) => {
+            const polygon = draw
+                .polygon(floor.points)
+                .attr({
+                    fill: floor.hoverColor,
+                    stroke: floor.stroke,
+                    "stroke-width": 10,
+                    cursor: "pointer",
+                    opacity: 0.4
+                })
+                .on("mouseover", () => {
+                    polygon.attr({ fill: "#ff6600", opacity: 0.8 });
+                })
+                .on("mouseout", () => {
+                    polygon.attr({ fill: floor.hoverColor, opacity: 0.4 });
+                })
+                .on("click", () => {
+                window.location.href = `sprat/${floor.id}`;
+            });    });
+    </script>
 </main>
 
 @include('partials/footer')
