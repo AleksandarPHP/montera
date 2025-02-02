@@ -981,6 +981,10 @@ footer .lastline ul li a {
     font-size: 2.2rem;
 }
 
+.floor-container {
+    position: absolute;
+}
+
 .apartment-table {
     width: 100%;
     border-collapse: collapse;
@@ -1129,5 +1133,9 @@ footer .lastline ul li a {
 
     .eco-friendly-section .column-left {
         padding: 20px;
+    }
+
+    .floor-container {
+        bottom: 0;
     }
 }

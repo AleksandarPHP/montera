@@ -21,7 +21,7 @@
 
     <section class="floor-main">
         <div id="floor-8"></div>
-        <div class="container" style="position: absolute;">
+        <div class="container floor-container">
             <div class="row">
                 <div class="col-md-3">
                     <h3> TEHNIČKI PRIKAZ OSNOVE <br />
@@ -94,7 +94,7 @@
             {
                 name: "Apartment 1",
                 id: "1",
-                points: "",
+                points: "923.5,374.5 734.5,374.5 734.5,501.5 854,501.5 854,455.5 923.5,455.5 923.5,374.5",
                 width: 1075,
                 height: 105,
                 hoverColor: "#ff6600",
@@ -103,16 +103,7 @@
             {
                 name: "Apartment 2",
                 id: "2",
-                points: "",
-                width: 1075,
-                height: 105,
-                hoverColor: "#ff6600",
-                stroke: "#33333300",
-            },
-            {
-                name: "Apartment 3",
-                id: "3",
-                points: "",
+                points: "1092,375 923.5,375 923.5,455.5 976,455.5 976,498.5 1092,498.5 1092,375",
                 width: 1075,
                 height: 105,
                 hoverColor: "#ff6600",

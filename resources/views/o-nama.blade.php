@@ -3,9 +3,9 @@
     <section class="content-page-banner" style="min-height: 80dvh;">
         <div class="bg" style="background-image: url('{{ asset('assets/images/frosty-background.png') }}');"></div>
     
-        <div class="left-content">
-        <h2>Sigurna investicija</h2>
-        <h1 class="title">TERMAG KONCEPT</h1>
+        <div class="left-content" data-aos="fade-right" data-aos-duration="2000">
+        <h2 data-aos="fade-right" data-aos-duration="1000">Sigurna investicija</h2>
+        <h1 class="title" data-aos="fade-right" data-aos-duration="1500">TERMAG KONCEPT</h1>
         <p>
             Kao krajnje ozbiljna i odgovorna, koja je svoje poslovanje usko vezala
             za planinu Jahorinu, kompanija Termag je 2020. godine započela sa
@@ -22,9 +22,9 @@
         </div>
     </section>
 
-    <img class="about-us-small-img" src="{{ asset('assets/images/concept-termag-3.png') }}" />
+    <img class="about-us-small-img" data-aos="zoom-in" data-aos-duration="1500" src="{{ asset('assets/images/concept-termag-3.png') }}" />
 
-    <div class="location-frame-container">
+    <div class="location-frame-container" data-aos="zoom-in" data-aos-duration="1500">
         <div class="image-frame location-frame about-us-frame" style="background-image: url('{{ asset('assets/images/okvir-2.png') }}'); ">
             <div class="image-text">
                 <p class="image-text-small">
@@ -37,13 +37,13 @@
     </div>
 
     <div class="simple-column-section" style="margin-top: 40px;">
-        <h1 class="title">Za Investitore</h1>
-        <h2 class="subtitle">na najpopularnijem skijalištu jugositočne Evrope</div>
+        <h1 class="title" data-aos="fade-left" data-aos-duration="1500">Za Investitore</h1>
+        <h2 class="subtitle" data-aos="fade-left" data-aos-duration="2000">na najpopularnijem skijalištu jugositočne Evrope</div>
         <div class="simple-column-container">
-            <div class="col-lg-6">Monterra concept Termag kompleks apartmana se nalazi na oimpijskoj planini
+            <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1300">Monterra concept Termag kompleks apartmana se nalazi na oimpijskoj planini
                 Jahorina, udaljen svega 30km od međunarodnog aerodroma Sarajevo ili 40 min
                 ugodne vožnje.</div>
-            <div class="col-lg-6">
+            <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1300">
                 Smještena na glavnoj saobraćajnici koja se proteže kroz ski centar, Monterra je od
                 prve staze, Novak Đoković, udaljena samo 250m, a od hotela Termag i staze Poljice
                 svega 200m. Izvrsno pozicionirana i na nadmorskoj visini od 1550 m/Nv Monterra
@@ -54,12 +54,12 @@
     <section class="rent-apartment">
         <div class="container">
             <div class="section-header">
-                <h2 class="title">ISTORIJA</h2>
+                <h2 class="title" data-aos="zoom-in" data-aos-duration="1500">ISTORIJA</h2>
             </div>
 
             <div class="apartment-section">
                 <div class="row">
-                    <div class="col-lg-6 apartment-column ac-bord">
+                    <div class="col-lg-6 apartment-column ac-bord" data-aos="fade-down-right" data-aos-duration="1300">
                         <h3>1999</h3>
                         <p>
                             Termag d.o.o. Rogatica je preduzeće koje je osnovano 1999. godine,
@@ -81,7 +81,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-6 apartment-column">
+                    <div class="col-lg-6 apartment-column" data-aos="fade-down" data-aos-duration="1300">
                         <p>
                         <ul class="styled-list">
                             <li>GRAĐEVINARSTVO;</li>
@@ -98,7 +98,7 @@
             </div>
             <div class="apartment-section">
                 <div class="row">
-                    <div class="col-lg-6 apartment-column ac-padd ac-bord">
+                    <div class="col-lg-6 apartment-column ac-padd ac-bord" data-aos="fade-down-right" data-aos-duration="1100">
                         <p>
                             Sjedište se nalazi u Rogatici, gdje se nalazi i uprava, a u sastavu kompanije se još
                             nalaze i 3 poslovne jedinice i jedno zavisno preduzeće koje se bavi primarnom i
@@ -133,7 +133,7 @@
                             </button>
                         </div>
                     </div>
-                    <div class="col-lg-6 apartment-column ac-padd">
+                    <div class="col-lg-6 apartment-column ac-padd" data-aos="fade-down" data-aos-duration="1100">
                         <h3>2020</h3>
                         <p>
                             Kao krajnje ozbiljna i odgovorna, koja je svoje poslovanje usko vezala za planinu
@@ -174,13 +174,13 @@
     </section>
 
     <div class="simple-column-section">
-        <h1 class="title">Eco Friendly</h1>
-        <h2 class="subtitle">na najpopularnijem skijalištu jugositočne Evrope</div>
+        <h1 class="title" data-aos="fade-left" data-aos-duration="1500">Eco Friendly</h1>
+        <h2 class="subtitle" data-aos="fade-left" data-aos-duration="2000">na najpopularnijem skijalištu jugositočne Evrope</div>
         <div class="simple-column-container">
-            <div class="col-lg-6">Monterra concept Termag kompleks apartmana se nalazi na oimpijskoj planini
+            <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1300">Monterra concept Termag kompleks apartmana se nalazi na oimpijskoj planini
                 Jahorina, udaljen svega 30km od međunarodnog aerodroma Sarajevo ili 40 min
                 ugodne vožnje.</div>
-            <div class="col-lg-6">
+            <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1300">
                 Smještena na glavnoj saobraćajnici koja se proteže kroz ski centar, Monterra je od
                 prve staze, Novak Đoković, udaljena samo 250m, a od hotela Termag i staze Poljice
                 svega 200m. Izvrsno pozicionirana i na nadmorskoj visini od 1550 m/Nv Monterra

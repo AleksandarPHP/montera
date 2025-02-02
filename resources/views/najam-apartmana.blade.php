@@ -35,14 +35,6 @@
                 concept Termag je prava oaza zdravog prostora.</div>
         </div>
     </div>
-
-    <div class="google-map" data-aos="fade-up" data-aos-duration="1500">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2882.8082803301954!2d18.56541387600685!3d43.73530947109838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4758bfcbd0b76b95%3A0xaeca4a33633713f8!2z0KLQtdGA0LzQsNCzINCl0L7RgtC10Ls!5e0!3m2!1ssr!2sus!4v1737678366655!5m2!1ssr!2sus" 
-            width="600" height="450" style="border:0;" 
-            allowfullscreen="" loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-    </div>
 </main>
 
 @include('partials/footer')

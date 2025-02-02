@@ -18,7 +18,8 @@ $routes = [
     'sprat/7' => 'sprat-6',
     'sprat/8' => 'sprat-7',
     'sprat/9' => 'sprat-8',
-
+    'najam-apartmana' => 'najam-apartmana',
+    'kupovina' => 'kupovina'
 ];
 Route::get('galerija', [App\Http\Controllers\HomeController::class, 'gallery']);
 // Route::get('sprat/{id}', [App\Http\Controllers\HomeController::class, 'floors']);
