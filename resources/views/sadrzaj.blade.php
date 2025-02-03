@@ -12,7 +12,7 @@
     </section>
  
     <section class="apartments">
-        <h2 class="title">Apartmani</h2>
+        <h2 class="title" data-aos="zoom-in" data-aos-duration="1500">Apartmani</h2>
         <div class="wrapper">
         <div class="container">
             <div class="row">
@@ -27,7 +27,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="content-wrapper">
+                    <div class="content-wrapper" data-aos="fade-down" data-aos-duration="1500">
                         <h5>Po strukturi apartmani su dvosobni i trosobni, sa 
                         kvadraturom od 41 m2 do 121 m2.</h5>
                             <p>
@@ -62,12 +62,12 @@
     </section>
 
     <section class="apartments apartments-2">
-        <h2 class="title">Recepcija</h2>
+        <h2 class="title" data-aos="zoom-in" data-aos-duration="1500">Recepcija</h2>
         <div class="wrapper">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
-                    <div class="content-wrapper">
+                    <div class="content-wrapper" data-aos="fade-down" data-aos-duration="1500">
                         <p>
                             Vlasnicima i posjetiocima kompleksa Monterra concept Termag na raspolaganju su 
                         usluge recepcije,  a osoblje recepcije je obučeno po standardima hotela Termag.
@@ -112,7 +112,7 @@
     </section>
 
     <section class="apartments apartments-3">
-        <h2 class="title">SKIJAŠNICA</h2>
+        <h2 class="title" data-aos="zoom-in" data-aos-duration="1500">SKIJAŠNICA</h2>
         <div class="wrapper">
         <div class="container">
             <div class="row">
@@ -127,7 +127,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="content-wrapper">
+                    <div class="content-wrapper" data-aos="fade-down" data-aos-duration="1500">
                             <p>
                                 Skijašnica Monterra kompleksa predstavlja zajednički prostor u kojem svaki 
                                 apartman ima svoj boks za odlaganje ski opreme, adekvatno veličini 
@@ -160,12 +160,12 @@
     </section>
 
     <section class="apartments apartments-2">
-        <h2 class="title">VEŠERAJ</h2>
+        <h2 class="title" data-aos="zoom-in" data-aos-duration="1500">VEŠERAJ</h2>
         <div class="wrapper">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
-                    <div class="content-wrapper">
+                    <div class="content-wrapper" data-aos="fade-down" data-aos-duration="1500">
                         <p>
                             Monterra concept Termag u svom sastavu ima i najmoderniji vešeraj čije 
                             usluge mogu koristiti i vlasnici i gosti apartmana. Savremena oprema uz 

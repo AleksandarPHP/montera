@@ -23,6 +23,7 @@ body {
     color: var(--text-color-primary);
     -webkit-font-smoothing: antialiased;
     padding-top: 122px;
+    overflow-x: hidden;
 }
 
 .bg {
@@ -109,6 +110,11 @@ header .navbar-nav {
     align-items: center;
 }
 
+header .navbar-nav.languages a.nav-link {
+    border: 1px solid #000;
+    padding: 4px;
+}
+
 header .transparent .navbar-nav.languages a.nav-link {
     border: 1px solid #fff;
 }
@@ -122,7 +128,6 @@ header .transparent .navbar-nav.languages a.nav-link {
 }
 
 header .navbar-nav.languages {
-    border: 1px solid #000;
     color: #fff;
     text-transform: uppercase;
     list-style: none;
@@ -1137,5 +1142,9 @@ footer .lastline ul li a {
 
     .floor-container {
         bottom: 0;
+    }
+
+    .footer-container {
+        padding: 0 30px !important;
     }
 }

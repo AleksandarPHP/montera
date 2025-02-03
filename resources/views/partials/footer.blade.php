@@ -34,7 +34,7 @@
 </section>
 
 <footer>
-    <div class="container">
+    <div class="container footer-container">
         <div class="row">
             <div class="col-lg-2">
                 <ul class="social">

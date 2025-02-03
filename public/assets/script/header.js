@@ -6,65 +6,64 @@ document.addEventListener("DOMContentLoaded", () => {
     const regularLogo2 = document.getElementById("regular-logo2");
     const offcanvas = document.querySelector(".offcanvas");
     const btnClose = document.querySelector(".btn-close");
+
     body.style.paddingTop = "0";
 
-    if (navbar && navbar.classList.contains("transparent")) {
-        if (window.matchMedia("(max-width: 1440px)").matches)
-            offcanvas.style.setProperty(
-                "background-color",
-                "#000",
-                "important"
-            );
+    const isMobile = () => window.matchMedia("(max-width: 1440px)").matches;
 
-        btnClose.style.setProperty("filter", "invert(1)");
+    function updateNavbarStyles() {
+        if (!navbar) return;
 
-        navbar.classList.add("transparent");
-        if (mediaLogo) {
-            mediaLogo.src = "assets/images/white-logo.webp";
-        }
-        if (regularLogo || regularLogo2) {
-            regularLogo.src = "assets/images/white-logo.webp";
-            regularLogo2.src = "assets/images/white-logo.webp";
-        }
+        const scrolled = window.scrollY > 250;
 
-        window.addEventListener("scroll", () => {
-            if (window.scrollY > 250) {
-                if (window.matchMedia("(max-width: 1440px)").matches)
-                    offcanvas.style.setProperty(
-                        "background-color",
-                        "var(--bs-offcanvas-bg)",
-                        "important"
-                    );
+        if (scrolled) {
+            navbar.classList.remove("transparent");
+            btnClose.style.removeProperty("filter");
 
-                navbar.classList.remove("transparent");
-                btnClose.style.removeProperty("filter");
+            if (mediaLogo) mediaLogo.src = "assets/images/black-logo.webp";
+            if (regularLogo) regularLogo.src = "assets/images/black-logo.webp";
+            if (regularLogo2)
+                regularLogo2.src = "assets/images/black-logo.webp";
 
-                if (mediaLogo) {
-                    mediaLogo.src = "assets/images/black-logo.webp";
-                }
-                if (regularLogo || regularLogo2) {
-                    regularLogo.src = "assets/images/black-logo.webp";
-                    regularLogo2.src = "assets/images/black-logo.webp";
-                }
-            } else {
-                if (window.matchMedia("(max-width: 1440px)").matches)
-                    offcanvas.style.setProperty(
-                        "background-color",
-                        "#000",
-                        "important"
-                    );
-
-                btnClose.style.setProperty("filter", "invert(1)");
-
-                navbar.classList.add("transparent");
-                if (mediaLogo) {
-                    mediaLogo.src = "assets/images/white-logo.webp";
-                }
-                if (regularLogo || regularLogo2) {
-                    regularLogo.src = "assets/images/white-logo.webp";
-                    regularLogo2.src = "assets/images/white-logo.webp";
-                }
+            if (isMobile()) {
+                offcanvas.style.setProperty(
+                    "background-color",
+                    "var(--bs-offcanvas-bg)",
+                    "important"
+                );
             }
-        });
+        } else {
+            navbar.classList.add("transparent");
+            btnClose.style.setProperty("filter", "invert(1)");
+
+            if (mediaLogo) mediaLogo.src = "assets/images/white-logo.webp";
+            if (regularLogo) regularLogo.src = "assets/images/white-logo.webp";
+            if (regularLogo2)
+                regularLogo2.src = "assets/images/white-logo.webp";
+
+            if (isMobile()) {
+                offcanvas.style.setProperty(
+                    "background-color",
+                    "#000",
+                    "important"
+                );
+            } else {
+                offcanvas.style.setProperty(
+                    "background-color",
+                    "transparent",
+                    "important"
+                );
+            }
+        }
+    }
+
+    function handleResize() {
+        updateNavbarStyles();
+    }
+
+    if (navbar.classList.contains("transparent")) {
+        updateNavbarStyles();
+        window.addEventListener("scroll", updateNavbarStyles);
+        window.addEventListener("resize", handleResize);
     }
 });
