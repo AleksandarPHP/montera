@@ -21,7 +21,7 @@
 
     <section class="floor-main">
         <div id="ground-floor"></div>
-        <div class="container" style="position: absolute;">
+        <div class="container floor-container">
             <div class="row">
                 <div class="col-md-3">
                     <h3> TEHNIČKI PRIKAZ OSNOVE <br />

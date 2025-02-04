@@ -1085,6 +1085,20 @@ footer .lastline ul li a {
 }
 
 @media (max-width: 1000px) {
+    #ground-floor,
+    #floor-1,
+    #floor-2,
+    #floor-3,
+    #floor-4,
+    #floor-5,
+    #floor-6,
+    #floor-7,
+    #floor-8 {
+        position: relative;
+        left: 30px;
+        transform: scale(1.2);
+    }
+
     .concept-termag-images {
         padding-bottom: 135px;
     }
@@ -1107,6 +1121,25 @@ footer .lastline ul li a {
 }
 
 @media (max-width: 768px) {
+    #ground-floor,
+    #floor-1,
+    #floor-2,
+    #floor-3,
+    #floor-4,
+    #floor-5,
+    #floor-6,
+    #floor-7,
+    #floor-8 {
+        position: relative;
+        left: 30px;
+        transform: scale(2);
+    }
+
+    .floors-navigator {
+        position: relative;
+        z-index: 100;
+    }
+
     .hero .container {
         transform: translate(-50%, -50%);
     }
@@ -1146,5 +1179,21 @@ footer .lastline ul li a {
 
     .footer-container {
         padding: 0 30px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    #ground-floor,
+    #floor-1,
+    #floor-2,
+    #floor-3,
+    #floor-4,
+    #floor-5,
+    #floor-6,
+    #floor-7,
+    #floor-8 {
+        position: relative;
+        left: 30px;
+        transform: scale(2.5);
     }
 }
