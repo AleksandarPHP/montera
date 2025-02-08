@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<main>
+<main class="main-margin">
 <div id="svg-container"></div>
 
 <section class="gallery-navigator">

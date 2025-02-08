@@ -1,6 +1,6 @@
 @include('partials/header')
 
-<main style="margin-top: 13.5rem;">
+<main class="main-margin">
     <nav class="floors-navigator">
         <div class="container">
             <div class="navigator-slider">

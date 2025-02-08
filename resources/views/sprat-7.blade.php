@@ -1,6 +1,6 @@
 @include('partials/header')
 
-<main style="margin-top: 13.5rem;">
+<main class="main-margin">
     <nav class="floors-navigator">
         <div class="container">
             <div class="navigator-slider">
@@ -21,6 +21,19 @@
 
     <section class="floor-main">
         <div id="floor-7"></div>
+        <div class="compass">
+            <svg width="90" height="90" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <g transform="rotate(-45, 50, 50)">
+                    <line x1="50" y1="10" x2="50" y2="90" stroke="gray" stroke-width="4"/>
+                    <line x1="10" y1="50" x2="90" y2="50" stroke="gray" stroke-width="4"/>
+                    <polygon points="50,5 45,20 55,20" fill="orange"/>
+                </g>
+                <text x="50" y="14" font-size="14" fill="orange" text-anchor="middle">N</text>
+                <text x="90" y="53" font-size="14" fill="gray" text-anchor="middle">E</text>
+                <text x="10" y="53" font-size="14" fill="gray" text-anchor="middle">W</text>
+                <text x="50" y="98" font-size="14" fill="gray" text-anchor="middle">S</text>
+            </svg>
+        </div>
         <div class="container floor-container">
             <div class="row">
                 <div class="col-md-3">

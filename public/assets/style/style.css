@@ -27,6 +27,10 @@ body {
     overflow-x: hidden;
 }
 
+.main-margin {
+    margin-top: 11.5rem;
+}
+
 .bg {
     position: absolute;
     inset: 0;
@@ -102,7 +106,7 @@ body {
 }
 
 header .navbar {
-    padding: 3rem;
+    padding: 2rem;
     background-color: #fff;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
@@ -940,6 +944,8 @@ footer .lastline ul li a {
 .floors-navigator {
     background-color: #ddd;
     padding: 2rem 0;
+    position: relative;
+    z-index: 100;
 }
 
 .floors-navigator .navigator-slider div {
@@ -949,6 +955,14 @@ footer .lastline ul li a {
 .floors-navigator .slick-prev.slick-disabled:before,
 .floors-navigator .slick-next.slick-disabled:before {
     opacity: 0.5;
+}
+
+.floors-navigator .navigator-slider::-webkit-scrollbar {
+    display: none;
+}
+
+.floors-navigator .navigator-slider .slick-slide {
+    min-width: 160px;
 }
 
 .floors-navigator .navigator-slider a {
@@ -975,7 +989,14 @@ footer .lastline ul li a {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100dvh;
+}
+
+.compass {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    width: 90px;
+    height: 90px;
 }
 
 .floor-main h3 {
@@ -1040,6 +1061,10 @@ footer .lastline ul li a {
 }
 
 @media (max-width: 1400px) {
+    .main-margin {
+        margin-top: 7rem;
+    }
+
     .navbar-toggler {
         background-color: #fff !important;
     }
@@ -1100,6 +1125,10 @@ footer .lastline ul li a {
         transform: scale(1.2);
     }
 
+    .main-margin {
+        margin-top: 6.5rem;
+    }
+
     .concept-termag-images {
         padding-bottom: 135px;
     }
@@ -1133,12 +1162,27 @@ footer .lastline ul li a {
     #floor-8 {
         position: relative;
         left: 30px;
+        top: -90px;
         transform: scale(2);
+    }
+
+    .floor-main {
+        min-height: 100dvh;
     }
 
     .floors-navigator {
         position: relative;
         z-index: 100;
+    }
+
+    .floors-navigator .navigator-slider .slick-slide {
+        min-width: 135px;
+    }
+
+    .compass {
+        bottom: 200px;
+        right: 40px;
+        top: unset;
     }
 
     .hero .container {
@@ -1195,6 +1239,11 @@ footer .lastline ul li a {
     #floor-8 {
         position: relative;
         left: 30px;
+        top: -120px;
         transform: scale(2.5);
+    }
+
+    .image-text {
+        transform: translate(-38%, -50%) scale(0.8);
     }
 }

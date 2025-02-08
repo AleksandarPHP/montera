@@ -87,6 +87,20 @@ $(".navigator-slider").slick({
     infinite: false,
     slidesToShow: 8,
     slidesToScroll: 1,
+    variableWidth: true,
+    swipeToSlide: true,
+    responsive: [
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                arrows: true,
+                swipeToSlide: true,
+                infinite: false,
+            },
+        },
+    ],
 });
 
 Fancybox.bind("[data-fancybox]", {});
