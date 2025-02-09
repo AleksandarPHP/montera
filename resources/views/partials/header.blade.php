@@ -100,7 +100,12 @@
                             class="img-fluid"
                         />
                         @else
-                            LOGO
+                        <img
+                            id="media-logo"
+                            src="{{ asset('assets/images/black-logo.webp') }}"
+                            alt="logo"
+                            class="img-fluid"
+                        />
                         @endif
                     </a>
                     <ul class="navbar-nav languages d-none d-lg-flex">
