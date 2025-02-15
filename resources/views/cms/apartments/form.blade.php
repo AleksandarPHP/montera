@@ -35,7 +35,7 @@
                         <select name="floor" class="form-control" id="floor" {!! $errors->has('floor') ? 'style="border-color:red;"' : '' !!}>
                             <option value="">Izaberi</option>  
                             @foreach ($floors as $floor)
-                            <option value="{{$floor->id}}" @selected(old('floor', $item->id) == $floor->id )>{{$floor->title}}</option>  
+                            <option value="{{$floor->id}}" @selected(old('floor', $item->floor_id) == $floor->id )>{{$floor->title}}</option>  
                             @endforeach
                         </select>
                     </div>
@@ -60,7 +60,7 @@
                 <div class="col-md-6">
                     <div class="mt-5">
                         <label for="pdf">Odaberi PDF </label>
-                        <input class="form-control" type="file" id="pdf" name="pdf">
+                        <input class="form-control" type="file" id="pdf" name="pdf" accept="application/pdf">
                     </div>
                 </div>
                 <div class="col-md-12"><hr></div>  

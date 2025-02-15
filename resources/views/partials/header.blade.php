@@ -86,6 +86,7 @@
         <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
         <script src="{{ asset('assets/script/header.js') }}"></script>
         <title>Montera</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
     </head>
     <body>
         <header>

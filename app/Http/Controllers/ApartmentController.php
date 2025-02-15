@@ -22,11 +22,10 @@ class ApartmentController extends Controller
 
         $columns = array( 
             0 =>'id',
-            1 =>'name',
-            2 =>'email',
-            3 =>'is_active',
-            4 =>'email_notifications',
-            5 =>'action'
+            1 =>'title',
+            2 =>'status',
+            3 =>'floor',
+            4 =>'action'
         );
 
         $sortable = [0, 1, 2, 3, 4];
@@ -57,8 +56,9 @@ class ApartmentController extends Controller
             $data[] = [
                 '0' => $row->id,
                 '1' => $row->title,
-                '2' => $row->status,
-                '3' => '<a href="'.url('cms/apartments/'.$row->id.'/edit').'" class="action-edit"><i class="fa fa-edit"></i></a><a href="'.url('cms/apartments').'" class="action-delete confirmation" data-id="'.$row->id.'"><i class="fa fa-trash"></i><form id="delete-form'.$row->id.'" action="'.url('cms/apartments/'.$row->id).'" method="POST" style="display: none;">'.csrf_field().'<input type="hidden" name="_method" value="delete" /></form></a>',
+                '2' => $row->floor->title,
+                '3' => $row->status == 1 ? 'Izdavanje' : ($row->status == 2 ? 'Prodaja' : 'Naruceno'),
+                '4' => '<a href="'.url('cms/apartments/'.$row->id.'/edit').'" class="action-edit"><i class="fa fa-edit"></i></a>',
             ];
         }
         
@@ -133,6 +133,7 @@ class ApartmentController extends Controller
 
     public function update(Request $request, $id)
     {
+        dd($request->all());
         $item = Apartment::findOrFail($id);
         $request->validate([
             'title' => ['required', 'string', 'max:191'],

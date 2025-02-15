@@ -22,6 +22,6 @@ class Floor extends Model
 
     public function apartment(): HasMany
     {
-        return $this->hasMany(Apartment::class);
+        return $this->hasMany(Apartment::class)->whereNot('status', 3);
     }
 }

@@ -2,7 +2,7 @@
 
 <main>
     <section class="hero" style="min-height: 100dvh">
-        <img src="{{ asset('assets/images/location-background.png') }}" alt="Ski Resort">
+        <img src="{{ asset('assets/images/ski-staze-scaled.jpg') }}" alt="Ski Resort">
     </section>
 
     <div class="location-frame-container">

@@ -21,11 +21,12 @@ class Apartment extends Model
         'status',
         'image',
         'image2',
+        'postition'
     ];
 
     public function floor(): BelongsTo
     {
-        return $this->belongsTo(Apartment::class);
+        return $this->belongsTo(Floor::class);
     }
 
 }

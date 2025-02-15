@@ -51,7 +51,6 @@
                             </tr>
                         </thead>
                         <tbody>
-                            {{-- @dd($floors->apartment) --}}
                             @isset($floors->apartment)
                                 @foreach ($floors->apartment as $apartment)
                                 <a href="d">
@@ -104,33 +103,18 @@
         draw.viewbox(0, 0, baseWidth, baseHeight);
 
         const floors = [
+
+            @foreach($floors->apartment as $apartment)
             {
-                name: "Apartment 1",
-                id: "1",
-                points: "730,287 593,287 593,454.5 726,454.5 726,462.5 791,462.5 791,383.5 730,383.5",
+                name: "{{ $apartment->title }}",
+                id: "{{ $apartment->id }}",
+                points: "{{ $apartment->postition }}",
                 width: 1075,
                 height: 105,
-                hoverColor: "#ff6600",
-                stroke: "#33333300",
-            },
-            {
-                name: "Apartment 2",
-                id: "2",
-                points: "1101,287 729.5,287 729.5,384.5 791.5,384.5 791.5,421.5 851.5,421.5 851.5,458.5 979.5,458.5 979.5,434.5 1035,434.5 1035,462.5 1101,462.5",
-                width: 1075,
-                height: 105,
-                hoverColor: "#ff6600",
-                stroke: "#33333300",
-            },
-            {
-                name: "Apartment 3",
-                id: "3",
-                points: "1114.5,287 1101,287 1100.5,463.5 1015.5,463.5 1015.5,597.5 1095,597.5 1095,563.5 1202.5,563.5 1202.5,457 1220,457 1220,461.5 1233,461.5 1233,457 1248.5,457 1248.5,421.5 1233,421.5 1233,326.5 1185.5,326.5",
-                width: 1075,
-                height: 105,
-                hoverColor: "#ff6600",
-                stroke: "#33333300",
-            },
+                hoverColor: '#ff6600',
+                stroke: '#33333300'
+            }@if(!$loop->last),@endif
+        @endforeach
         ];
 
         floors.forEach((floor) => {
@@ -150,7 +134,7 @@
                     polygon.attr({ fill: floor.hoverColor, opacity: 0.4 });
                 })
                 .on("click", () => {
-                window.location.href = `sprat/${floor.id}`;
+                window.location.href = `../apartmani/${floor.id}`;
             });    });
     </script>
 </main>

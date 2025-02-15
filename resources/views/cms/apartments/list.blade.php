@@ -10,7 +10,6 @@
 </ol>
 <h1>Stranice</h1>
 <hr>
-<a href="{{ url()->full().'/create'}}" class="btn btn-primary mb-3">Dodaj <i class="fa-solid fa-plus"></i></a>
 <div class="card mb-3">
     <div class="card-header">
         <i class="fa fa-table"></i> Lista</div>
@@ -21,6 +20,7 @@
                 <tr>
                     <th>ID</th>
                     <th>Naziv</th>
+                    <th>Sprat</th>
                     <th>Status</th>
                     <th class="nosort text-center">Akcija</th>
                 </tr>
@@ -29,6 +29,7 @@
                 <tr>
                     <th>ID</th>
                     <th>Naziv</th>
+                    <th>Sprat</th>
                     <th>Status</th>
                     <th class="nosort text-center">Akcija</th>
                 </tr>
@@ -93,8 +94,18 @@ $(document).ready(function() {
     "createdRow": function (row, data, index) {
         $(row).find('td:eq(2)').addClass("text-center");
         $(row).find('td:eq(3)').addClass("text-center");
+        $(row).find('td:eq(4)').addClass("text-center");
     },
     "order": [[ 0, "asc"]],
+    "rowCallback": function(row, data, index) {
+        if(data[3] == "Izdavanje") {
+            $(row).find('td:eq(3)').css('background-color', '#d2fad7');
+        } else if(data[3] == "Prodaja") {
+            $(row).find('td:eq(3)').css('background-color', '#d5d8f3');
+        } else {
+            $(row).find('td:eq(3)').css('background-color', '#f3d5d5');
+        }
+    }
   });
 });
 </script>

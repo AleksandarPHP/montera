@@ -53,7 +53,7 @@
                         <tbody>
                             {{-- @dd($floors->apartment) --}}
                             @isset($floors->apartment)
-                                @foreach ($floors->apartment as $apartment)
+                                {{-- @foreach ($floors->apartment as $apartment)
                                 <a href="d">
                                     <tr>
                                         <td>{{$apartment->title}}</td>
@@ -61,7 +61,7 @@
                                         <td>{{$apartment->surface}}</td>
                                     </tr>
                                 </a>
-                                @endforeach 
+                                @endforeach  --}}
                             @endisset
                         </tbody>
                     </table>
@@ -104,87 +104,17 @@
         draw.viewbox(0, 0, baseWidth, baseHeight);
 
         const floors = [
+            @foreach($floors->apartment as $apartment)
             {
-                name: "Apartment 1",
-                id: "1",
-                points: "975.5,501 1102,501 1102,451 1222.5,451 1222.5,292.5 1092.5,292.5 1092.5,369.5 923.5,369.5 923.5,455.5 975.5,455.5 975.5,501",
+                name: "{{ $apartment->title }}",
+                id: "{{ $apartment->id }}",
+                points: "{{ $apartment->postition }}",
                 width: 1075,
                 height: 105,
-                hoverColor: "#ff6600",
-                stroke: "#33333300",
-            },
-            {
-                name: "Apartment 2",
-                id: "2",
-                points: "923.5,455.5 923.5,369.5 730.5,369.5 730.5,293 597.5,293 597.5,507 596.5,507 596.5,513 593.5,513 593.5,554.5 596.5,554.5 596.5,563 748,563 748,535.5 814.5,535.5 814.5,517.5 807.5,517.5 807.5,502.5 854,502.5 854,455.5 923.5,455.5",
-                width: 1075,
-                height: 105,
-                hoverColor: "#ff6600",
-                stroke: "#33333300",
-            },
-            {
-                name: "Apartment 3",
-                id: "3",
-                points: "1058,536 1011.5,536 1011.5,518 1019,518 1019,501 1102,501 1102,451 1222,451 1222,562 1058,562",
-                width: 1075,
-                height: 105,
-                hoverColor: "#ff6600",
-                stroke: "#33333300",
-            },
-            {
-                name: "Apartment 4",
-                id: "4",
-                points: "1011.5,585.5 1011.5,610.5 1078.5,610.5 1078.5,633 1133,633 1133,676.5 1222,676.5 1222,562 1058,562 1058,536 1011.5,536 1011.5,553 1019.5,553 1019.5,585.5",
-                width: 1075,
-                height: 105,
-                hoverColor: "#ff6600",
-                stroke: "#33333300",
-            },
-            {
-                name: "Apartment 5",
-                id: "5",
-                points: "1011.5,610.5 1011.5,672.5 1100,672.5 1100,786.5 1178.5,786.5 1178.5,788 1181,788 1181,790 1207.5,790 1207.5,788 1224,788 1224,779 1226.5,779 1226.5,755 1224,755 1224,753 1222,753 1222,676.5 1133,676.5 1133,633 1078.5,633 1078.5,610.5",
-                width: 1075,
-                height: 105,
-                hoverColor: "#ff6600",
-                stroke: "#33333300",
-            },
-            {
-                name: "Apartment 6",
-                id: "6",
-                points: "971.5,672.5 971.5,670 922,670 922,716.5 971.5,716.5 971.5,786.5 1100,786.5 1100,672.5",
-                width: 1075,
-                height: 105,
-                hoverColor: "#ff6600",
-                stroke: "#33333300",
-            },
-            {
-                name: "Apartment 7",
-                id: "7",
-                points: "971.5,787 729,787 729,675 849,675 849,626.5 963.5,626.5 963.5,658 971.5,658 971.5,670 922.5,670 922.5,716 971.5,716 971.5,787",
-                width: 1075,
-                height: 105,
-                hoverColor: "#ff6600",
-                stroke: "#33333300",
-            },
-            {
-                name: "Apartment 8",
-                id: "8",
-                points: "693.5,676.5 597.5,676.5 597.5,792.5 658.5,792.5 658.5,787 729,787 729,675 815,675 815,610 748,610 748,633 693.5,633",
-                width: 1075,
-                height: 105,
-                hoverColor: "#ff6600",
-                stroke: "#33333300",
-            },
-            {
-                name: "Apartment 9",
-                id: "9",
-                points: "693.5,676.5 598,676.5 598,604.5 596.5,604.5 596.5,602.5 592,602.5 592,575 596.5,575 596.5,563 748,563 748,535.5 815,535.5 815,610 748,610 748,633 693.5,633",
-                width: 1075,
-                height: 105,
-                hoverColor: "#ff6600",
-                stroke: "#33333300",
-            },
+                hoverColor: '#ff6600',
+                stroke: '#33333300'
+            }@if(!$loop->last),@endif
+        @endforeach
         ];
 
         floors.forEach((floor) => {
@@ -204,7 +134,7 @@
                     polygon.attr({ fill: floor.hoverColor, opacity: 0.4 });
                 })
                 .on("click", () => {
-                window.location.href = `sprat/${floor.id}`;
+                window.location.href = `../apartmani/${floor.id}`;
             });    });
     </script>
 </main>

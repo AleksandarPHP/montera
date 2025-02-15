@@ -24,8 +24,8 @@
         </div>
 
         <div class="button-wrapper">
-            <a href="{{ Helper::url('galerija') }}" class="button button_primary">
-                {{__('Gallery')}}
+            <a href="{{ Helper::url('sprat/1') }}" class="button button_primary">
+                {{__('Complete offer')}}
             </a>
         </div>
     </div>
