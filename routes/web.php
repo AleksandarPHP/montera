@@ -86,7 +86,10 @@ Route::group(['prefix' => 'cms', 'middleware' => ['auth', 'active']], function()
     // Route::post('menu/ajax', 'App\Http\Controllers\MenuController@ajax');    
 
     Route::resource('apartments', 'App\Http\Controllers\ApartmentController')->except('show');
-    Route::post('apartments/ajax', 'App\Http\Controllers\ApartmentController@ajax');    
+    Route::post('apartments/ajax', 'App\Http\Controllers\ApartmentController@ajax'); 
+    
+    Route::resource('sliders', 'App\Http\Controllers\SliderController')->except('show');
+    Route::post('sliders/ajax', 'App\Http\Controllers\SliderController@ajax');    
 
     Route::resource('floors', 'App\Http\Controllers\FloorController')->except('show');
     Route::post('floors/ajax', 'App\Http\Controllers\FloorController@ajax');  

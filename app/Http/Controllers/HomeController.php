@@ -24,8 +24,8 @@ class HomeController extends Controller
 
     public function apartmant(Request $request, $id){
         $apartmant = Apartment::findOrFail($id);
-
-        return view('detail', ['apartmant' => $apartmant]);
+        $floor = Floor::select('id', 'title')->get();
+        return view('detail', ['apartmant' => $apartmant, 'floor' => $floor]);
     }
 
     public function contact(Request $request)

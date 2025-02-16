@@ -42,11 +42,17 @@
                 <div class="col-md-12"><hr></div>   
                 <div class="col-md-12">
                     <div class="form-group" {!! $errors->has('text') ? 'style="border:1px solid red;"' : '' !!}>
-                        <label for="description">Tekst </label>
+                        <label for="description">Tekst  </label>
                         <textarea name="description" id="description" class="form-control">{{ old('description', $item->getTranslation('description', $lang, false)) }}</textarea>
                     </div>
                 </div>
                 <div class="col-md-12"><hr></div>
+                <div class="col-md-12">
+                    <div class="form-group" {!! $errors->has('text') ? 'style="border:1px solid red;"' : '' !!}>
+                        <label for="description2">Tekst 2</label>
+                        <textarea name="description2" id="description2" class="form-control">{{ old('description2', $item->getTranslation('description2', $lang, false)) }}</textarea>
+                    </div>
+                </div>
                 <div class="col-md-12"><hr></div>
                 <div class="col-md-3">
                     <div class="form-group">

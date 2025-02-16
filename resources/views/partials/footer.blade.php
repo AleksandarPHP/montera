@@ -3,14 +3,13 @@
         <div class="content-wrapper">
             <h4 data-aos="fade-down"
             data-aos-easing="linear"
-            data-aos-duration="1000">INVESTIRAJTE U KUPOVINU</h4>
+            data-aos-duration="1000">{{__('INVEST IN PURCHASES')}}</h4>
             <h3 data-aos="fade-up"
             data-aos-easing="linear"
             data-aos-duration="1300">
-                Monterra Concept Termag APARTMANA u NAJMODERNIJem SKIJALIŠTu U
-                REGIONU
+           {{__('Monterra Concept Termag APARTMENT in the MOST MODERN SKI AREA IN THE REGION')}}
             </h3>
-            <a href="#" class="button button_secondary" data-aos="zoom-out" data-aos-duration="1500"> upit za ponudu </a>
+            <a href="#" class="button button_secondary" data-aos="zoom-out" data-aos-duration="1500" data-bs-toggle="modal" data-bs-target="#contactModal">{{__('request for quotation')}}</a>
         </div>
     </div>
 </section>
@@ -59,57 +58,70 @@
                         </a>
                     </li>
                 </ul>
-                <h5>Pratite nas</h5>
+                <h5>{{__('Follow us')}}</h5>
                 <p class="txt">
-                    Ukoliko želite samo Vaše parče planinskog raja na
-                    najpopularnijem skijalištu jugositočne Evrope, Monterra
-                    concept Termag je jedini logičan izbor!
+                    {{__('If you want just your piece of mountain paradise at the most popular ski resort in Southeastern Europe, Monterra concept Termag is the only logical choice!')}}
                 </p>
             </div>
             <div class="col-lg-1 offset-lg-1">
                 <ul>
                     <li>
-                        <a href="#">O nama</a>
+                        <a href="{{ Helper::url('o-nama') }}" role="button">
+                            {{__('About us')}}
+                        </a> 
+                   </li>
+                    <li>
+                        <a href="{{ Helper::url('sadrzaj') }}" role="button">
+                            {{__('Content')}}
+                        </a>
                     </li>
                     <li>
-                        <a href="#"> SADRŽAJ </a>
+                        <a href="{{ Helper::url('apartmani') }}" role="button">
+                            {{__('Apartments')}}
+                        </a>
                     </li>
                     <li>
-                        <a href="#"> Apartmani </a>
+                        <a href="{{ Helper::url('kupovina') }}" role="button">
+                            {{__('Shopping')}}
+                        </a>
                     </li>
                     <li>
-                        <a href="#"> Kupovina </a>
+                        <a href="{{ Helper::url('najam-apartmana') }}" role="button"> 
+                            {{__('Apartment rent')}}
+                        </a>
                     </li>
                 </ul>
             </div>
             <div class="col-lg-3 offset-lg-1">
                 <i class="fa-solid fa-location-dot"></i>
-                <h3>lokacija</h3>
+                <h3>{{__('Location')}}</h3>
                 <p>
-                    Hotel Termag Jahorina, Olimpijska 4 , Bosna i Hercegovina
+                   {{$settings->title}}, {{$settings->address}} , Bosna i Hercegovina
                     <br />
                     Telefoni: +387 57 270 422, +387 57 272 100 <br />
                     Faks: +387 57 270 423, +387 57 272 072
                 </p>
-                <a href="mailto:info@termaghotel.com">info@termaghotel.com</a>
+                <a href="mailto:{{$settings->email}}">{{$settings->email}}</a>
             </div>
             <div class="col-lg-3 offset-lg-1">
                 <i class="fa-solid fa-envelope"></i>
-                <h3>Kontakt</h3>
-                <a href="mailto:info@monterratermag.com">
-                    info@monterratermag.com</a
+                <h3>{{__('Contact')}}</h3>
+                <a href="mailto:{{$settings->email}}">
+                    {{$settings->email}}</a
                 >
                 <form action="#">
                     <input type="text" placeholder="Email Adresa" />
                     <button type="submit" class="button button_secondary">
-                        Pošaljite
+                        {{__('Send')}}
                     </button>
                 </form>
             </div>
         </div>
 
         <div class="lastline">
-            <p>Allright Reserved - Termag Concept</p>
+            <p>Copyright 2024 © Hotel Termag. Sva prava zadržana. Created by 
+                <a href="https://soft4tech.com/">SoftTech</a>
+            </p>
             <ul>
                 <li>
                     <a href="#">DIsclaimer</a>
@@ -124,7 +136,13 @@
 </footer>
 <style>
     .modal-content {
-        border-radius: 0; /* Isključuje zaobljene ivice */
+        border-radius: 0;
+    }
+    .modal-body label {
+        font-size: 2.23rem;
+    }
+    .modal-body h2 {
+        font-size: 3.23rem;
     }
 
     .my-form-control {
@@ -145,7 +163,7 @@
     }
 </style>
 <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-xl"> <!-- Prošireni modal -->
+    <div class="modal-dialog modal-dialog-centered modal-xl">
         <div class="modal-content">
             <div class="modal-header">
                 {{-- <h5 class="modal-title fs-4" id="contactModalLabel">Za sva pitanja i nedoumice</h5> --}}
@@ -154,37 +172,37 @@
             <div class="modal-body">
                 <form action="{{ url('/kontakt') }}" method="POST">
                     @csrf
-                    <h2 class=" text-center">{{__('kontakt')}}</h2>
+                    <h2 class="text-center">{{__('Contact us')}}</h2>
                     <br>
                     <br>
                     <div class="row g-3 mb-3">
                         <div class="col-md-6">
-                            <label for="firstName" class="form-label fs-5">Ime <span class="text-danger">*</span></label>
-                            <input type="text" class="my-form-control" name="firstName" id="firstName" placeholder="Unesite ime" required>
+                            <label for="firstName" class="form-label">{{__('Name')}} <span class="text-danger">*</span></label>
+                            <input type="text" class="my-form-control" name="firstName" id="firstName" placeholder="{{__('Name')}} " required>
                         </div>
                         <div class="col-md-6">
-                            <label for="lastName" class="form-label fs-5">Prezime <span class="text-danger">*</span></label>
-                            <input type="text" class="my-form-control" name="lastName" id="lastName" placeholder="Unesite prezime" required>
+                            <label for="lastName" class="form-label">{{__('Last name')}} <span class="text-danger">*</span></label>
+                            <input type="text" class="my-form-control" name="lastName" id="lastName" placeholder="{{__('Last name')}}" required>
                         </div>
                     </div>
                     <div class="row g-3 mb-3">
                         <div class="col-md-6">
-                            <label for="phone" class="form-label fs-5">Broj telefona <span class="text-danger">*</span></label>
-                            <input type="tel" class="my-form-control" name="phone" id="phone" placeholder="Unesite broj telefona" required>
+                            <label for="phone" class="form-label">{{__( 'Mobile number')}} <span class="text-danger">*</span></label>
+                            <input type="tel" class="my-form-control" name="phone" id="phone" placeholder="{{__( 'Mobile number')}}" required>
                         </div>
                         <div class="col-md-6">
-                            <label for="email" class="form-label fs-5">Mail <span class="text-danger">*</span></label>
+                            <label for="email" class="form-label">{{__('E-mail')}} <span class="text-danger">*</span></label>
                             <input type="email" class="my-form-control" name="email" id="email" placeholder="Unesite email" required>
                         </div>
                     </div>
                     <div class="mb-3">
-                        <label for="question" class="form-label fs-5">Postavite pitanje <span class="text-danger">*</span></label>
-                        <textarea class="my-form-control" id="question" name="question" rows="4" placeholder="Unesite pitanje" required></textarea>
+                        <label for="question" class="form-label">{{__('Ask a question')}} <span class="text-danger">*</span></label>
+                        <textarea class="my-form-control" id="question" name="question" rows="4" placeholder="{{__('Ask a question')}}" required></textarea>
                     </div>
                     <br>
                     <br>
                     <div class="text-center">
-                        <button type="submit" class="button button_primary">Pošaljite</button> <!-- Veće dugme -->
+                        <button type="submit" class="button button_primary">{{__('Send')}}</button>
                     </div>
                 </form>
             </div>

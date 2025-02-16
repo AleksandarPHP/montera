@@ -37,9 +37,12 @@ class SettingsController extends Controller
             'keywords' => ['nullable', 'string', 'max:500'],
 
             'phone' => ['nullable', 'string', 'max:191'],
+            'phone2' => ['nullable', 'string', 'max:191'],
             'worktime' => ['nullable', 'string', 'max:191'],
             'address' => ['nullable', 'string', 'max:191'],
             'facebook' => ['nullable', 'string', 'max:191'],
+            'linkedin' => ['nullable', 'string', 'max:191'],
+            'twitter' => ['nullable', 'string', 'max:191'],
             'google' => ['nullable', 'string', 'max:191'],
             'instagram' => ['nullable', 'string', 'max:191'],
 
@@ -67,6 +70,8 @@ class SettingsController extends Controller
             $item->worktime = $request->worktime;
             $item->address = $request->address;
             $item->facebook = $request->facebook;
+            $item->twitter = $request->twitter;
+            $item->linkedin = $request->linkedin;
             $item->instagram = $request->instagram;
 
             $item->logoH = $logoH;

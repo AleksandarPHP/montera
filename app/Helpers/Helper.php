@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Storage;
 use Exception;
 use Illuminate\Support\Facades\Log;
 use App\Models\Gallery;
+use App\Models\Slider;
 use App\Models\Text;
 use Request;
 use Cache;
@@ -58,6 +59,44 @@ class Helper {
             echo ($e);
             return null;
         }
+    }
+
+    public static function image($path = null, $width = null, $height = null, $public_path = false)
+    {
+        if(is_null($path) || $path == "") return null;
+        
+        if(Str::startsWith($path, url(''))) $path = trim(str_replace(url(''), '', $path), '/');
+
+        $replace = 'storage';
+        $path = trim($path, '/');
+        if(Str::startsWith($path, $replace)) $path = trim(substr($path, strlen($replace)), '/');
+
+        $width = intval($width) > 5000 ? 0 : intval($width);
+        $height = intval($height) > 5000 ? 0 : intval($height);
+
+        if(($width == 0 || $height == 0) && Storage::exists('public/'.$path)) return $public_path ? public_path('storage/'.$path) : asset('storage/'.$path);
+        if(Storage::exists('public/'.$path)) {
+            if(Str::lower(pathinfo($path, PATHINFO_EXTENSION)) === "svg") return $public_path ? public_path('storage/'.$path) : asset('storage/'.$path);
+
+            if($width > 0 && $height > 0 && Storage::exists('public/cache/'.$width.'x'.$height.'/'.$path)) return $public_path ? public_path('storage/cache/'.$width.'x'.$height.'/'.$path) : asset('storage/cache/'.$width.'x'.$height.'/'.$path);
+            if($width > 0 && $height > 0) {
+                try {
+                    $manager = new ImageManager(new Driver());
+
+                    $originalImage = $manager->read(Storage::get('public/'.$path));                
+
+                    if($width == 5000 && $height < 5000) Storage::put('public/cache/'.$width.'x'.$height.'/'.$path, $originalImage->resize(null, $height)->encode());
+                    else if($height == 5000 && $width < 5000) Storage::put('public/cache/'.$width.'x'.$height.'/'.$path, $originalImage->resize($width, null)->encode());
+                    else Storage::put('public/cache/'.$width.'x'.$height.'/'.$path, $originalImage->resize($width,$height)->encode());
+                    
+                    if(Storage::exists('public/cache/'.$width.'x'.$height.'/'.$path)) return $public_path ? public_path('storage/cache/'.$width.'x'.$height.'/'.$path) : asset('storage/cache/'.$width.'x'.$height.'/'.$path);
+                } catch (Exception $e) {}
+
+                return $public_path ? public_path('storage/'.$path) : asset('storage/'.$path);
+            }
+        }
+
+        return null;
     }
 
     public static function deleteImage($oldImage)
@@ -134,6 +173,13 @@ class Helper {
         return Cache::rememberForever('texts-'.$id, function() use ($id) {
             return Text::find($id);
         });
+    }
+
+    public static function slider($id)
+    {
+        // return Cache::rememberForever('slider-'.$id, function() use ($id) {
+            return Slider::find($id);
+        // });
     }
 
     public static function url($url='')

@@ -51,7 +51,6 @@
                             </tr>
                         </thead>
                         <tbody>
-                            {{-- @dd($floors->apartment) --}}
                             @isset($floors->apartment)
                                 {{-- @foreach ($floors->apartment as $apartment)
                                 <a href="d">

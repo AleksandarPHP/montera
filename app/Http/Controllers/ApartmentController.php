@@ -133,7 +133,6 @@ class ApartmentController extends Controller
 
     public function update(Request $request, $id)
     {
-        dd($request->all());
         $item = Apartment::findOrFail($id);
         $request->validate([
             'title' => ['required', 'string', 'max:191'],

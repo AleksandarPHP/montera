@@ -21,10 +21,11 @@
         </div>
         @php
         $moduli = array(
-          array('cms/floors', 'Spratovi', 'building'),
-          array('cms/apartments', 'Stanovi', 'building'),
+          array('cms/floors', 'Spratovi', 'cubes'),
+          array('cms/apartments', 'Apartmani', 'building'),
           array('cms/galleries', 'Albumi', 'image'),
           array('cms/settings/1/edit', 'Podesavanja', 'cog'),
+          array('cms/sliders', 'Slajderi', 'desktop'),
           array('cms/texts', 'Tekstovi', 'text-width'),
           array('cms/users', 'Korisnici', 'users'),
 

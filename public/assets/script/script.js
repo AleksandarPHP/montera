@@ -7,21 +7,21 @@ $(".slider").slick({
 $(".slider-2").slick({
     arrows: true,
     infinite: true,
-    prevArrow: $(".prev-arrow.prev-arrow-2"),
-    nextArrow: $(".next-arrow.next-arrow-2"),
+    prevArrow: $(".prev-arrow-2"),
+    nextArrow: $(".next-arrow-2"),
 });
 $(".slider-3").slick({
     arrows: true,
     infinite: true,
-    prevArrow: $(".prev-arrow.prev-arrow-2"),
-    nextArrow: $(".next-arrow.next-arrow-2"),
+    prevArrow: $(".prev-arrow-3"),
+    nextArrow: $(".next-arrow-3"),
 });
-$(".slider-4").slick({
-    arrows: true,
-    infinite: true,
-    prevArrow: $(".prev-arrow.prev-arrow-2"),
-    nextArrow: $(".next-arrow.next-arrow-2"),
-});
+// $(".slider-4").slick({
+//     arrows: true,
+//     infinite: true,
+//     prevArrow: $(".prev-arrow.prev-arrow-2"),
+//     nextArrow: $(".next-arrow.next-arrow-2"),
+// });
 
 $(".building-slider").slick({
     dots: false,

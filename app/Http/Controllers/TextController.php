@@ -160,6 +160,7 @@ class TextController extends Controller
             'title' => ['nullable', 'string', 'max:191'],
             'subtitle' => ['nullable', 'string'],
             'description' => ['nullable', 'string'],
+            'description2' => ['nullable', 'string'],
             'image' => ['nullable', 'mimes:jpeg,png,svg,webp', 'image', 'max:5000', 'dimensions:min_width='.$width.',min_height='.$height],
 
         ]);    
@@ -185,7 +186,9 @@ class TextController extends Controller
         $item->setTranslation('description', $lang, $request->input('description'));
         $item->setTranslation('meta_title', $lang, $request->input('meta_title'));
         $item->setTranslation('meta_description', $lang, $request->input('meta_description'));
-
+        $item->setTranslation('description2', $lang, $request->input('description2'));
+       
+        
 
         if($lang=='sr') {      
             $item->image = $image;
@@ -205,12 +208,9 @@ class TextController extends Controller
 
     public function removeImage(Request $request, $id)
     {
-        $checkArray = ['image'];
-
-        $checkArray = implode(",", $checkArray);
 
         $request->validate([
-            'image2' => ['required', 'in:'.$checkArray],
+            'image' => ['required'],
         ]);
 
         $item = Text::findOrFail($id);

@@ -1,46 +1,52 @@
+@section('title', Helper::title(17))
 @extends('layouts.app')
 @section('content')
+@php
+    $text = Helper::text(18) 
+@endphp
 <main>
     <section class="content-page-banner">
-        <div class="bg" style="background-image: url('{{asset("assets/images/placeholder.png")}}');"></div>
+        <div class="bg" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div class="content-wrapper">
-                <p>Monterra Kompleks ima 12 tipova apartmana + prateće sadržaje:  <br />
-                    recepciju, parking, skijašnicu, restoran i vešeraj</p>
+                <p>{{$text->title}}  <br />
+                    {{$text->subtitle}}</p>
             </div>
         </div>
     </section>
  
+    @php
+        $slider = Helper::slider(1);
+    @endphp
     <section class="apartments">
-        <h2 class="title" data-aos="zoom-in" data-aos-duration="1500">Apartmani</h2>
+        <h2 class="title" data-aos="zoom-in" data-aos-duration="1500">{{$slider->title}}</h2>
         <div class="wrapper">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
                     <div class="slider">
-                        <div>
-                            <img src="{{asset('assets/images/placeholder.png')}}" alt="" class="img-fluid">
-                        </div>
-                        <div>
-                            <img src="{{asset('assets/images/placeholder.png')}}" alt="" class="img-fluid">
-                        </div>
+                        @for ($i = 1; $i <= 4; $i++)
+                        @php
+                            $img = 'image'.$i;   
+                        @endphp
+                            <div>
+                                @if (!is_null($slider->$img))
+                                    <img src="{{Helper::image($slider->$img, 1200, 800, false)}}" alt="" class="img-fluid">
+                                @else
+                                <div>
+                                    <img src="{{asset('assets/images/placeholder.png')}}" alt="" class="img-fluid">
+                                </div>
+                                @endif
+                            </div>
+                        @endfor
                     </div>
                 </div>
+
                 <div class="col-lg-6">
                     <div class="content-wrapper" data-aos="fade-down" data-aos-duration="1500">
-                        <h5>Po strukturi apartmani su dvosobni i trosobni, sa 
-                        kvadraturom od 41 m2 do 121 m2.</h5>
+                        <h5>{{$slider->subtitle}}</h5>
                             <p>
-                            Monterra je nezavisan, multifunkcionalan kompleks koji budućim vlasnicima nudi 81 
-                            apartman, opremljen najkvalitetnijim i prirodnim materijalima, u neoplaninskom stilu.
-                            </p>
-                            <p>
-                            Monterra je nezavisan, multifunkcionalan kompleks koji budućim vlasnicima nudi 81 
-                            apartman, opremljen najkvalitetnijim i prirodnim materijalima, u neoplaninskom stilu.
-                            </p>
-                            <p>
-                            Monterra je nezavisan, multifunkcionalan kompleks koji budućim vlasnicima nudi 81 
-                            apartman, opremljen najkvalitetnijim i prirodnim materijalima, u neoplaninskom stilu.
+                            {{$slider->text}}
                             </p>
                     </div>
                 </div>
@@ -55,47 +61,42 @@
             </div>
         </div>
     </div>
-
     <div class="button-wrapper">
-        <a href="{{ Helper::url('sprat/1') }}" class="button button_secondary">Kompletna ponuda</a>
+        <a href="{{ Helper::url('sprat/1') }}" class="button button_secondary">{{__('Complete offer')}}</a>
     </div>
     </section>
-
+    @php
+        $slider = Helper::slider(2);
+    @endphp
     <section class="apartments apartments-2">
-        <h2 class="title" data-aos="zoom-in" data-aos-duration="1500">Recepcija</h2>
+        <h2 class="title" data-aos="zoom-in" data-aos-duration="1500">{{$slider->title}}</h2>
         <div class="wrapper">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
                     <div class="content-wrapper" data-aos="fade-down" data-aos-duration="1500">
+                        <h5>{{$slider->subtitle}}</h5>
                         <p>
-                            Vlasnicima i posjetiocima kompleksa Monterra concept Termag na raspolaganju su 
-                        usluge recepcije,  a osoblje recepcije je obučeno po standardima hotela Termag.
-                        </p>
-                        <h5>
-                            Vlasnicima apartmana pruža usluge 
-                            check in i check out, vođenje  knjige gostiju, 
-                            izdavanje ključeva. 
-                        </h5>
-                        <p>
-                            osoblje recepcije se stara o organizaciji čišćenja i održavanja apartmana, te vrši 
-                            svakodnevni obilazak i monitoring, što garantuje sigurnost i bezbjednost, kako 
-                            vlasnicima, tako i gostima kompleksa Monterra concept Termag. 
-                        </p>
-                        <p>
-                            Zahvaljujući službi recepcije Vaša nekretnina je u potpunosti sigurna, 
-                            a komoditet zagarantovan
+                            {{$slider->text}}
                         </p>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="slider-2">
-                        <div>
-                            <img src="{{asset('assets/images/placeholder.png')}}" alt="" class="img-fluid">
-                        </div>
-                        <div>
-                            <img src="{{asset('assets/images/placeholder.png')}}" alt="" class="img-fluid">
-                        </div>
+                        @for ($i = 1; $i <= 4; $i++)
+                        @php
+                            $img = 'image'.$i;   
+                        @endphp
+                            <div>
+                                @if (!is_null($slider->$img))
+                                    <img src="{{Helper::image($slider->$img, 1200, 800, false)}}" alt="" class="img-fluid">
+                                @else
+                                <div>
+                                    <img src="{{asset('assets/images/placeholder.png')}}" alt="" class="img-fluid">
+                                </div>
+                                @endif
+                            </div>
+                        @endfor
                     </div>
                 </div>
             </div>
@@ -111,39 +112,38 @@
     </div>
     </section>
 
+    @php
+        $slider = Helper::slider(3);
+    @endphp
     <section class="apartments apartments-3">
-        <h2 class="title" data-aos="zoom-in" data-aos-duration="1500">SKIJAŠNICA</h2>
+        <h2 class="title" data-aos="zoom-in" data-aos-duration="1500">{{$slider->title}}</h2>
         <div class="wrapper">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
                     <div class="slider-3">
-                        <div>
-                            <img src="{{asset('assets/images/placeholder.png')}}" alt="" class="img-fluid">
-                        </div>
-                        <div>
-                            <img src="{{asset('assets/images/placeholder.png')}}" alt="" class="img-fluid">
-                        </div>
+                        @for ($i = 1; $i <= 4; $i++)
+                        @php
+                            $img = 'image'.$i;   
+                        @endphp
+                            <div>
+                                @if (!is_null($slider->$img))
+                                    <img src="{{Helper::image($slider->$img, 1200, 800, false)}}" alt="" class="img-fluid">
+                                @else
+                                <div>
+                                    <img src="{{asset('assets/images/placeholder.png')}}" alt="" class="img-fluid">
+                                </div>
+                                @endif
+                            </div>
+                        @endfor
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="content-wrapper" data-aos="fade-down" data-aos-duration="1500">
-                            <p>
-                                Skijašnica Monterra kompleksa predstavlja zajednički prostor u kojem svaki 
-                                apartman ima svoj boks za odlaganje ski opreme, adekvatno veličini 
-                                apartmana.
-                            </p>
-                            <h5>
-                                Posebna pogodnost za sve vlasnike apartmana je ta 
-                                što boks za odlaganje opreme ulazi u osnovnu 
-                                cijenu apartmana, ne plaća se dodatno.  
-                            </h5>
-                            <p>
-                                Skijašnica je opremljena sa najmodernijim boksovima kompanije 
-                                Wintersteiger, a pored toga što imaju sistem kartičnog otključavanja, nude 
-                                mogućnost sušenja i zagrijavanja ski opreme. Moderno i funkcionalno 
-                                rješenje za uživanje u skijaškim danima.
-                            </p>
+                        <h5>{{$slider->subtitle}}</h5>
+                        <p>
+                            {{$slider->text}}
+                        </p>
                     </div>
                 </div>
             </div>
@@ -159,46 +159,47 @@
     </div>
     </section>
 
+    @php
+        $slider = Helper::slider(5);
+    @endphp
     <section class="apartments apartments-2">
-        <h2 class="title" data-aos="zoom-in" data-aos-duration="1500">VEŠERAJ</h2>
+        <h2 class="title" data-aos="zoom-in" data-aos-duration="1500">{{$slider->title}}</h2>
         <div class="wrapper">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
                     <div class="content-wrapper" data-aos="fade-down" data-aos-duration="1500">
+                        <h5>{{$slider->subtitle}}</h5>
                         <p>
-                            Monterra concept Termag u svom sastavu ima i najmoderniji vešeraj čije 
-                            usluge mogu koristiti i vlasnici i gosti apartmana. Savremena oprema uz 
-                            korištenje sertifikovanih sredstava za pranje garantuje uvijek svježu i mirisnu 
-                            posteljinu, za lak i ugodan san. Pored usluge pranja vešeraj ima i posebnu 
-                            službu održavanja koja se brine za higijenu zajedničkih prostorija ali i 
-                            apartmana. 
+                            {{$slider->text}}
                         </p>
-                        <h5>
-                            Komplet vešeraj funkcioniše po koceptu Termag 
-                            hotela te osigurava ispunjavanje najstrožijih 
-                            kriterijuma i standarda kada je higijena prostora u 
-                            pitanju.
-                        </h5>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="slider-4">
-                        <div>
-                            <img src="{{asset('assets/images/placeholder.png')}}" alt="" class="img-fluid">
-                        </div>
-                        <div>
-                            <img src="{{asset('assets/images/placeholder.png')}}" alt="" class="img-fluid">
-                        </div>
+                    <div class="slider-2">
+                        @for ($i = 1; $i <= 4; $i++)
+                        @php
+                            $img = 'image'.$i;   
+                        @endphp
+                            <div>
+                                @if (!is_null($slider->$img))
+                                    <img src="{{Helper::image($slider->$img, 1200, 800, false)}}" alt="" class="img-fluid">
+                                @else
+                                <div>
+                                    <img src="{{asset('assets/images/placeholder.png')}}" alt="" class="img-fluid">
+                                </div>
+                                @endif
+                            </div>
+                        @endfor
                     </div>
                 </div>
             </div>
         </div>
         <div class="slider-control">
-            <button class="prev-arrow prev-arrow-4" aria-label="Previous" type="button">
+            <button class="prev-arrow prev-arrow-2" aria-label="Previous" type="button">
                 <i class="fa-solid fa-arrow-left"></i>
             </button>
-            <button class="next-arrow next-arrow-4"  aria-label="Next" type="button">
+            <button class="next-arrow next-arrow-2"  aria-label="Next" type="button">
                 <i class="fa-solid fa-arrow-right"></i>
             </button>
         </div>

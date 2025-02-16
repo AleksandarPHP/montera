@@ -68,6 +68,20 @@
                 <div class="col-md-12"><hr></div>
                 <div class="col-md-12">
                     <div class="form-group">
+                        <label for="twitter">twitter</label>
+                        <input name="twitter" type="text" class="form-control" id="twitter" placeholder="twitter" value="{{ old('twitter', $item->twitter) }}" {!! $errors->has('twitter') ? 'style="border-color:red;"' : '' !!}>
+                    </div>
+                </div>
+                <div class="col-md-12"><hr></div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="linkedin">linkedin</label>
+                        <input name="linkedin" type="text" class="form-control" id="linkedin" placeholder="linkedin" value="{{ old('linkedin', $item->linkedin) }}" {!! $errors->has('linkedin') ? 'style="border-color:red;"' : '' !!}>
+                    </div>
+                </div>
+                <div class="col-md-12"><hr></div>
+                <div class="col-md-12">
+                    <div class="form-group">
                         <label for="google">Google</label>
                         <input name="google" type="text" class="form-control" id="google" placeholder="google" value="{{ old('google', $item->google) }}" {!! $errors->has('google') ? 'style="border-color:red;"' : '' !!}>
                     </div>
