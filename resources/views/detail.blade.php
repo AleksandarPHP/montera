@@ -39,6 +39,9 @@
                 @endif
         </div>
     </section>
+    <p class="txt" style="text-align: center">
+        Sve prikazane kvadrature su približne(cca). Tačne kvadrature iskazane su u pojedinačnim komercijalnim skicama i dostupne su na zahtev
+    </p>
 </main>
 <script>
 var url = "{{asset('storage/'.$apartmant->pdf)}}";

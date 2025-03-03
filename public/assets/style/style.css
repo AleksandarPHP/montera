@@ -984,6 +984,87 @@ footer .lastline ul li a {
     background-color: #f28a57;
 }
 
+.contact-container {
+    background-color: #201c34;
+    color: #fff;
+    font-size: 1.5rem;
+    display: flex;
+    min-height: 100vh;
+}
+
+.contact-info {
+    flex: 1;
+    color: #fff;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-info i {
+    padding-right: 5px;
+}
+
+.contact-info-data {
+    line-height: 4rem;
+}
+
+.contact-info h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.contact-info h3 {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.contact-info p,
+.contact-info a {
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.contact-form {
+    flex: 1;
+    background: #fff;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-form form {
+    width: 100%;
+    max-width: 400px;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    width: 100%;
+    background: #201c34;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
 .floor-main {
     position: relative;
     display: flex;
@@ -1054,8 +1135,8 @@ footer .lastline ul li a {
     background-color: #f1f1f1;
 }
 .pdf-container {
-    max-width: 1920px;  /* Maksimalna širina za desktop */
-    width: 100%;  /* Fleksibilna širina */
+    max-width: 1920px; /* Maksimalna širina za desktop */
+    width: 100%; /* Fleksibilna širina */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1063,54 +1144,54 @@ footer .lastline ul li a {
 }
 
 canvas {
-    width: 100%;  /* Popunjava širinu roditeljskog diva */
-    height: auto;  /* Održava proporcije */
-    border: 1px solid #ccc;  /* Opcioni border */
+    width: 100%; /* Popunjava širinu roditeljskog diva */
+    height: auto; /* Održava proporcije */
+    border: 1px solid #ccc; /* Opcioni border */
 }
 .body-loading:after,
 .body-loading:before {
-position: fixed;
-content: " ";
-display: block;
+    position: fixed;
+    content: " ";
+    display: block;
 }
 .body-loading:before {
-z-index: 100000001;
-width: 100%;
-height: 100%;
-top: 0;
-left: 0;
-background-color: rgba(255, 255, 255, 0.65);
+    z-index: 100000001;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.65);
 }
 .body-loading:after {
-z-index: 100000002;
-top: 0;
-right: 0;
-left: 0;
-bottom: 0;
-margin: auto;
-width: 80px;
-height: 80px;
-border-radius: 50%;
-border: 10px solid #f28a57;
-border-color: #f28a57 transparent #f28a57 transparent;
--webkit-animation: lds-dual-ring 1s linear infinite;
-animation: lds-dual-ring 1s linear infinite;
+    z-index: 100000002;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 10px solid #f28a57;
+    border-color: #f28a57 transparent #f28a57 transparent;
+    -webkit-animation: lds-dual-ring 1s linear infinite;
+    animation: lds-dual-ring 1s linear infinite;
 }
 @-webkit-keyframes lds-dual-ring {
-0% {
-    transform: rotate(0deg);
-}
-100% {
-    transform: rotate(360deg);
-}
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 @keyframes lds-dual-ring {
-0% {
-    transform: rotate(0deg);
-}
-100% {
-    transform: rotate(360deg);
-}
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 @media (max-width: 1500px) {
     .header-contact {
@@ -1205,6 +1286,28 @@ animation: lds-dual-ring 1s linear infinite;
 
     .column-left-text {
         max-height: unset;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px;
+    }
+
+    .contact-info,
+    .contact-form {
+        max-width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .contact-info {
+        padding-bottom: 10px;
+    }
+
+    .contact-info ul {
+        list-style: none;
+        padding-left: 0;
     }
 }
 
