@@ -1177,6 +1177,135 @@ canvas {
     -webkit-animation: lds-dual-ring 1s linear infinite;
     animation: lds-dual-ring 1s linear infinite;
 }
+
+/* Styling for form */
+form {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    z-index: 1;
+    padding-top: 3rem;
+    align-items: center;
+}
+
+.booking-container {
+    position: absolute;
+    max-width: 1320px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.booking-container form {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 4rem;
+    z-index: 1;
+    padding-top: 3rem;
+    align-items: center;
+}
+
+/* General div layout for each section */
+.booking-container form > div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Label & Icon alignment */
+.booking-container form div div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.booking-container form div div:not(.dropdown) h4 {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-family: "Inter", sans-serif;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.booking-container form input {
+    border: none;
+    border-bottom: 1px solid var(--text-color-primary);
+    width: 100%;
+    padding-bottom: 0.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color-primary);
+    background-color: transparent;
+}
+
+/* FontAwesome Icons */
+form i {
+    font-size: 16px;
+    color: #002244; /* Dark navy color */
+}
+
+/* Date inputs */
+.booking-container input[type="date"] {
+    border: none;
+    border-bottom: 1px solid #002244;
+    padding: 5px;
+    width: 120px;
+    text-align: left;
+    background: transparent;
+    font-size: 14px;
+}
+
+/* Guest & Children Counter */
+.booking-container .gests-wrapper,
+.children-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/* Counter buttons */
+.booking-container .btn-decrease,
+.btn-increase {
+    background: none;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px;
+    color: #002244;
+}
+
+/* Counter input */
+.booking-container input[type="text"] {
+    border: none;
+    border-bottom: 1px solid #002244;
+    width: 30px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    background: transparent;
+}
+
+/* Submit button */
+.booking-container .btnn {
+    padding: 8px 20px;
+    background: none;
+    border: 2px solid #002244;
+    border-radius: 20px;
+    color: #002244;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.booking-container .btnn:hover {
+    background: #002244;
+    color: white;
+}
+
 @-webkit-keyframes lds-dual-ring {
     0% {
         transform: rotate(0deg);
@@ -1348,6 +1477,10 @@ canvas {
 
     .hero .container {
         transform: translate(-50%, -50%);
+    }
+
+    .booking-container form {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .concept-termag .row {

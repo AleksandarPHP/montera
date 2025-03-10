@@ -205,6 +205,89 @@
         </div>
     </div>
     </section>
+    <section class="apartments">
+        <h2 class="title" data-aos="zoom-in" data-aos-duration="1500">Italijanski restoran Monterra->title</h2>
+        <div class="wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="slider">
+                                <div>
+                                    <div>
+                                        <img src="{{asset('assets/images/placeholder.png')}}" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="content-wrapper" data-aos="fade-down" data-aos-duration="1500">
+                            <h5>Italijanski restoran Monterra->subtitle</h5>
+                                <p>
+                                Italijanski restoran Monterra->text
+                                </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="apartments apartments-2">
+        <h2 class="title" data-aos="zoom-in" data-aos-duration="1500">butik sportske opreme PlanetBike->title</h2>
+        <div class="wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="content-wrapper" data-aos="fade-down" data-aos-duration="1500">
+                            <h5>butik sportske opreme PlanetBike->subtitle</h5>
+                                <p>
+                                butik sportske opreme PlanetBike->text
+                                </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="slider">
+                                <div>
+                                    <div>
+                                        <img src="{{asset('assets/images/placeholder.png')}}" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="apartments apartments-3">
+        <h2 class="title" data-aos="zoom-in" data-aos-duration="1500">parking-garaža->title</h2>
+        <div class="wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="slider">
+                                <div>
+                                    <div>
+                                        <img src="{{asset('assets/images/placeholder.png')}}" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="content-wrapper" data-aos="fade-down" data-aos-duration="1500">
+                            <h5>parking-garaža->subtitle</h5>
+                                <p>
+                                parking-garaža->text
+                                </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 
 @endsection

@@ -175,6 +175,146 @@
 </div>
 </section>
 
+<section class="apartments">
+    <h2 class="title" data-aos="zoom-in" data-aos-duration="1500">autonomija->title</h2>
+    <div class="wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="slider">
+                            <div>
+                                <div>
+                                    <img src="{{asset('assets/images/placeholder.png')}}" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="content-wrapper" data-aos="fade-down" data-aos-duration="1500">
+                        <h5>autonomija->subtitle</h5>
+                            <p>
+                            autonomija->text
+                            </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="apartments apartments-2">
+    <h2 class="title" data-aos="zoom-in" data-aos-duration="1500">energetska efikasnost->title</h2>
+    <div class="wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="content-wrapper" data-aos="fade-down" data-aos-duration="1500">
+                        <h5>energetska efikasnost->subtitle</h5>
+                            <p>
+                            energetska efikasnost->text
+                            </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="slider">
+                            <div>
+                                <div>
+                                    <img src="{{asset('assets/images/placeholder.png')}}" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="apartments apartments-3">
+    <h2 class="title" data-aos="zoom-in" data-aos-duration="1500">održavanje->title</h2>
+    <div class="wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="slider">
+                            <div>
+                                <div>
+                                    <img src="{{asset('assets/images/placeholder.png')}}" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="content-wrapper" data-aos="fade-down" data-aos-duration="1500">
+                        <h5>održavanje->subtitle</h5>
+                            <p>
+                            održavanje->text
+                            </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="apartments apartments-4">
+    <h2 class="title" data-aos="zoom-in" data-aos-duration="1500">sigurnost->title</h2>
+    <div class="wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="slider">
+                            <div>
+                                <div>
+                                    <img src="{{asset('assets/images/placeholder.png')}}" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="content-wrapper" data-aos="fade-down" data-aos-duration="1500">
+                        <h5>sigurnost->subtitle</h5>
+                            <p>
+                            sigurnost->text
+                            </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="apartments apartments">
+    <h2 class="title" data-aos="zoom-in" data-aos-duration="1500">opremljenost->title</h2>
+    <div class="wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="slider">
+                            <div>
+                                <div>
+                                    <img src="{{asset('assets/images/placeholder.png')}}" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="content-wrapper" data-aos="fade-down" data-aos-duration="1500">
+                        <h5>opremljenost->subtitle</h5>
+                            <p>
+                            opremljenost->text
+                            </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <script src="https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js"></script>
 <script>
     const draw = SVG().addTo("#svg-container").size("100%", "100%");
