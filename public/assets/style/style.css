@@ -257,6 +257,10 @@ header .transparent .header-contact a {
     overflow: hidden;
 }
 
+.hero img {
+    width: 100vw;
+}
+
 .hero .container {
     position: absolute;
     top: 50%;
@@ -1037,6 +1041,7 @@ footer .lastline ul li a {
 }
 
 .contact-form form {
+    display: block;
     width: 100%;
     max-width: 400px;
 }
@@ -1195,6 +1200,7 @@ form {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    color: #fff;
 }
 
 .booking-container form {
@@ -1231,29 +1237,30 @@ form {
 
 .booking-container form input {
     border: none;
-    border-bottom: 1px solid var(--text-color-primary);
+    border-bottom: 1px solid #fff;
     width: 100%;
     padding-bottom: 0.5rem;
     font-size: 1.6rem;
-    color: var(--text-color-primary);
+    color: #fff;
     background-color: transparent;
 }
 
 /* FontAwesome Icons */
 form i {
     font-size: 16px;
-    color: #002244; /* Dark navy color */
+    color: #fff;
 }
 
 /* Date inputs */
 .booking-container input[type="date"] {
     border: none;
-    border-bottom: 1px solid #002244;
+    border-bottom: 1px solid #fff;
     padding: 5px;
     width: 120px;
     text-align: left;
     background: transparent;
     font-size: 14px;
+    color-scheme: dark;
 }
 
 /* Guest & Children Counter */
@@ -1274,13 +1281,13 @@ form i {
     font-weight: bold;
     cursor: pointer;
     padding: 5px;
-    color: #002244;
+    color: #fff;
 }
 
 /* Counter input */
 .booking-container input[type="text"] {
     border: none;
-    border-bottom: 1px solid #002244;
+    border-bottom: 1px solid #fff;
     width: 30px;
     text-align: center;
     font-size: 16px;
@@ -1292,9 +1299,9 @@ form i {
 .booking-container .btnn {
     padding: 8px 20px;
     background: none;
-    border: 2px solid #002244;
+    border: 2px solid #fff;
     border-radius: 20px;
-    color: #002244;
+    color: var(--text-color-primary);
     font-size: 14px;
     font-weight: bold;
     cursor: pointer;
@@ -1302,8 +1309,8 @@ form i {
 }
 
 .booking-container .btnn:hover {
-    background: #002244;
-    color: white;
+    background: var(--text-color-primary);
+    color: #fff;
 }
 
 @-webkit-keyframes lds-dual-ring {
