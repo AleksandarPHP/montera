@@ -1195,12 +1195,9 @@ form {
 }
 
 .booking-container {
-    position: absolute;
-    max-width: 1320px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
+    margin: 50px auto;
+    max-width: 840px;
+    color: var(--text-color-primary);
 }
 
 .booking-container form {
@@ -1237,30 +1234,29 @@ form {
 
 .booking-container form input {
     border: none;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid var(--text-color-primary);
     width: 100%;
     padding-bottom: 0.5rem;
     font-size: 1.6rem;
-    color: #fff;
+    color: var(--text-color-primary);
     background-color: transparent;
 }
 
 /* FontAwesome Icons */
 form i {
     font-size: 16px;
-    color: #fff;
+    color: #002244; /* Dark navy color */
 }
 
 /* Date inputs */
 .booking-container input[type="date"] {
     border: none;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #002244;
     padding: 5px;
     width: 120px;
     text-align: left;
     background: transparent;
     font-size: 14px;
-    color-scheme: dark;
 }
 
 /* Guest & Children Counter */
@@ -1281,13 +1277,13 @@ form i {
     font-weight: bold;
     cursor: pointer;
     padding: 5px;
-    color: #fff;
+    color: #002244;
 }
 
 /* Counter input */
 .booking-container input[type="text"] {
     border: none;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #002244;
     width: 30px;
     text-align: center;
     font-size: 16px;
@@ -1299,7 +1295,7 @@ form i {
 .booking-container .btnn {
     padding: 8px 20px;
     background: none;
-    border: 2px solid #fff;
+    border: 2px solid #002244;
     border-radius: 20px;
     color: var(--text-color-primary);
     font-size: 14px;
@@ -1309,7 +1305,7 @@ form i {
 }
 
 .booking-container .btnn:hover {
-    background: var(--text-color-primary);
+    background: #002244;
     color: #fff;
 }
 
@@ -1487,7 +1483,9 @@ form i {
     }
 
     .booking-container form {
-        grid-template-columns: repeat(2, 1fr);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .concept-termag .row {

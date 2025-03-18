@@ -6,61 +6,6 @@
 <main>
     <section class="hero" style="min-height: 100dvh">
         <img src="{{ asset('storage/'.$text->image) }}" alt="Ski Resort">
-        <div class="booking-container">
-            <form method="GET" target="_blank" class="">
-                <div>
-                    <div>
-                        <i class="fa-solid fa-calendar"></i>
-                        <h4>Check in</h4>
-                    </div>
-                    <input type="date" id="checkIn" name="checkin_date"/>
-                </div>
-                <div>
-                    <div>
-                        <i class="fa-solid fa-calendar"></i>
-                        <h4>Check out</h4>
-                    </div>
-                    <input type="date" id="checkOut" name="checkout_date"/>
-                </div>
-                <div>
-                    <div>
-                        <i class="fa-solid fa-user"></i>
-                        <h4>Guests</h4>
-                    </div>
-                    <div class="gests-wrapper">
-                        <div>
-                            <button type="button" class="btn-decrease" onclick="updateGuestCount(-1)">-</button>
-                            <input
-                                name="adults" type="text" id="guest-count" value="2" min="1" max="4" readonly
-                            />
-                            <button type="button" class="btn-increase" onclick="updateGuestCount(1)">+</button>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <div>
-                            <i class="fa-solid fa-user"></i>
-                            <h4>Children</h4>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="children-wrapper"> 
-                            <button type="button" class="btn-decrease" onclick="updateChildCount(-1)">-</button>
-                            <input name="children" type="text" id="child-count" value="0" min="0" max="3" readonly
-                            />
-                            <button type="button" class="btn-increase" onclick="updateChildCount(1)">+</button>
-                        </div>
-                    </div>
-                </div>
-                <input type="hidden" value="1" name="nights" id="ReserveNights">
-                <div>
-                    <button type="submit" class="btnn btn_secondary">
-                        Book now
-                    </button>
-                </div>
-            </form>
-        </div>
     </section>
 
     <div class="location-frame-container">
@@ -72,6 +17,63 @@
             </div>
         </div>
     </div>
+
+        <div class="booking-container">
+        <form method="GET" target="_blank" class="">
+            <div>
+                <div>
+                    <i class="fa-solid fa-calendar"></i>
+                    <h4>Check in</h4>
+                </div>
+                <input type="date" id="checkIn" name="checkin_date"/>
+            </div>
+            <div>
+                <div>
+                    <i class="fa-solid fa-calendar"></i>
+                    <h4>Check out</h4>
+                </div>
+                <input type="date" id="checkOut" name="checkout_date"/>
+            </div>
+            <div>
+                <div>
+                    <i class="fa-solid fa-user"></i>
+                    <h4>Guests</h4>
+                </div>
+                <div class="gests-wrapper">
+                    <div>
+                        <button type="button" class="btn-decrease" onclick="updateGuestCount(-1)">-</button>
+                        <input
+                            name="adults" type="text" id="guest-count" value="2" min="1" max="4" readonly
+                        />
+                        <button type="button" class="btn-increase" onclick="updateGuestCount(1)">+</button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <div>
+                        <i class="fa-solid fa-user"></i>
+                        <h4>Children</h4>
+                    </div>
+                </div>
+                <div>
+                    <div class="children-wrapper"> 
+                        <button type="button" class="btn-decrease" onclick="updateChildCount(-1)">-</button>
+                        <input name="children" type="text" id="child-count" value="0" min="0" max="3" readonly
+                        />
+                        <button type="button" class="btn-increase" onclick="updateChildCount(1)">+</button>
+                    </div>
+                </div>
+            </div>
+            <input type="hidden" value="1" name="nights" id="ReserveNights">
+            <div>
+                <button type="submit" class="btnn btn_secondary">
+                    Book now
+                </button>
+            </div>
+        </form>
+    </div>
+
     @php
         $text = Helper::text(24);
     @endphp
