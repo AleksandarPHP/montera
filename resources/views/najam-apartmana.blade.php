@@ -272,7 +272,7 @@
 </div>
 </section>
 
-    <div class="contact-container">
+    <div class="contact-container mt-5">
         <div class="contact-info">
             <h2 class="title" data-aos="fade-left" data-aos-duration="1500">Get in touch</h2>
             <p data-aos="fade-left" data-aos-duration="2000">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
