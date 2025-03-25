@@ -29,89 +29,144 @@
         </div>
     </div>
 
-    <section class="apartments">
-        <h2 class="title" data-aos="zoom-in" data-aos-duration="1500">KUPOVINA</h2>
-        <div class="wrapper">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="slider">
+    @php
+    $slider = Helper::slider(14);
+@endphp
+<section class="apartments apartments-3">
+    <h2 class="title" data-aos="zoom-in" data-aos-duration="1500">{{$slider->title}}</h2>
+    <div class="wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="slider-3">
+                    @for ($i = 1; $i <= 4; $i++)
+                    @php
+                        $img = 'image'.$i;   
+                    @endphp
+                        <div>
+                            @if (!is_null($slider->$img))
+                                <img src="{{Helper::image($slider->$img, 1200, 800, false)}}" alt="" class="img-fluid">
+                            @else
                             <div>
-                                <div>
-                                    <img src="{{asset('assets/images/placeholder.png')}}" alt="" class="img-fluid">
-                                </div>
+                                <img src="{{asset('assets/images/placeholder.png')}}" alt="" class="img-fluid">
                             </div>
-                    </div>
+                            @endif
+                        </div>
+                    @endfor
                 </div>
-
-                <div class="col-lg-6">
-                    <div class="content-wrapper" data-aos="fade-down" data-aos-duration="1500">
-                        <h5>kupovina</h5>
-                            <p>
-                            kupovina
-                            </p>
-                    </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="content-wrapper" data-aos="fade-down" data-aos-duration="1500">
+                    <h5>{{$slider->subtitle}}</h5>
+                    <p>
+                        {{$slider->text}}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="slider-control">
+            <button class="prev-arrow prev-arrow-3" aria-label="Previous" type="button">
+                <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <button class="next-arrow next-arrow-3"  aria-label="Next" type="button">
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+</div>
+</section>
+@php
+    $slider = Helper::slider(15);
+@endphp
+<section class="apartments apartments-2">
+    <h2 class="title" data-aos="zoom-in" data-aos-duration="1500">{{$slider->title}}</h2>
+    <div class="wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="content-wrapper" data-aos="fade-down" data-aos-duration="1500">
+                    <h5>{{$slider->subtitle}}</h5>
+                    <p>
+                        {{$slider->text}}
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="slider-2">
+                    @for ($i = 1; $i <= 4; $i++)
+                    @php
+                        $img = 'image'.$i;   
+                    @endphp
+                        <div>
+                            @if (!is_null($slider->$img))
+                                <img src="{{Helper::image($slider->$img, 1200, 800, false)}}" alt="" class="img-fluid">
+                            @else
+                            <div>
+                                <img src="{{asset('assets/images/placeholder.png')}}" alt="" class="img-fluid">
+                            </div>
+                            @endif
+                        </div>
+                    @endfor
                 </div>
             </div>
         </div>
     </div>
-    </section>
-
-    <section class="apartments apartments-2">
-        <h2 class="title" data-aos="zoom-in" data-aos-duration="1500">KUPI</h2>
-        <div class="wrapper">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="content-wrapper" data-aos="fade-down" data-aos-duration="1500">
-                        <h5>kupi</h5>
-                            <p>
-                            kupi
-                            </p>
-                    </div>
-                </div>
-
-                <div class="col-lg-6">
-                    <div class="slider">
+    <div class="slider-control">
+        <button class="prev-arrow prev-arrow-2" aria-label="Previous" type="button">
+            <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <button class="next-arrow next-arrow-2"  aria-label="Next" type="button">
+            <i class="fa-solid fa-arrow-right"></i>
+        </button>
+    </div>
+</div>
+</section>
+@php
+    $slider = Helper::slider(16);
+@endphp
+<section class="apartments apartments-3">
+    <h2 class="title" data-aos="zoom-in" data-aos-duration="1500">{{$slider->title}}</h2>
+    <div class="wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="slider-3">
+                    @for ($i = 1; $i <= 4; $i++)
+                    @php
+                        $img = 'image'.$i;   
+                    @endphp
+                        <div>
+                            @if (!is_null($slider->$img))
+                                <img src="{{Helper::image($slider->$img, 1200, 800, false)}}" alt="" class="img-fluid">
+                            @else
                             <div>
-                                <div>
-                                    <img src="{{asset('assets/images/placeholder.png')}}" alt="" class="img-fluid">
-                                </div>
+                                <img src="{{asset('assets/images/placeholder.png')}}" alt="" class="img-fluid">
                             </div>
-                    </div>
+                            @endif
+                        </div>
+                    @endfor
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="content-wrapper" data-aos="fade-down" data-aos-duration="1500">
+                    <h5>{{$slider->subtitle}}</h5>
+                    <p>
+                        {{$slider->text}}
+                    </p>
                 </div>
             </div>
         </div>
-    </div>
-    </section>
-
-    <section class="apartments apartments-3">
-        <h2 class="title" data-aos="zoom-in" data-aos-duration="1500">INVESTIRAJ</h2>
-        <div class="wrapper">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="slider">
-                            <div>
-                                <div>
-                                    <img src="{{asset('assets/images/placeholder.png')}}" alt="" class="img-fluid">
-                                </div>
-                            </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-6">
-                    <div class="content-wrapper" data-aos="fade-down" data-aos-duration="1500">
-                        <h5>investiraj</h5>
-                            <p>
-                            investiraj
-                            </p>
-                    </div>
-                </div>
-            </div>
+        <div class="slider-control">
+            <button class="prev-arrow prev-arrow-3" aria-label="Previous" type="button">
+                <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <button class="next-arrow next-arrow-3"  aria-label="Next" type="button">
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
         </div>
     </div>
-    </section>
+</div>
+</section>
 
     <div class="contact-container">
         <div class="contact-info">
