@@ -16,6 +16,7 @@ class Settings extends Model
         'keywords',
         'phone',
         'phone2',
+        'email',
         'worktime',
         'address',
         'facebook',

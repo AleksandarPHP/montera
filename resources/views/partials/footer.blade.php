@@ -37,26 +37,34 @@
         <div class="row">
             <div class="col-lg-2">
                 <ul class="social">
+                    @if ($settings->facebook) 
                     <li>
-                        <a href="">
+                        <a href="{{$settings->facebook}}">
                             <i class="fa-brands fa-facebook-f"></i>
                         </a>
                     </li>
+                    @endif
+                    @if ($settings->facebook) 
                     <li>
-                        <a href="">
+                        <a href="{{$settings->instagram}}">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
                     </li>
+                    @endif
+                    @if ($settings->linkedin) 
                     <li>
-                        <a href="">
+                        <a href="{{$settings->linkedin}}">
                             <i class="fa-brands fa-linkedin-in"></i>
                         </a>
                     </li>
+                    @endif
+                    @if ($settings->twitter) 
                     <li>
-                        <a href="">
+                        <a href="{{$settings->twitter}}">
                             <i class="fa-brands fa-twitter"></i>
                         </a>
                     </li>
+                    @endif
                 </ul>
                 <h5>{{__('Follow us')}}</h5>
                 <p class="txt">
@@ -101,16 +109,15 @@
                     Telefoni: +387 57 270 422, +387 57 272 100 <br />
                     Faks: +387 57 270 423, +387 57 272 072
                 </p>
-                <a href="mailto:{{$settings->email}}">{{$settings->email}}</a>
             </div>
             <div class="col-lg-3 offset-lg-1">
                 <i class="fa-solid fa-envelope"></i>
                 <h3>{{__('Contact')}}</h3>
-                <a href="mailto:{{$settings->email}}">
+                <a class="mail-address" href="mailto:{{$settings->email}}">
                     {{$settings->email}}</a
                 >
                 <form action="#">
-                    <input type="text" placeholder="Email Adresa" />
+                    <input class="newsletter" type="text" placeholder="Email Adresa" />
                     <button type="submit" class="button button_secondary">
                         {{__('Send')}}
                     </button>

@@ -204,28 +204,26 @@
             <div class="contact-info-data" data-aos="fade-left" data-aos-duration="2000">
                 <h3>Kontakt informacije</h3>
                 <ul>
-                    <li><i class="fas fa-phone-alt"></i> +387000000</li>
-                    <li><i class="fas fa-envelope"></i> mail@mail.com</li>
-                    <li><i class="fas fa-map-marker-alt"></i> Adresa</li>
+                    @if ($settings->phone)<li><i class="fas fa-phone-alt"></i>  {{$settings->phone}}</li>@endif
+                    @if ($settings->phone)<li><i class="fas fa-envelope"></i>  {{$settings->email}}</li>@endif
+                    @if ($settings->phone)<li><i class="fas fa-map-marker-alt"></i> {{$settings->address}}</li>@endif
                 </ul>
             </div>
         </div>
 
         <div class="contact-form" data-aos="fade-right" data-aos-duration="2000">
             <form method="post" name="contact-form">
-                <input type="hidden" name="post_id" value="101">
-                <input type="hidden" name="form_id" value="ccca9af">
-                
-                <label for="name">Ime</label>
-                <input type="text" id="name" name="name" placeholder="Name" required>
+
+                <label for="name">{{__('Name')}}</label>
+                <input type="text" id="name" name="Name goes here" placeholder="Name" required>
                 
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Email" required>
+                <input type="email" id="email" name="Email goes here" placeholder="Email" required>
                 
-                <label for="message">Poruka</label>
-                <textarea id="message" name="message" rows="4" placeholder="Message" required></textarea>
+                <label for="message">{{__('Message')}}</label>
+                <textarea id="message" name="message" rows="4" placeholder="Message text goes here" required></textarea>
                 
-                <button type="submit">Pošalji</button>
+                <button type="submit">{{__('Send')}}</button>
             </form>
         </div>
     </div>

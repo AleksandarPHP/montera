@@ -176,9 +176,9 @@
             <div class="contact-info-data" data-aos="fade-left" data-aos-duration="2000">
                 <h3>Kontakt informacije</h3>
                 <ul>
-                    <li><i class="fas fa-phone-alt"></i>  +387000000</li>
-                    <li><i class="fas fa-envelope"></i>  mail@mail.com</li>
-                    <li><i class="fas fa-map-marker-alt"></i>  Adresa</li>
+                    @if ($settings->phone)<li><i class="fas fa-phone-alt"></i>  {{$settings->phone}}</li>@endif
+                    @if ($settings->phone)<li><i class="fas fa-envelope"></i>  {{$settings->email}}</li>@endif
+                    @if ($settings->phone)<li><i class="fas fa-map-marker-alt"></i> {{$settings->address}}</li>@endif
                 </ul>
             </div>
         </div>

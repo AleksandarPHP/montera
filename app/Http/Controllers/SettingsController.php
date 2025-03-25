@@ -35,6 +35,7 @@ class SettingsController extends Controller
             'title' => ['nullable', 'string', 'max:191'],
             'description' => ['nullable', 'string', 'max:500'],
             'keywords' => ['nullable', 'string', 'max:500'],
+            'email' => ['nullable', 'string', 'max:191'],
 
             'phone' => ['nullable', 'string', 'max:191'],
             'phone2' => ['nullable', 'string', 'max:191'],
@@ -69,6 +70,7 @@ class SettingsController extends Controller
             $item->phone = $request->phone;
             $item->worktime = $request->worktime;
             $item->address = $request->address;
+            $item->email = $request->email;
             $item->facebook = $request->facebook;
             $item->twitter = $request->twitter;
             $item->linkedin = $request->linkedin;

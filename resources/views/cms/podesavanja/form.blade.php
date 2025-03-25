@@ -40,6 +40,13 @@
                 <div class="col-md-12"><hr></div>
                 <div class="col-md-12">
                     <div class="form-group">
+                        <label for="email">Email</label>
+                        <input name="email" type="text" class="form-control" id="email" placeholder="email" value="{{ old('email', $item->email) }}" {!! $errors->has('email') ? 'style="border-color:red;"' : '' !!}>
+                    </div>
+                </div>
+                <div class="col-md-12"><hr></div>
+                <div class="col-md-12">
+                    <div class="form-group">
                         <label for="worktime">Radno vrijeme</label>
                         <input name="worktime" type="text" class="form-control" id="worktime" placeholder="Radno vrijeme" value="{{ old('worktime', $item->worktime) }}" {!! $errors->has('worktime') ? 'style="border-color:red;"' : '' !!}>
                     </div>
