@@ -4,7 +4,7 @@
     $text = Helper::text(23);
 @endphp
 <main>
-    <section class="hero" style="min-height: 100dvh">
+    <section class="hero" style="max-height: 85dvh">
         <img src="{{ asset('storage/'.$text->image) }}" alt="Ski Resort">
         <div class="booking-container">
             <form method="GET" target="_blank" class="">
@@ -88,7 +88,43 @@
     $slider = Helper::slider(17);
 @endphp
 <section class="apartments">
-    <h2 class="title" data-aos="zoom-in" data-aos-duration="1500">{{$slider->title}}</h2>
+    <div class="container">
+        <script type="text/javascript">
+            window.wbpSettings = window.wbpSettings || {};
+            window.wbpSettings = {
+                'hotelId': '33636',
+                'language': 'en',
+                'currency': 'EUR',
+                'showLogo': '0',
+                'showProperty': 0,
+                'showFooter': '0',
+                'darktheme': '0'
+            }
+            </script>
+            <script>
+            fetch('https://booking.webbookingpro.com/asset-manifest.json')
+                .then((response) => response.json())
+                .then(({entrypoints}) => {
+                    entrypoints.forEach(file => {
+                        if (file.endsWith('.css')) {
+                            var css = document.createElement('link');
+                            css.rel = 'stylesheet';
+                            css.href = 'https://booking.webbookingpro.com/' + file;
+                            document.head.appendChild(css);
+                        }
+                        else if (file.endsWith('js')) {
+                            var script = document.createElement('script');
+                            script.src = 'https://booking.webbookingpro.com/' + file;
+                            document.head.appendChild(script);
+                        }
+                    });
+                });
+            </script>
+            <div id="wbproot"></div>
+    </div>
+</section>
+<section class="apartments">
+    <h2 class="title" data-aos="zoom-in" data-aos-duration="1500">{{$slider->title ?? ''}}</h2>
     <div class="wrapper">
     <div class="container">
         <div class="row">
