@@ -106,8 +106,8 @@
                 <p>
                    {{$settings->title}}, {{$settings->address}} , Bosna i Hercegovina
                     <br />
-                    Telefoni: +387 57 270 422, +387 57 272 100 <br />
-                    Faks: +387 57 270 423, +387 57 272 072
+                    Telefoni: +387 57 272 101, +387 66 980 487 <br />
+                    Faks: +387 57 272 101, +387 66 980 487
                 </p>
             </div>
             <div class="col-lg-3 offset-lg-1">

@@ -226,11 +226,11 @@
                                 <li class="header-contact">
                                     <i class="fa-solid fa-mobile-screen"></i>
                                     <div>
-                                        <a href="tel:+381 66 686 89 85"
-                                            >+381 66 686 89 85</a
+                                        <a href="tel:+387 57 272 101"
+                                            >+387 57 272 101</a
                                         >
-                                        <a href="tel: +381 65 927 97 00">
-                                            +381 65 927 97 00</a
+                                        <a href="tel: +387 66 980 487">
+                                            +387 66 980 487</a
                                         >
                                     </div>
                                 </li>
