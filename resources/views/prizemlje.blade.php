@@ -53,13 +53,11 @@
                         <tbody>
                             @isset($floors->apartment)
                                 @foreach ($floors->apartment as $apartment)
-                                <a href="d">
                                     <tr>
-                                        <td>{{$apartment->title}}</td>
+                                        <td><a href="{{ url('apartmani/'.$apartment->id) }}">{{$apartment->title}}</a></td>
                                         <td>{{$apartment->apt_number}}</td>
                                         <td>{{$apartment->surface}}</td>
                                     </tr>
-                                </a>
                                 @endforeach 
                             @endisset
                         </tbody>
