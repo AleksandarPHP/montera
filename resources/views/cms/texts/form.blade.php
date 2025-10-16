@@ -54,6 +54,7 @@
                     </div>
                 </div>
                 <div class="col-md-12"><hr></div>
+                @if ($item->id !== 9)
                 <div class="col-md-3">
                     <div class="form-group">
                         {{-- <label>Min: {{ $width }}x{{ $height }}px</label> --}}
@@ -133,6 +134,7 @@
                         </script>
                     </div>
                 @endfor
+                @endif
             </div>
             <button type="submit" class="btn btn-danger mb-3">Sačuvaj</button>
             <a href="{{ url()->previous() }}" class="btn btn-secondary mb-3 ml-auto" style="margin-left: 10px">Odustani</a>
