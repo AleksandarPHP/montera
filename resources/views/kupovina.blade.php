@@ -38,7 +38,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
-                <div class="slider-3">
+                <div class="slider-9">
                     @for ($i = 1; $i <= 4; $i++)
                     @php
                         $img = 'image'.$i;   
@@ -65,10 +65,10 @@
             </div>
         </div>
         <div class="slider-control">
-            <button class="prev-arrow prev-arrow-3" aria-label="Previous" type="button">
+            <button class="prev-arrow prev-arrow-9" aria-label="Previous" type="button">
                 <i class="fa-solid fa-arrow-left"></i>
             </button>
-            <button class="next-arrow next-arrow-3"  aria-label="Next" type="button">
+            <button class="next-arrow next-arrow-9"  aria-label="Next" type="button">
                 <i class="fa-solid fa-arrow-right"></i>
             </button>
         </div>
