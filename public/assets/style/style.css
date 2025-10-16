@@ -1471,6 +1471,11 @@ form i {
     .floors-navigator {
         position: relative;
         z-index: 100;
+        margin-top: 9rem;
+    }
+
+    .download-btn {
+        margin-top: 14px;
     }
 
     .floors-navigator .navigator-slider .slick-slide {

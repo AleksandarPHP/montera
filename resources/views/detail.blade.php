@@ -33,7 +33,7 @@
                     Kontakt
                 </a>
                 @if ($apartmant->pdf)
-                    <a href="{{asset('storage/'.$apartmant->pdf)}}" class="button button_secondary" style="margin-left: 1rem" download>
+                    <a href="{{asset('storage/'.$apartmant->pdf)}}" class="button button_secondary download-btn" style="margin-left: 1rem" download>
                         {{__('DOWNLOAD')}}
                     </a>
                 @endif
