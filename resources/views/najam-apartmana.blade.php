@@ -278,7 +278,7 @@
                 </div>
             </div>
             <div class="col-lg-6">
-                <div class="slider-2">
+                <div class="slider-4">
                     @for ($i = 1; $i <= 4; $i++)
                     @php
                         $img = 'image'.$i;   
@@ -298,10 +298,10 @@
         </div>
     </div>
     <div class="slider-control">
-        <button class="prev-arrow prev-arrow-2" aria-label="Previous" type="button">
+        <button class="prev-arrow prev-arrow-4" aria-label="Previous" type="button">
             <i class="fa-solid fa-arrow-left"></i>
         </button>
-        <button class="next-arrow next-arrow-2"  aria-label="Next" type="button">
+        <button class="next-arrow next-arrow-4"  aria-label="Next" type="button">
             <i class="fa-solid fa-arrow-right"></i>
         </button>
     </div>
