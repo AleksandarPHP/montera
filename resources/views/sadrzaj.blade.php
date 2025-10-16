@@ -305,7 +305,7 @@ $slider = Helper::slider(8);
 <div class="wrapper">
 <div class="container">
     <div class="row">
-        <div class="col-lg-7">
+        <div class="col-lg-6">
             <div class="slider-7">
                 @for ($i = 1; $i <= 4; $i++)
                 @php

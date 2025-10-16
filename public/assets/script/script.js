@@ -32,52 +32,52 @@ $("#grand-2").slick({
 $(".slider-2").slick({
     arrows: true,
     infinite: true,
-    prevArrow: $(".prev-arrow prev-arrow-2"),
-    nextArrow: $(".next-arrow next-arrow-2"),
+    prevArrow: $(".prev-arrow.prev-arrow-2"),
+    nextArrow: $(".next-arrow.next-arrow-2"),
 });
 
 $(".slider-4").slick({
     arrows: true,
     infinite: true,
-    prevArrow: $(".prev-arrow prev-arrow-4"),
-    nextArrow: $(".next-arrow next-arrow-4"),
+    prevArrow: $(".prev-arrow.prev-arrow-4"),
+    nextArrow: $(".next-arrow.next-arrow-4"),
 });
 $(".slider-5").slick({
     arrows: true,
     infinite: true,
-    prevArrow: $(".prev-arrow prev-arrow-5"),
-    nextArrow: $(".next-arrow next-arrow-5"),
+    prevArrow: $(".prev-arrow.prev-arrow-5"),
+    nextArrow: $(".next-arrow.next-arrow-5"),
 });
 $(".slider-6").slick({
     arrows: true,
     infinite: true,
-    prevArrow: $(".prev-arrow prev-arrow-6"),
-    nextArrow: $(".next-arrow next-arrow-6"),
+    prevArrow: $(".prev-arrow.prev-arrow-6"),
+    nextArrow: $(".next-arrow.next-arrow-6"),
 });
 $(".slider-7").slick({
     arrows: true,
     infinite: true,
-    prevArrow: $(".prev-arrow prev-arrow-7"),
-    nextArrow: $(".next-arrow next-arrow-7"),
+    prevArrow: $(".prev-arrow.prev-arrow-7"),
+    nextArrow: $(".next-arrow.next-arrow-7"),
 });
 $(".slider-8").slick({
     arrows: true,
     infinite: true,
-    prevArrow: $(".prev-arrow prev-arrow-8"),
-    nextArrow: $(".next-arrow next-arrow-8"),
+    prevArrow: $(".prev-arrow.prev-arrow-8"),
+    nextArrow: $(".next-arrow.next-arrow-8"),
 });
 $(".slider-9").slick({
     arrows: true,
     infinite: true,
-    prevArrow: $(".prev-arrow prev-arrow-9"),
-    nextArrow: $(".next-arrow next-arrow-9"),
+    prevArrow: $(".prev-arrow.prev-arrow-9"),
+    nextArrow: $(".next-arrow.next-arrow-9"),
 });
 
 $(".slider-3").slick({
     arrows: true,
     infinite: true,
-    prevArrow: $(".prev-arrow prev-arrow-3"),
-    nextArrow: $(".next-arrow next-arrow-3"),
+    prevArrow: $(".prev-arrow.prev-arrow-3"),
+    nextArrow: $(".next-arrow.next-arrow-3"),
 });
 // $(".slider-4").slick({
 //     arrows: true,
