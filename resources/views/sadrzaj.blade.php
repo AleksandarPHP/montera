@@ -196,10 +196,10 @@
             </div>
         </div>
         <div class="slider-control">
-            <button class="prev-arrow prev-arrow-2" aria-label="Previous" type="button">
+            <button class="prev-arrow prev-arrow-15" aria-label="Previous" type="button">
                 <i class="fa-solid fa-arrow-left"></i>
             </button>
-            <button class="next-arrow next-arrow-2"  aria-label="Next" type="button">
+            <button class="next-arrow next-arrow-15"  aria-label="Next" type="button">
                 <i class="fa-solid fa-arrow-right"></i>
             </button>
         </div>
@@ -288,10 +288,10 @@ $slider = Helper::slider(7);
     </div>
 </div>
 <div class="slider-control">
-    <button class="prev-arrow prev-arrow-2" aria-label="Previous" type="button">
+    <button class="prev-arrow prev-arrow-16" aria-label="Previous" type="button">
         <i class="fa-solid fa-arrow-left"></i>
     </button>
-    <button class="next-arrow next-arrow-2"  aria-label="Next" type="button">
+    <button class="next-arrow next-arrow-16"  aria-label="Next" type="button">
         <i class="fa-solid fa-arrow-right"></i>
     </button>
 </div>
