@@ -190,7 +190,7 @@ $slider = Helper::slider(1);
                 </div>
             </div>
             <div class="col-lg-6">
-                <div class="slider-2">
+                <div class="slider-8">
                     @for ($i = 1; $i <= 4; $i++)
                     @php
                         $img = 'image'.$i;   
@@ -210,10 +210,10 @@ $slider = Helper::slider(1);
         </div>
     </div>
     <div class="slider-control">
-        <button class="prev-arrow prev-arrow-2" aria-label="Previous" type="button">
+        <button class="prev-arrow prev-arrow-8" aria-label="Previous" type="button">
             <i class="fa-solid fa-arrow-left"></i>
         </button>
-        <button class="next-arrow next-arrow-2"  aria-label="Next" type="button">
+        <button class="next-arrow next-arrow-8"  aria-label="Next" type="button">
             <i class="fa-solid fa-arrow-right"></i>
         </button>
     </div>
@@ -228,7 +228,7 @@ $slider = Helper::slider(1);
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
-                <div class="slider-3">
+                <div class="slider-9">
                     @for ($i = 1; $i <= 4; $i++)
                     @php
                         $img = 'image'.$i;   
@@ -255,10 +255,10 @@ $slider = Helper::slider(1);
             </div>
         </div>
         <div class="slider-control">
-            <button class="prev-arrow prev-arrow-3" aria-label="Previous" type="button">
+            <button class="prev-arrow prev-arrow-9" aria-label="Previous" type="button">
                 <i class="fa-solid fa-arrow-left"></i>
             </button>
-            <button class="next-arrow next-arrow-3"  aria-label="Next" type="button">
+            <button class="next-arrow next-arrow-9"  aria-label="Next" type="button">
                 <i class="fa-solid fa-arrow-right"></i>
             </button>
         </div>
@@ -282,7 +282,7 @@ $slider = Helper::slider(1);
                 </div>
             </div>
             <div class="col-lg-6">
-                <div class="slider-2">
+                <div class="slider-10">
                     @for ($i = 1; $i <= 4; $i++)
                     @php
                         $img = 'image'.$i;   
@@ -302,10 +302,10 @@ $slider = Helper::slider(1);
         </div>
     </div>
     <div class="slider-control">
-        <button class="prev-arrow prev-arrow-2" aria-label="Previous" type="button">
+        <button class="prev-arrow prev-arrow-10" aria-label="Previous" type="button">
             <i class="fa-solid fa-arrow-left"></i>
         </button>
-        <button class="next-arrow next-arrow-2"  aria-label="Next" type="button">
+        <button class="next-arrow next-arrow-10"  aria-label="Next" type="button">
             <i class="fa-solid fa-arrow-right"></i>
         </button>
     </div>
@@ -320,7 +320,7 @@ $slider = Helper::slider(1);
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
-                <div class="slider-3">
+                <div class="slider-11">
                     @for ($i = 1; $i <= 4; $i++)
                     @php
                         $img = 'image'.$i;   
@@ -347,10 +347,10 @@ $slider = Helper::slider(1);
             </div>
         </div>
         <div class="slider-control">
-            <button class="prev-arrow prev-arrow-3" aria-label="Previous" type="button">
+            <button class="prev-arrow prev-arrow-11" aria-label="Previous" type="button">
                 <i class="fa-solid fa-arrow-left"></i>
             </button>
-            <button class="next-arrow next-arrow-3"  aria-label="Next" type="button">
+            <button class="next-arrow next-arrow-11"  aria-label="Next" type="button">
                 <i class="fa-solid fa-arrow-right"></i>
             </button>
         </div>
@@ -374,7 +374,7 @@ $slider = Helper::slider(1);
                 </div>
             </div>
             <div class="col-lg-6">
-                <div class="slider-2">
+                <div class="slider-12">
                     @for ($i = 1; $i <= 4; $i++)
                     @php
                         $img = 'image'.$i;   
@@ -394,10 +394,10 @@ $slider = Helper::slider(1);
         </div>
     </div>
     <div class="slider-control">
-        <button class="prev-arrow prev-arrow-2" aria-label="Previous" type="button">
+        <button class="prev-arrow prev-arrow-12" aria-label="Previous" type="button">
             <i class="fa-solid fa-arrow-left"></i>
         </button>
-        <button class="next-arrow next-arrow-2"  aria-label="Next" type="button">
+        <button class="next-arrow next-arrow-12"  aria-label="Next" type="button">
             <i class="fa-solid fa-arrow-right"></i>
         </button>
     </div>

@@ -72,6 +72,30 @@ $(".slider-9").slick({
     prevArrow: $(".prev-arrow.prev-arrow-9"),
     nextArrow: $(".next-arrow.next-arrow-9"),
 });
+$(".slider-10").slick({
+    arrows: true,
+    infinite: true,
+    prevArrow: $(".prev-arrow.prev-arrow-10"),
+    nextArrow: $(".next-arrow.next-arrow-10"),
+});
+$(".slider-11").slick({
+    arrows: true,
+    infinite: true,
+    prevArrow: $(".prev-arrow.prev-arrow-11"),
+    nextArrow: $(".next-arrow.next-arrow-11"),
+});
+$(".slider-12").slick({
+    arrows: true,
+    infinite: true,
+    prevArrow: $(".prev-arrow.prev-arrow-12"),
+    nextArrow: $(".next-arrow.next-arrow-12"),
+});
+$(".slider-13").slick({
+    arrows: true,
+    infinite: true,
+    prevArrow: $(".prev-arrow.prev-arrow-13"),
+    nextArrow: $(".next-arrow.next-arrow-13"),
+});
 
 $(".slider-3").slick({
     arrows: true,
