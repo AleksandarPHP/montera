@@ -49,9 +49,10 @@
                     <div class="col-lg-6 apartment-column ac-bord" data-aos="fade-down-right" data-aos-duration="1300">
                         <h3>{{$text->title}}</h3>
                         {!!$text->description !!}
-                        <div>
+                        <div id="apartment-basic">
                             @if ($text->image)
                                 <img src="{{Helper::image($text->image, 1200, 800, false)}}" alt="" class="img-fluid">
+                                <img src="{{Helper::image($text->image3, 1200, 800, false)}}" alt="" class="img-fluid">
                             @else
                                 <img src="{{asset('assets/images/placeholder.png')}}" alt="Basic Apartment" class="img-fluid">
                             @endif
@@ -60,11 +61,14 @@
 
                     <div class="col-lg-6 apartment-column" data-aos="fade-down" data-aos-duration="1300">
                         {!!$text->description2 !!}
-                        @if ($text->image2)
-                            <img src="{{Helper::image($text->image2, 1200, 800, false)}}" alt="" class="img-fluid">
-                        @else
-                            <img src="{{asset('assets/images/placeholder.png')}}" alt="Basic Apartment" class="img-fluid">
-                        @endif
+                        <div id="apartment-basic2">
+                            @if ($text->image2)
+                                <img src="{{Helper::image($text->image2, 1200, 800, false)}}" alt="" class="img-fluid">
+                                <img src="{{Helper::image($text->image4, 1200, 800, false)}}" alt="" class="img-fluid">
+                            @else
+                                <img src="{{asset('assets/images/placeholder.png')}}" alt="Basic Apartment" class="img-fluid">
+                            @endif
+                        </div>
                     </div>
                 </div>
             </div>
@@ -73,20 +77,26 @@
                 <div class="row">
                     <div class="col-lg-6 apartment-column ac-padd ac-bord" data-aos="fade-down-right" data-aos-duration="1100">
                         {!!$text->description2!!}
-                        @if ($text->image)
-                            <img src="{{Helper::image($text->image, 1200, 800, false)}}" alt="" class="img-fluid">
-                        @else
-                            <img src="{{asset('assets/images/placeholder.png')}}" alt="Basic Apartment" class="img-fluid">
-                        @endif
+                        <div id="grand-1">
+                            @if ($text->image)
+                                <img src="{{Helper::image($text->image, 1200, 800, false)}}" alt="" class="img-fluid">
+                                <img src="{{Helper::image($text->image3, 1200, 800, false)}}" alt="" class="img-fluid">
+                            @else
+                                <img src="{{asset('assets/images/placeholder.png')}}" alt="Basic Apartment" class="img-fluid">
+                            @endif
+                        </div>
                     </div>
                     <div class="col-lg-6 apartment-column ac-padd" data-aos="fade-down" data-aos-duration="1100">
                         <h3>{{$text->title}}</h3>
                         {!!$text->description!!}
-                        @if ($text->image2)
-                            <img src="{{Helper::image($text->image2, 1200, 800, false)}}" alt="" class="img-fluid">
-                        @else
-                            <img src="{{asset('assets/images/placeholder.png')}}" alt="Basic Apartment" class="img-fluid">
-                        @endif
+                        <div id="grand-2">
+                            @if ($text->image2)
+                                <img src="{{Helper::image($text->image2, 1200, 800, false)}}" alt="" class="img-fluid">
+                                <img src="{{Helper::image($text->image4, 1200, 800, false)}}" alt="" class="img-fluid">
+                            @else
+                                <img src="{{asset('assets/images/placeholder.png')}}" alt="Basic Apartment" class="img-fluid">
+                            @endif
+                        </div>
                     </div>
                 </div>
             </div>

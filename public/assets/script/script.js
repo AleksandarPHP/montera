@@ -4,6 +4,17 @@ $(".slider").slick({
     prevArrow: $(".prev-arrow"),
     nextArrow: $(".next-arrow"),
 });
+
+$("#apartment-basic").slick({
+    autoplay: true,
+    autoplaySpeed: 2000,
+});
+
+$("#apartment-basic2").slick({
+    autoplay: true,
+    autoplaySpeed: 2000,
+});
+
 $(".slider-2").slick({
     arrows: true,
     infinite: true,
