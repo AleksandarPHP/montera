@@ -8,11 +8,25 @@ $(".slider").slick({
 $("#apartment-basic").slick({
     autoplay: true,
     autoplaySpeed: 2000,
+    arrows: false,
 });
 
 $("#apartment-basic2").slick({
     autoplay: true,
     autoplaySpeed: 2000,
+    arrows: false,
+});
+
+$("#grand-1").slick({
+    autoplay: true,
+    autoplaySpeed: 2000,
+    arrows: false,
+});
+
+$("#grand-2").slick({
+    autoplay: true,
+    autoplaySpeed: 2000,
+    arrows: false,
 });
 
 $(".slider-2").slick({
