@@ -10,8 +10,8 @@
         <div class="container">
             <div class="image-frame" style="background-image: url('{{ asset('assets/images/okvir-2.png') }}');">
                 <div class="image-text">
-                    <p class="image-text-soft" data-aos="flip-right" data-aos-duration="1500">parče raja</p>
-                    <p data-aos="flip-right"data-aos-duration="900">na Jahorini</p>
+                    <p class="image-text-soft" data-aos="flip-right" data-aos-duration="1500">{{ __('Piece of heaven') }}</p>
+                    <p data-aos="flip-right"data-aos-duration="900">{{ __('at Jahorina') }}</p>
                 </div>
             </div>
         </div>
