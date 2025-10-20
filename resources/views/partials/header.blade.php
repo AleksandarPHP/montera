@@ -140,7 +140,7 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a class="dropdown-item" href="{{ url(Str::replaceFirst('en', '', request()->path())) }}">SRB</a>
+                                    <a class="dropdown-item" href="{{ url(Str::replaceFirst('en', '', request()->path())) }}">BiH</a>
                                 </li>
                             </ul>
                         </li>

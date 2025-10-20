@@ -40,7 +40,7 @@
                     <h3> TEHNIČKI PRIKAZ OSNOVE <br />
                         <span>{{$floors->title}}</span></h3>
                 </div>
-                <div class="col-md-7"></div>
+                {{-- <div class="col-md-7"></div>
                 <div class="col-md-2">
                     <table class="apartment-table">
                         <thead>
@@ -62,7 +62,7 @@
                             @endisset
                         </tbody>
                     </table>
-                </div>
+                </div> --}}
             </div>
         </div>
     </section>
