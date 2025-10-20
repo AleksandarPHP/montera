@@ -27,7 +27,7 @@
         <h2 class="subtitle" data-aos="fade-left" data-aos-duration="2000">{{$text->subtitle}}</div>
         <div class="simple-column-container">
             <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1300">{!!$text->description!!}</div>
-            <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1300">{!!$text->description!!}</div>
+            <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1300">{!!$text->description2!!}</div>
         </div>
     </div>
 

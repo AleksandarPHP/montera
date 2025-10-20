@@ -36,10 +36,10 @@ document.addEventListener("DOMContentLoaded", () => {
             navbar.classList.add("transparent");
             btnClose.style.setProperty("filter", "invert(1)");
 
-            if (mediaLogo) mediaLogo.src = "assets/images/white-logo.webp";
-            if (regularLogo) regularLogo.src = "assets/images/white-logo.webp";
+            if (mediaLogo) mediaLogo.src = "https://monterra.soft4tech.com/assets/images/white-logo.webp";
+            if (regularLogo) regularLogo.src = "https://monterra.soft4tech.com/assets/images/white-logo.webp";
             if (regularLogo2)
-                regularLogo2.src = "assets/images/white-logo.webp";
+                regularLogo2.src = "https://monterra.soft4tech.com/assets/images/white-logo.webp";
 
             if (isMobile()) {
                 offcanvas.style.setProperty(
