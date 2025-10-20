@@ -20,10 +20,10 @@ document.addEventListener("DOMContentLoaded", () => {
             navbar.classList.remove("transparent");
             btnClose.style.removeProperty("filter");
 
-            if (mediaLogo) mediaLogo.src = "assets/images/black-logo.webp";
-            if (regularLogo) regularLogo.src = "assets/images/black-logo.webp";
+            if (mediaLogo) mediaLogo.src = "https://monterra.soft4tech.com/assets/images/black-logo.webp";
+            if (regularLogo) regularLogo.src = "https://monterra.soft4tech.com/assets/images/black-logo.webp";
             if (regularLogo2)
-                regularLogo2.src = "assets/images/black-logo.webp";
+                regularLogo2.src = "https://monterra.soft4tech.com/assets/images/black-logo.webp";
 
             if (isMobile()) {
                 offcanvas.style.setProperty(

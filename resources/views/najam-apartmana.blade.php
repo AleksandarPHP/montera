@@ -311,10 +311,10 @@
     <div class="contact-container mt-5">
         <div class="contact-info">
             <h2 class="title" data-aos="fade-left" data-aos-duration="1500">Get in touch</h2>
-            <p data-aos="fade-left" data-aos-duration="2000">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p data-aos="fade-left" data-aos-duration="2000">{{__('If you have any additional questions, please contact us by email or by calling the phone number:')}}</p>
         
             <div class="contact-info-data" data-aos="fade-left" data-aos-duration="2000">
-                <h3>Kontakt informacije</h3>
+                <h3>{{ __('Contact info') }}</h3>
                 <ul>
                     @if ($settings->phone)<li><i class="fas fa-phone-alt"></i>  {{$settings->phone}}</li>@endif
                     @if ($settings->phone)<li><i class="fas fa-envelope"></i>  {{$settings->email}}</li>@endif
