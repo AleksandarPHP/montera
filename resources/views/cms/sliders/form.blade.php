@@ -24,6 +24,7 @@
         <form method="post" action="@if(!$editing) {{ url('cms/sliders') }} @else {{ url('cms/sliders/'.$item->id) }} @endif" enctype="multipart/form-data">
             @csrf
             @if($editing) @method('PUT') @endif
+            <input type="hidden" value="{{ $lang }}" name="language">
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
