@@ -204,14 +204,8 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ Helper::url('sadrzaj') }}" role="button">
-                                        {{__('Content')}}
-                                    </a>
-                                </li>
-
-                                <li class="nav-item">
                                     <a class="nav-link" href="{{ Helper::url('apartmani') }}" role="button">
-                                        {{__('Apartments')}}
+                                        {{__('APARTMENT SALE')}}
                                     </a>
                                 </li>
                                 <li class="nav-logo d-none d-xxl-flex">
@@ -225,10 +219,16 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
+                                    <a class="nav-link" href="{{ Helper::url('sadrzaj') }}" role="button">
+                                        {{__('Content')}}
+                                    </a>
+                                </li>
+
+                                {{-- <li class="nav-item">
                                     <a class="nav-link" href="{{ Helper::url('kupovina') }}" role="button">
                                         {{__('Shopping')}}
                                     </a>
-                                </li>
+                                </li> --}}
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ Helper::url('najam-apartmana') }}" role="button"> 
                                         {{__('Apartment rent')}}
@@ -237,12 +237,21 @@
                                 <li class="header-contact">
                                     <i class="fa-solid fa-mobile-screen"></i>
                                     <div>
+                                        @if(request()->is('apartmani'))
+                                        <a href="tel:+387 65 927 970"
+                                            >+387 65 927 970</a
+                                        >
+                                        <a class="text-lowercase" href="mailto:info@monterratermag.com">
+                                            info@monterratermag.com</a
+                                        >
+                                        @else
                                         <a href="tel:+387 57 272 101"
                                             >+387 57 272 101</a
                                         >
                                         <a href="tel: +387 66 980 487">
                                             +387 66 980 487</a
                                         >
+                                        @endif
                                     </div>
                                 </li>
                             </ul>
