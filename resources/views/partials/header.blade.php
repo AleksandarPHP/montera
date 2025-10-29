@@ -220,7 +220,7 @@
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ Helper::url('sadrzaj') }}" role="button">
-                                        {{__('Content')}}
+                                        {{__('Complex content')}}
                                     </a>
                                 </li>
 
