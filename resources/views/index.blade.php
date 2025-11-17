@@ -10,8 +10,8 @@
         <div class="container">
             <div class="image-frame" style="background-image: url('{{ asset('assets/images/okvir-2.png') }}');">
                 <div class="image-text">
-                    <p class="image-text-soft" data-aos="flip-right" data-aos-duration="1500">{{ __('Piece of heaven') }}</p>
-                    <p data-aos="flip-right"data-aos-duration="900">{{ __('at Jahorina') }}</p>
+                    <h1 class="image-text-soft" data-aos="flip-right" data-aos-duration="1500" style="margin-left: 10%;">Prodaja i izdavanje luksuznih <br> apartmana {{ __('at Jahorina') }} </h1>
+                    {{-- <p data-aos="flip-right"data-aos-duration="900">Prodaja i izdavanje luksuznih apartmana <br> {{ __('at Jahorina') }}</p> --}}
                 </div>
             </div>
         </div>
@@ -28,14 +28,29 @@
                 </div>
                 <div class="col-lg-6" >
                     @isset($text->subtitle)<h2 class="subtitle" data-aos="fade-left" data-aos-duration="1500">{{$text->subtitle}}</h2>@endisset
-                    @isset($text->title)<h1 class="title" data-aos="fade-left" data-aos-duration="2000">{{$text->title}}</h1>@endisset
+                    @isset($text->title)<h2 class="title" data-aos="fade-left" data-aos-duration="2000">{{$text->title}}</h2>@endisset
                     @isset($text->description){!!$text->description!!}@endisset
                 </div>
             </div>
         </div>
     </section>
     <br>
-    <br>
+    <section class="rent-apartment"> 
+        <div class="container">
+            <div class="row">
+                @php $text =  Helper::text(2) @endphp
+                <div class="col-lg-12 text-center" >
+                    @isset($text->title)<h2 class="subtitle my-5" data-aos="fade-left" data-aos-duration="2000">{{$text->title}}</h2>@endisset
+                    @isset($text->description){!!$text->description!!}@endisset
+                </div>
+            </div>
+            <div class="button-wrapper mt-5">
+            <a href="{{ Helper::url('apartmani') }}" class="button button_primary">
+                {{__('Complete offer')}}
+            </a>
+        </div>
+        </div>
+    </section>
     <section class="rent-apartment">
         <div class="container">
             @php $text =  Helper::text(3) @endphp

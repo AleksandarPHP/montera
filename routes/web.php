@@ -9,6 +9,7 @@ $routes = [
     'o-nama' => 'o-nama', 
     'tehnicki-prikaz' => 'tehnicki-prikaz',
     'lokacija' => 'lokacija',
+    'kontakt' => 'kontakt',
     'sprat/1' => 'prizemlje',
     'sprat/2' => 'sprat-1',
     'sprat/3' => 'sprat-2',

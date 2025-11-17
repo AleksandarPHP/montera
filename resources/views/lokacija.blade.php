@@ -37,7 +37,7 @@
             allowfullscreen="" loading="lazy" 
             referrerpolicy="no-referrer-when-downgrade">
         </iframe> --}}
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2882.8738041435195!2d18.56709957600676!3d43.73394837109835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4758bf0048026649%3A0x46cf5b48f344089a!2sMonterra%20Concept%20Termag!5e0!3m2!1sen!2sba!4v1760950554569!5m2!1sen!2sba" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2882.8738041435195!2d18.56709957600676!3d43.73394837109835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4758bf0048026649%3A0x46cf5b48f344089a!2sMonterra%20Concept%20Termag!5e0!3m2!1sen!2sba!4v1760950554569!5m2!1sen!2sba" width="200" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 </main>
 

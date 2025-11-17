@@ -384,11 +384,12 @@ header .transparent .header-contact a {
 }
 
 .google-map iframe {
-    height: 100%;
-    width: 100%;
-    left: 0;
+    height: 80%;
+    width: 80%;
+    left: 10%;
     top: 0;
     position: absolute;
+        /* margin: 0px 10%; */
 }
 
 .concept-termag {
@@ -438,7 +439,7 @@ header .transparent .header-contact a {
 }
 
 .rent-apartment {
-    padding: 100px 0;
+    padding: 50px 0;
 }
 
 .rent-apartment p {
@@ -899,7 +900,7 @@ footer .lastline ul li a {
 }
 
 .gallery-navigator {
-    padding: 5rem 0 10rem 0;
+    padding: 5rem 0 5rem 0;
 }
 
 .gallery-navigator.brdr {
@@ -1552,5 +1553,25 @@ form i {
 
     .image-text {
         transform: translate(-38%, -50%) scale(0.8);
+    }
+    .google-map iframe {
+        height: 100%;
+        width: 100%;
+        left: 0;
+        position: absolute;
+    }
+    .image-text-soft {
+        width: 310px;
+    }
+
+    .gallery-navigator .button-wrapper {
+        margin-top: 0;
+    }
+
+    .apartments {
+        padding: 5rem 0;
+    }
+    .gallery-navigator {
+        padding: 3rem 0 0rem 0;
     }
 }

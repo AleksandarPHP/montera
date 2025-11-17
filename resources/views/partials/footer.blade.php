@@ -9,7 +9,7 @@
             data-aos-duration="1300">
            {{__('Monterra Concept Termag APARTMENT in the MOST MODERN SKI AREA IN THE REGION')}}
             </h3>
-            <a href="#" class="button button_secondary" data-aos="zoom-out" data-aos-duration="1500" data-bs-toggle="modal" data-bs-target="#contactModal">{{__('request for quotation')}}</a>
+            <a href="{{ Helper::url('kontakt') }}" class="button button_secondary" data-aos="zoom-out" data-aos-duration="1500">{{__('request for quotation')}}</a>
         </div>
     </div>
 </section>
@@ -89,8 +89,8 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{{ Helper::url('kupovina') }}" role="button">
-                            {{__('Shopping')}}
+                        <a href="{{ Helper::url('kontakt') }}" role="button">
+                            {{__('Contact')}}
                         </a>
                     </li>
                     <li>
@@ -103,11 +103,10 @@
             <div class="col-lg-3 offset-lg-1">
                 <i class="fa-solid fa-location-dot"></i>
                 <h3>{{__('Location')}}</h3>
-                <p>
+                <p class="fs-4">
                    {{$settings->title}}, {{$settings->address}} , Bosna i Hercegovina
                     <br />
                     Telefoni: +387 57 272 101, +387 66 980 487 <br />
-                    Faks: +387 57 272 101, +387 66 980 487
                 </p>
             </div>
             <div class="col-lg-3 offset-lg-1">

@@ -23,7 +23,13 @@
                 </p>
             </div>
         </div>
-
+        <div class="row">
+            @php $text =  Helper::text(2) @endphp
+            <div class="col-lg-12 text-center" >
+                @isset($text->title)<h2 class="subtitle mb-5" data-aos="fade-left" data-aos-duration="2000">{{$text->title}}</h2>@endisset
+                @isset($text->description){!!$text->description!!}@endisset
+            </div>
+        </div>
         <div class="button-wrapper">
             <a href="{{ Helper::url('sprat/1') }}" class="button button_primary">
                 {{__('Complete offer')}}
@@ -61,9 +67,17 @@ $slider = Helper::slider(1);
         <div class="col-lg-6">
             <div class="content-wrapper" data-aos="fade-down" data-aos-duration="1500">
                 <h5>{{$slider->subtitle}}</h5>
-                    <p>
-                    {{$slider->text}}
-                    </p>
+                    <div class="readmore-wrapper">
+                        <p class="short-text">
+                            {!! Str::words($slider->text, 40, '...') !!}
+                        </p>
+
+                        <p class="full-text d-none">
+                            {!! nl2br(e($slider->text)) !!}
+                        </p>
+
+                        <button class="read-more-btn btn btn-link p-0 mt-2 fs-4">Pročitaj više</button>
+                    </div>
             </div>
         </div>
     </div>
@@ -92,9 +106,17 @@ $slider = Helper::slider(1);
             <div class="col-lg-6">
                 <div class="content-wrapper" data-aos="fade-down" data-aos-duration="1500">
                     <h5>{{$slider->subtitle}}</h5>
-                    <p>
-                        {{$slider->text}}
-                    </p>
+                    <div class="readmore-wrapper">
+                        <p class="short-text">
+                            {!! Str::words($slider->text, 40, '...') !!}
+                        </p>
+
+                        <p class="full-text d-none">
+                            {!! nl2br(e($slider->text)) !!}
+                        </p>
+
+                        <button class="read-more-btn btn btn-link p-0 mt-2 fs-4">Pročitaj više</button>
+                    </div>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -156,9 +178,17 @@ $slider = Helper::slider(1);
             <div class="col-lg-6">
                 <div class="content-wrapper" data-aos="fade-down" data-aos-duration="1500">
                     <h5>{{$slider->subtitle}}</h5>
-                    <p>
-                        {{$slider->text}}
-                    </p>
+                    <div class="readmore-wrapper">
+                        <p class="short-text">
+                            {!! Str::words($slider->text, 40, '...') !!}
+                        </p>
+
+                        <p class="full-text d-none">
+                            {!! nl2br(e($slider->text)) !!}
+                        </p>
+
+                        <button class="read-more-btn btn btn-link p-0 mt-2 fs-4">Pročitaj više</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -184,9 +214,17 @@ $slider = Helper::slider(1);
             <div class="col-lg-6">
                 <div class="content-wrapper" data-aos="fade-down" data-aos-duration="1500">
                     <h5>{{$slider->subtitle}}</h5>
-                    <p>
-                        {{$slider->text}}
-                    </p>
+                    <div class="readmore-wrapper">
+                        <p class="short-text">
+                            {!! Str::words($slider->text, 40, '...') !!}
+                        </p>
+
+                        <p class="full-text d-none">
+                            {!! nl2br(e($slider->text)) !!}
+                        </p>
+
+                        <button class="read-more-btn btn btn-link p-0 mt-2 fs-4">Pročitaj više</button>
+                    </div>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -248,9 +286,17 @@ $slider = Helper::slider(1);
             <div class="col-lg-6">
                 <div class="content-wrapper" data-aos="fade-down" data-aos-duration="1500">
                     <h5>{{$slider->subtitle}}</h5>
-                    <p>
-                        {{$slider->text}}
-                    </p>
+                    <div class="readmore-wrapper">
+                        <p class="short-text">
+                            {!! Str::words($slider->text, 40, '...') !!}
+                        </p>
+
+                        <p class="full-text d-none">
+                            {!! nl2br(e($slider->text)) !!}
+                        </p>
+
+                        <button class="read-more-btn btn btn-link p-0 mt-2 fs-4">Pročitaj više</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -276,9 +322,17 @@ $slider = Helper::slider(1);
             <div class="col-lg-6">
                 <div class="content-wrapper" data-aos="fade-down" data-aos-duration="1500">
                     <h5>{{$slider->subtitle}}</h5>
-                    <p>
-                        {{$slider->text}}
-                    </p>
+                    <div class="readmore-wrapper">
+                        <p class="short-text">
+                            {!! Str::words($slider->text, 40, '...') !!}
+                        </p>
+
+                        <p class="full-text d-none">
+                            {!! nl2br(e($slider->text)) !!}
+                        </p>
+
+                        <button class="read-more-btn btn btn-link p-0 mt-2 fs-4">Pročitaj više</button>
+                    </div>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -340,9 +394,17 @@ $slider = Helper::slider(1);
             <div class="col-lg-6">
                 <div class="content-wrapper" data-aos="fade-down" data-aos-duration="1500">
                     <h5>{{$slider->subtitle}}</h5>
-                    <p>
-                        {{$slider->text}}
-                    </p>
+                    <div class="readmore-wrapper">
+                        <p class="short-text">
+                            {!! Str::words($slider->text, 40, '...') !!}
+                        </p>
+
+                        <p class="full-text d-none">
+                            {!! nl2br(e($slider->text)) !!}
+                        </p>
+
+                        <button class="read-more-btn btn btn-link p-0 mt-2 fs-4">Pročitaj više</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -357,15 +419,33 @@ $slider = Helper::slider(1);
     </div>
 </div>
 </section>
-
 <script src="https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js"></script>
 <script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".readmore-wrapper").forEach(function (wrapper) {
+        const btn = wrapper.querySelector(".read-more-btn");
+        const shortText = wrapper.querySelector(".short-text");
+        const fullText = wrapper.querySelector(".full-text");
+
+        btn.addEventListener("click", function () {
+            shortText.classList.toggle("d-none");
+            fullText.classList.toggle("d-none");
+
+            btn.textContent =
+                btn.textContent === "Pročitaj više" ? "Prikaži manje" : "Pročitaj više";
+        });
+    });
+});
+
     const draw = SVG().addTo("#svg-container").size("100%", "100%");
 
     const baseWidth = 1920;
     const baseHeight = 1080;
 
+
     const mainTitle = '{{ __('FLOOR AND\nPOSITION\nAPARTMENT\nOFFERED') }}';
+    const titleH1 = '{{ __('Prodaja Apartmana Jahorina') }}';
     draw.viewbox(0, 0, baseWidth, baseHeight);
 
     const floors = [
@@ -511,7 +591,18 @@ $slider = Helper::slider(1);
             y: 435,
             fill: "#000",
             opacity: 0.8,
-            "font-size": 24,
+            "font-size": 20,
+            "font-family": "Arial, sans-serif",
+            "font-weight": "500",
+        },
+
+        {
+            title: titleH1,
+            x: 1000,
+            y: 95,
+            fill: "#000",
+            opacity: 0.8,
+            "font-size": 53,
             "font-family": "Arial, sans-serif",
             "font-weight": "500",
         },
@@ -537,7 +628,10 @@ $slider = Helper::slider(1);
         });    });
 
     texts.forEach((text) => {
-        draw.text(text.title).attr(text);
+        draw.text(text.title).attr({
+        ...text,
+        "pointer-events": "none",
+    });
     });
 </script>
 </main>
