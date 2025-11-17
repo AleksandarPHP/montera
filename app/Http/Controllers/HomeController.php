@@ -7,7 +7,9 @@ use App\Models\Apartment;
 use App\Models\Floor;
 use Illuminate\Http\Request;
 use App\Models\Gallery;
-
+use App\Notifications\KontaktNotification;
+use Notification;
+use Exception;
 class HomeController extends Controller
 {
     public function gallery(){
@@ -31,15 +33,27 @@ class HomeController extends Controller
     public function contact(Request $request)
     {
         $request->validate([
-            'firstName' => ['required', 'string', 'max:191'],
-            'phone' => ['required', 'string'],
-            'email' => ['required', 'string', 'max:191'],
-            'lastName' => ['required', 'string'],
-            'question' => ['required', 'string'],
+            'g-recaptcha-response' => ['required', function ($attribute, $value, $fail) {
+                if (!app('captcha')->verifyResponse($value)) {
+                    $fail('Invalid reCAPTCHA response.');
+                }
+            }],
+            'name' => ['required', 'string', 'max:191'],
+            'email' => ['required', 'email'],
+            'message' => ['required', 'string', 'max:300'],
         ]);   
 
+        if ($request->check_first) {
+            return redirect(url()->previous())->with(['spam' => 'SPAM!']);
+        }
+        $html = '<b>Ime:</b> '.htmlspecialchars($request->input('name')).'<br>';
+        $html .= '<b>Email:</b> '.htmlspecialchars($request->input('email')).'<br>';
+        if($request->input('message')!='') $html .= '<b>Napomena:</b> '.htmlspecialchars($request->input('message')).'<br>';
 
-
+        try {
+             Notification::route('mail', 'acocoaj123@gmail.com')->notify(new KontaktNotification($html, $request->input('email'), $request->input('name')));
+        } catch (Exception $e) {}
+        
         return redirect()->back()->with(['status' => 'Vasa poruka je uspijesno poslana!']);
     }
 }
