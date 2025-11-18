@@ -4,7 +4,7 @@
     <section class="gallery">
         <div class="container">
             @foreach ($albums as $album)
-            <div class="wrapper">
+            <div class="wrapper gallery-wrapper">
                 <h2 class="subtitle">{{$album->title}}</h2>
                 <div
                  {{-- @class([
@@ -13,22 +13,18 @@
                     'apartments-slider' => $album->type == 3,
                 ]) --}}
                 >
-                <div class="row">
                     @foreach ($album->gallery as $item)
-                    <div class="col-2">
                     <a
-                        href="{{asset('storage/'.$item->image)}}"
+                        href="{{'https://monterratermag.com/storage/'.$item->image}}"
                         data-fancybox="building"
                         data-caption="{{ $album->title }}"
                     >
                         <img
-                            {{-- class="img-fluid" --}}
-                            src="{{asset('storage/'.$item->image)}}" width="220px" height="220px"
+                            class="img-thumbnail"
+                            src="{{'https://monterratermag.com/storage/'.$item->image}}"
                         />
                     </a>
-                    </div>
                     @endforeach
-                </div>
                 </div>
             </div>
             @endforeach

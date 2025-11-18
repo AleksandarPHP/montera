@@ -1079,7 +1079,11 @@ footer .lastline ul li a {
     align-items: center;
     justify-content: center;
 }
-
+.gallery-wrapper img {
+    width: 250px; /* Željena širina slike */
+    height: 250px; /* Željena visina slike */
+    object-fit: cover; /* Da bi se uklopila u kvadrat */
+}
 .compass {
     position: absolute;
     top: 20px;
@@ -1443,6 +1447,11 @@ form i {
         padding-bottom: 10px;
     }
 
+    .gallery-wrapper img {
+        width: 225px;
+        height: 225px;
+    }
+
     .contact-info ul {
         list-style: none;
         padding-left: 0;
@@ -1468,7 +1477,10 @@ form i {
     .floor-main {
         min-height: 100dvh;
     }
-
+    .gallery-wrapper img {
+        width: 170px;
+        height: 170px;
+    }
     .floors-navigator {
         position: relative;
         z-index: 100;
@@ -1568,6 +1580,10 @@ form i {
         margin-top: 0;
     }
 
+    .gallery-wrapper img {
+        width: 180px;
+        height: 180px;
+    }
     .apartments {
         padding: 5rem 0;
     }
