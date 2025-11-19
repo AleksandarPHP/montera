@@ -4,7 +4,7 @@
 <main class="main-margin">
 <div id="svg-container"></div>
 
-<section class="gallery-navigator">
+{{-- <section class="gallery-navigator">
     <div class="container">
         <div class="row">
             @php $text =  Helper::text(1) @endphp
@@ -23,18 +23,22 @@
                 </p>
             </div>
         </div>
+    </div>
+</section> --}}
+<section class="rent-apartment"> 
+    <div class="container">
         <div class="row">
-            @php $text =  Helper::text(2) @endphp
+            @php $text =  Helper::text(27) @endphp
             <div class="col-lg-12 text-center" >
-                @isset($text->title)<h2 class="subtitle mb-5" data-aos="fade-left" data-aos-duration="2000">{{$text->title}}</h2>@endisset
+                @isset($text->title)<h2 class="subtitle my-5" data-aos="fade-left" data-aos-duration="2000">{{$text->title}}</h2>@endisset
                 @isset($text->description){!!$text->description!!}@endisset
             </div>
         </div>
-        <div class="button-wrapper">
-            <a href="{{ Helper::url('sprat/1') }}" class="button button_primary">
-                {{__('Complete offer')}}
-            </a>
-        </div>
+        <div class="button-wrapper mt-5">
+        <a href="{{ Helper::url('sprat/1') }}" class="button button_primary">
+            {{__('Complete offer')}}
+        </a>
+    </div>
     </div>
 </section>
 @php
@@ -68,15 +72,17 @@ $slider = Helper::slider(1);
             <div class="content-wrapper" data-aos="fade-down" data-aos-duration="1500">
                 <h5>{{$slider->subtitle}}</h5>
                     <div class="readmore-wrapper">
-                        <p class="short-text">
+                        <p class="short-text d-md-none">
                             {!! Str::words($slider->text, 40, '...') !!}
                         </p>
-
+                        <p class="short-text d-none d-md-block">
+                            {!! $slider->text !!}
+                        </p>
                         <p class="full-text d-none">
                             {!! nl2br(e($slider->text)) !!}
                         </p>
 
-                        <button class="read-more-btn btn btn-link p-0 mt-2 fs-4">Pročitaj više</button>
+                        <button class="read-more-btn btn btn-link p-0 mt-2 fs-4 d-md-none">Pročitaj više</button>
                     </div>
             </div>
         </div>
@@ -107,15 +113,17 @@ $slider = Helper::slider(1);
                 <div class="content-wrapper" data-aos="fade-down" data-aos-duration="1500">
                     <h5>{{$slider->subtitle}}</h5>
                     <div class="readmore-wrapper">
-                        <p class="short-text">
+                        <p class="short-text d-md-none">
                             {!! Str::words($slider->text, 40, '...') !!}
                         </p>
-
+                        <p class="short-text d-none d-md-block">
+                            {!! $slider->text !!}
+                        </p>
                         <p class="full-text d-none">
                             {!! nl2br(e($slider->text)) !!}
                         </p>
 
-                        <button class="read-more-btn btn btn-link p-0 mt-2 fs-4">Pročitaj više</button>
+                        <button class="read-more-btn btn btn-link p-0 mt-2 fs-4 d-md-none">Pročitaj više</button>
                     </div>
                 </div>
             </div>
@@ -179,15 +187,17 @@ $slider = Helper::slider(1);
                 <div class="content-wrapper" data-aos="fade-down" data-aos-duration="1500">
                     <h5>{{$slider->subtitle}}</h5>
                     <div class="readmore-wrapper">
-                        <p class="short-text">
+                        <p class="short-text d-md-none">
                             {!! Str::words($slider->text, 40, '...') !!}
                         </p>
-
+                        <p class="short-text d-none d-md-block">
+                            {!! $slider->text !!}
+                        </p>
                         <p class="full-text d-none">
                             {!! nl2br(e($slider->text)) !!}
                         </p>
 
-                        <button class="read-more-btn btn btn-link p-0 mt-2 fs-4">Pročitaj više</button>
+                        <button class="read-more-btn btn btn-link p-0 mt-2 fs-4 d-md-none">Pročitaj više</button>
                     </div>
                 </div>
             </div>
@@ -215,15 +225,17 @@ $slider = Helper::slider(1);
                 <div class="content-wrapper" data-aos="fade-down" data-aos-duration="1500">
                     <h5>{{$slider->subtitle}}</h5>
                     <div class="readmore-wrapper">
-                        <p class="short-text">
+                        <p class="short-text d-md-none">
                             {!! Str::words($slider->text, 40, '...') !!}
                         </p>
-
+                        <p class="short-text d-none d-md-block">
+                            {!! $slider->text !!}
+                        </p>
                         <p class="full-text d-none">
                             {!! nl2br(e($slider->text)) !!}
                         </p>
 
-                        <button class="read-more-btn btn btn-link p-0 mt-2 fs-4">Pročitaj više</button>
+                        <button class="read-more-btn btn btn-link p-0 mt-2 fs-4 d-md-none">Pročitaj više</button>
                     </div>
                 </div>
             </div>
@@ -287,15 +299,17 @@ $slider = Helper::slider(1);
                 <div class="content-wrapper" data-aos="fade-down" data-aos-duration="1500">
                     <h5>{{$slider->subtitle}}</h5>
                     <div class="readmore-wrapper">
-                        <p class="short-text">
+                        <p class="short-text d-md-none">
                             {!! Str::words($slider->text, 40, '...') !!}
                         </p>
-
+                        <p class="short-text d-none d-md-block">
+                            {!! $slider->text !!}
+                        </p>
                         <p class="full-text d-none">
                             {!! nl2br(e($slider->text)) !!}
                         </p>
 
-                        <button class="read-more-btn btn btn-link p-0 mt-2 fs-4">Pročitaj više</button>
+                        <button class="read-more-btn btn btn-link p-0 mt-2 fs-4 d-md-none">Pročitaj više</button>
                     </div>
                 </div>
             </div>
@@ -323,15 +337,17 @@ $slider = Helper::slider(1);
                 <div class="content-wrapper" data-aos="fade-down" data-aos-duration="1500">
                     <h5>{{$slider->subtitle}}</h5>
                     <div class="readmore-wrapper">
-                        <p class="short-text">
+                        <p class="short-text d-md-none">
                             {!! Str::words($slider->text, 40, '...') !!}
                         </p>
-
+                        <p class="short-text d-none d-md-block">
+                            {!! $slider->text !!}
+                        </p>
                         <p class="full-text d-none">
                             {!! nl2br(e($slider->text)) !!}
                         </p>
 
-                        <button class="read-more-btn btn btn-link p-0 mt-2 fs-4">Pročitaj više</button>
+                        <button class="read-more-btn btn btn-link p-0 mt-2 fs-4 d-md-none">Pročitaj više</button>
                     </div>
                 </div>
             </div>
@@ -395,15 +411,17 @@ $slider = Helper::slider(1);
                 <div class="content-wrapper" data-aos="fade-down" data-aos-duration="1500">
                     <h5>{{$slider->subtitle}}</h5>
                     <div class="readmore-wrapper">
-                        <p class="short-text">
+                        <p class="short-text d-md-none">
                             {!! Str::words($slider->text, 40, '...') !!}
                         </p>
-
+                        <p class="short-text d-none d-md-block">
+                            {!! $slider->text !!}
+                        </p>
                         <p class="full-text d-none">
                             {!! nl2br(e($slider->text)) !!}
                         </p>
 
-                        <button class="read-more-btn btn btn-link p-0 mt-2 fs-4">Pročitaj više</button>
+                        <button class="read-more-btn btn btn-link p-0 mt-2 fs-4 d-md-none">Pročitaj više</button>
                     </div>
                 </div>
             </div>

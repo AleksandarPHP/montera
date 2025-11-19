@@ -38,8 +38,8 @@
     <section class="rent-apartment"> 
         <div class="container">
             <div class="row">
-                @php $text =  Helper::text(2) @endphp
-                <div class="col-lg-12 text-center" >
+                @php $text =  Helper::text(25) @endphp
+                <div class="col-lg-12 text-center my-5" >
                     @isset($text->title)<h2 class="subtitle my-5" data-aos="fade-left" data-aos-duration="2000">{{$text->title}}</h2>@endisset
                     @isset($text->description){!!$text->description!!}@endisset
                 </div>

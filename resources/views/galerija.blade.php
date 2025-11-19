@@ -5,7 +5,7 @@
         <div class="container">
             @foreach ($albums as $album)
             <div class="wrapper gallery-wrapper">
-                <h2 class="subtitle">{{$album->title}}</h2>
+                <h2 class="subtitle">{{ __('Gallery') }}</h2>
                 <div
                  {{-- @class([
                     'building-slider' => $album->type == 1,
@@ -15,13 +15,13 @@
                 >
                     @foreach ($album->gallery as $item)
                     <a
-                        href="{{'https://monterratermag.com/storage/'.$item->image}}"
+                        href="{{asset('storage/'.$item->image)}}"
                         data-fancybox="building"
                         data-caption="{{ $album->title }}"
                     >
                         <img
                             class="img-thumbnail"
-                            src="{{'https://monterratermag.com/storage/'.$item->image}}"
+                            src="{{asset('storage/'.$item->image)}}"
                         />
                     </a>
                     @endforeach
