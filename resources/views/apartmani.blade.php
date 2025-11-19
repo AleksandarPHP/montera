@@ -462,7 +462,7 @@ $slider = Helper::slider(1);
     const baseHeight = 1080;
 
 
-    const mainTitle = '{{ __('FLOOR AND\nPOSITION\nAPARTMENT\nOFFERED') }}';
+    const mainTitle = '{{ __('Klikom na sliku mogu se\npogledati dostupni apartmani \nod 1. do 6. sprata.') }}';
     const titleH1 = '{{ __('Prodaja Apartmana Jahorina') }}';
     draw.viewbox(0, 0, baseWidth, baseHeight);
 
@@ -605,7 +605,7 @@ $slider = Helper::slider(1);
         },
         {
             title: mainTitle,
-            x: 225,
+            x: 205,
             y: 435,
             fill: "#000",
             opacity: 0.8,
