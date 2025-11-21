@@ -8,6 +8,7 @@ use App\Models\Floor;
 use Illuminate\Http\Request;
 use App\Models\Gallery;
 use App\Notifications\KontaktNotification;
+use Illuminate\Support\Facades\Log;
 use Notification;
 use Exception;
 class HomeController extends Controller
@@ -43,16 +44,16 @@ class HomeController extends Controller
             'message' => ['required', 'string', 'max:300'],
         ]);   
 
-        if ($request->check_first) {
-            return redirect(url()->previous())->with(['spam' => 'SPAM!']);
-        }
+
         $html = '<b>Ime:</b> '.htmlspecialchars($request->input('name')).'<br>';
         $html .= '<b>Email:</b> '.htmlspecialchars($request->input('email')).'<br>';
         if($request->input('message')!='') $html .= '<b>Napomena:</b> '.htmlspecialchars($request->input('message')).'<br>';
 
         try {
              Notification::route('mail', 'acocoaj123@gmail.com')->notify(new KontaktNotification($html, $request->input('email'), $request->input('name')));
-        } catch (Exception $e) {}
+        } catch (Exception $e) {
+            Log::info($e);
+        }
         
         return redirect('thank-you');
     }
