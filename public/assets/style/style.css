@@ -291,6 +291,16 @@ header .transparent .header-contact a {
     text-transform: uppercase;
 }
 
+.thank-you-frame-container {
+        position: relative;
+    text-align: center;
+    padding: 128px 0 0;
+    font-size: 1.6rem;
+    color: #555;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
 .location-frame {
     position: absolute;
     top: -170px;

@@ -17,9 +17,9 @@
             <div class="contact-info-data" data-aos="fade-left" data-aos-duration="2000">
                 <h3>{{ __('Contact info') }}</h3>
                 <ul>
-                    @if ($settings->phone)<li><i class="fas fa-phone-alt"></i>  {{$settings->phone}}</li>@endif
-                    @if ($settings->phone)<li><i class="fas fa-envelope"></i>  {{$settings->email}}</li>@endif
-                    @if ($settings->phone)<li><i class="fas fa-map-marker-alt"></i> {{$settings->address}}</li>@endif
+                    @if ($settings->phone)<li><a class="text-decoration-none" href="tel:+{{ $settings->phone }}"><i class="fas fa-phone-alt"></i>  {{$settings->phone}}</a></li>@endif
+                    @if ($settings->email)<li><a class="text-decoration-none" href="mailto: {{ $settings->email }}"><i class="fas fa-envelope"></i>  {{$settings->email}}</a></li>@endif
+                    @if ($settings->address)<li><a class="text-decoration-none" href="https://maps.app.goo.gl/gUuniN8yP2qpLGM97" target="_blank"><i class="fas fa-map-marker-alt"></i> Monterra Termag, {{$settings->address}}, 71423 Jahorina, Bosna i Hercegovina</a></li>@endif
                 </ul>
             </div>
         </div>

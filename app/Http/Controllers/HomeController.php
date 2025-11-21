@@ -33,11 +33,11 @@ class HomeController extends Controller
     public function contact(Request $request)
     {
         $request->validate([
-            'g-recaptcha-response' => ['required', function ($attribute, $value, $fail) {
-                if (!app('captcha')->verifyResponse($value)) {
-                    $fail('Invalid reCAPTCHA response.');
-                }
-            }],
+            // 'g-recaptcha-response' => ['required', function ($attribute, $value, $fail) {
+            //     if (!app('captcha')->verifyResponse($value)) {
+            //         $fail('Invalid reCAPTCHA response.');
+            //     }
+            // }],
             'name' => ['required', 'string', 'max:191'],
             'email' => ['required', 'email'],
             'message' => ['required', 'string', 'max:300'],
@@ -54,6 +54,6 @@ class HomeController extends Controller
              Notification::route('mail', 'acocoaj123@gmail.com')->notify(new KontaktNotification($html, $request->input('email'), $request->input('name')));
         } catch (Exception $e) {}
         
-        return redirect()->back()->with(['status' => 'Vasa poruka je uspijesno poslana!']);
+        return redirect('thank-you');
     }
 }

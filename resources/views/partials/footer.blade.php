@@ -120,6 +120,7 @@
                     <button type="submit" class="button button_secondary">
                         {{__('Send')}}
                     </button>
+                    <p class="fs-5" > {{ __('Email for newsletter') }} </p>
                 </form>
             </div>
         </div>
