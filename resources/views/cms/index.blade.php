@@ -27,6 +27,7 @@
           array('cms/settings/1/edit', 'Podesavanja', 'cog'),
           array('cms/sliders', 'Slajderi', 'desktop'),
           array('cms/texts', 'Tekstovi', 'text-width'),
+          array('cms/messages', 'Inbox', 'envelope'),
           array('cms/users', 'Korisnici', 'users'),
 
         );
