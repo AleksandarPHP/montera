@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Album;
 use App\Models\Apartment;
 use App\Models\Floor;
+use App\Models\Message;
 use Illuminate\Http\Request;
 use App\Models\Gallery;
 use App\Notifications\KontaktNotification;
@@ -50,11 +51,18 @@ class HomeController extends Controller
         if($request->input('message')!='') $html .= '<b>Napomena:</b> '.htmlspecialchars($request->input('message')).'<br>';
 
         try {
-             Notification::route('mail', 'acocoaj123@gmail.com')->notify(new KontaktNotification($html, $request->input('email'), $request->input('name')));
+             Notification::route('mail', 'rezervacije@monterratermag.com')->notify(new KontaktNotification($html, $request->input('email'), $request->input('name')));
         } catch (Exception $e) {
             Log::info($e);
         }
         
+        Message::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'ip' => $request->ip(),
+            'contents' => $html,
+        ]);
+
         return redirect('thank-you');
     }
 }

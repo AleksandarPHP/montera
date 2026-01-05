@@ -55,10 +55,14 @@ pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs
 
 async function renderPDF() {
     try {
-        const pdf = await pdfjsLib.getDocument(url).promise;
+        const pdf = await pdfjsLib.getDocument({
+            url: url,
+            disableFontFace: true,
+        }).promise;
+
         const page = await pdf.getPage(1);
 
-        const scale = 1.5;
+        const scale = window.innerWidth < 768 ? 1.0 : 1.25;
         const viewport = page.getViewport({ scale });
 
         const canvas = document.getElementById("pdfCanvas");
@@ -67,19 +71,15 @@ async function renderPDF() {
         canvas.width = viewport.width;
         canvas.height = viewport.height;
 
-        const renderContext = {
+        await page.render({
             canvasContext: context,
             viewport: viewport,
-        };
-
-        await page.render(renderContext);
-        setTimeout(function wait(){
+        }).promise;
 
         element.classList.remove("body-loading");
-    }, 3000);
 
     } catch (error) {
-        console.error("Greška prilikom učitavanja PDF-a:", error);
+        console.error(error);
         element.classList.remove("body-loading");
     }
 }

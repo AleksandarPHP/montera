@@ -14,7 +14,12 @@
             </div>
         </div>
     </section>
- 
+    <div class="button-wrapper my-5">
+        <a href="{{ Helper::url('sprat/1') }}" class="button button_primary">
+            {{__('Complete offer')}}
+        </a>
+        <a href="{{ Helper::url('kontakt') }}" class="button button_primary mt-3 mx-4">{{__('request for quotation')}}</a>
+    </div>
     @php
         $slider = Helper::slider(1);
     @endphp

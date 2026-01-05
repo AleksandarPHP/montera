@@ -19,9 +19,10 @@ class MessageController extends Controller
         $data = [];
 
         $columns = array( 
-            0 =>'id',
+            0 =>'ip',
             1 =>'name',
-            2 =>'action'
+            2 =>'email',
+            3 =>'action'
         );
 
         $sortable = [0, 1];
@@ -51,9 +52,10 @@ class MessageController extends Controller
         
         foreach($rows as $row) {
             $data[] = [
-                '0' => $row->is_send ? '<i class="fa fa-check-square" aria-hidden="true"></i>' : '<i class="fa fa-spinner" aria-hidden="true"></i>',
-                '1' => '<a href="'.url('cms/menu/'.$row->id.'/edit').'" class="action-edit">'.$row->name.'</a>',
-                '2' => '<a href="'.url('cms/menu/'.$row->id.'/edit').'" class="action-edit"><i class="fa fa-envelope" aria-hidden="true"></i></a>',
+                '0' => $row->ip,
+                '1' => $row->name,
+                '2' => $row->email,
+                '3' => '<a href="'.url('cms/messages/'.$row->id.'/edit').'" class="action-edit"><i class="fa fa-envelope" aria-hidden="true"></i></a>',
             ];
         }
         
@@ -105,6 +107,6 @@ class MessageController extends Controller
 
     public function edit($id) 
     {
-        return view('cms.messages.form', ['item' => Message::findOrFail($id)]);
+        return view('cms.messages.form', ['item' => Message::findOrFail($id), 'editing' => false, 'lang' => 'sr']);
     }
 }

@@ -9,7 +9,7 @@
             data-aos-duration="1300">
            {{__('Monterra Concept Termag APARTMENT in the MOST MODERN SKI AREA IN THE REGION')}}
             </h3>
-            <a href="{{ Helper::url('kontakt') }}" class="button button_secondary" data-aos="zoom-out" data-aos-duration="1500">{{__('request for quotation')}}</a>
+            <a href="{{ Helper::url('kontakt') }}" class="button button_primary" data-aos="zoom-out" data-aos-duration="1500">{{__('request for quotation')}}</a>
         </div>
     </div>
 </section>

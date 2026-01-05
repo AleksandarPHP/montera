@@ -45,10 +45,11 @@
                 </div>
             </div>
             <div class="button-wrapper mt-5">
-            <a href="{{ Helper::url('apartmani') }}" class="button button_primary">
-                {{__('Complete offer')}}
-            </a>
-        </div>
+                <a href="{{ Helper::url('apartmani') }}" data-aos="zoom-out" data-aos-duration="1500" class="button button_primary">
+                    {{__('Complete offer')}}
+                </a>
+                <a href="{{ Helper::url('kontakt') }}" class="button button_primary mt-3 mx-4"  data-aos="zoom-out" data-aos-duration="1500">{{__('request for quotation')}}</a>
+            </div>
         </div>
     </section>
     <section class="rent-apartment">
