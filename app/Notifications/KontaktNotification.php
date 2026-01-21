@@ -41,7 +41,7 @@ class KontaktNotification extends Notification
     {
         return (new MailMessage)
                     ->subject(__('Montera Kontakt Formular'))
-                    ->from($this->email, $this->name)
+                    ->from('websajt@monterratermag.com', $this->name)
                     ->line(new HtmlString($this->html))
                     ->action(__('Web site'), url('/'));
     }
